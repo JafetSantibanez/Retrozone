@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #121535;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+}
+
+
+/*? Esta parte corresponde al Navbar */
+/* 1. Importar una fuente Pixel Art (¡Fundamental!) */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Configuración general de la barra */
+.mi-navbar-retro {
+  background-color: #00ff21 !important; /* El verde brillante de tu imagen */
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px; /* Las fuentes pixel de Google se ven mejor en tamaños múltiplos de 8 o 12 */
+  padding: 10px 20px;
+  border-bottom: 4px solid #000000;
+}
+
+/* 2. El truco del botón pixeleado con relieve */
+.boton-pixel {
+  color: #00ff21 !important;
+  background-color: #1a2313 !important; /* Fondo oscuro del botón */
+  padding: 8px 16px !important;
+  margin: 0 5px;
+  display: inline-block;
+  
+  /* Bordes rectos imitando curvas de pixeles antiguos */
+  border: 4px solid #000000;
+  border-radius: 12px; /* Un radio pequeño da la ilusión de escalón pixelado */
+  
+  /* Sombra interna para dar el efecto de relieve/cápsula retro */
+  box-shadow: 
+    inset -3px -3px 0px #4a5e3a, 
+    inset 3px 3px 0px #0c1209;
+    
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Efecto Hover (Cuando pasas el mouse) */
+.boton-pixel:hover {
+  background-color: #25331c !important;
+  color: #ffffff !important;
+  /* Invierte las sombras para que parezca que se hunde */
+  box-shadow: 
+    inset 3px 3px 0px #4a5e3a, 
+    inset -3px -3px 0px #0c1209;
+}
+
+/* 3. Ajustes específicos para el buscador */
+.buscador-retro {
+  color: #00ff21 !important;
+  border-radius: 8px;
+}
+
+/* 4. Logo retro (El cuadro de la izquierda) */
+.logo-pixel {
+  background-color: #ffffc4;
+  color: #11144c !important;
+  border: 4px solid #000000;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 340px;
+  padding: 40px 25px;
+  background: #121535;
+  overflow: hidden;
+  border-bottom: 20px solid #e91e63;
+}
+
+.hero h1 {
+  text-align: center;
+  color: #fff36d;
+  font-size: 32px;
+  text-shadow: 4px 4px #111;
+}
+
+.hero h1 span {
+  border: 3px dashed white;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: white;
+  font-size: 10px;
+}
+
+.about-intro {
+  width: 45%;
+  margin-top: 35px;
+}
+
+.about-label {
+  color: #ff2b9d;
+}
+
+.about-intro h2 {
+  color: #00ff1e;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.about-intro p {
+  line-height: 1.8;
+}
+
+.btn-retro {
+  position: absolute;
+  top: 185px;
+  left: 43%;
+  background: white;
+  color: #2b2bff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 25px;
+  font-size: 8px;
+}
+
+.hearts {
+  position: absolute;
+  top: 250px;
+  left: 43%;
+  font-size: 22px;
+}
+
+.cloud {
+  position: absolute;
+  font-size: 35px;
+}
+
+.cloud1 {
+  top: 70px;
+  left: 20px;
+}
+
+.cloud2 {
+  top: 60px;
+  right: 50px;
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 8px dotted #00ff1e;
+}
+
+/* SECCIONES */
+main {
+  background: #121535;
+}
+
+.historia,
+.mision-vision,
+.valores {
+  padding: 25px;
+  border-bottom: 4px solid #00ff1e;
+}
+
+h3 {
+  color: #00ff1e;
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+
+.arcade-img {
+  border: 3px solid #ff2b9d;
+  box-shadow: 0 0 20px #ff2b9d;
+}
+
+.historia p {
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* MISION Y VISION */
+.card-retro {
+  border: 3px solid #00ff1e;
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 220px;
+  text-align: center;
+}
+
+.icon {
+  font-size: 55px;
+}
+
+.card-retro h4 {
+  color: #00ff1e;
+  font-size: 10px;
+}
+
+.card-retro p {
+  line-height: 1.8;
+}
+

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,77 +8,16 @@ body {
   margin: 0;
   background: #121535;
   color: white;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 10px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 15px;
+  padding-top: 150px;
 }
-
-
-/*? Esta parte corresponde al Navbar */
-/* 1. Importar una fuente Pixel Art (¡Fundamental!) */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-/* Configuración general de la barra */
-.mi-navbar-retro {
-  background-color: #00ff21 !important; /* El verde brillante de tu imagen */
-  font-family: 'Press Start 2P', monospace;
-  font-size: 12px; /* Las fuentes pixel de Google se ven mejor en tamaños múltiplos de 8 o 12 */
-  padding: 10px 20px;
-  border-bottom: 4px solid #000000;
-}
-
-/* 2. El truco del botón pixeleado con relieve */
-.boton-pixel {
-  color: #00ff21 !important;
-  background-color: #1a2313 !important; /* Fondo oscuro del botón */
-  padding: 8px 16px !important;
-  margin: 0 5px;
-  display: inline-block;
-  
-  /* Bordes rectos imitando curvas de pixeles antiguos */
-  border: 4px solid #000000;
-  border-radius: 12px; /* Un radio pequeño da la ilusión de escalón pixelado */
-  
-  /* Sombra interna para dar el efecto de relieve/cápsula retro */
-  box-shadow: 
-    inset -3px -3px 0px #4a5e3a, 
-    inset 3px 3px 0px #0c1209;
-    
-  text-decoration: none;
-  text-align: center;
-}
-
-/* Efecto Hover (Cuando pasas el mouse) */
-.boton-pixel:hover {
-  background-color: #25331c !important;
-  color: #ffffff !important;
-  /* Invierte las sombras para que parezca que se hunde */
-  box-shadow: 
-    inset 3px 3px 0px #4a5e3a, 
-    inset -3px -3px 0px #0c1209;
-}
-
-/* 3. Ajustes específicos para el buscador */
-.buscador-retro {
-  color: #00ff21 !important;
-  border-radius: 8px;
-}
-
-/* 4. Logo retro (El cuadro de la izquierda) */
-.logo-pixel {
-  background-color: #ffffc4;
-  color: #11144c !important;
-  border: 4px solid #000000;
-  padding: 5px 10px;
-  font-weight: bold;
-  font-size: 18px;
-}
-
 
 /* HERO */
 .hero {
   position: relative;
   min-height: 340px;
-  padding: 40px 25px;
+  padding: 50px 25px 40px;
   background: #121535;
   overflow: hidden;
   border-bottom: 20px solid #e91e63;
@@ -87,7 +26,7 @@ body {
 .hero h1 {
   text-align: center;
   color: #fff36d;
-  font-size: 32px;
+  font-size: 50px;
   text-shadow: 4px 4px #111;
 }
 
@@ -100,26 +39,42 @@ body {
 .subtitle {
   text-align: center;
   color: white;
-  font-size: 10px;
+  font-size: 40px;
 }
 
 .about-intro {
   width: 45%;
-  margin-top: 35px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .about-label {
   color: #ff2b9d;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin: 0 0 15px 0;
+  line-height: 1;
+  font-weight: normal;
 }
 
 .about-intro h2 {
   color: #00ff1e;
-  font-size: 18px;
-  line-height: 1.5;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  text-align: left;
+  margin: 0 0 25px 0;
+  text-align: left;
 }
 
 .about-intro p {
-  line-height: 1.8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left;
+  max-width: 350px;
+  margin-bottom: 70px;
 }
 
 .btn-retro {
@@ -137,8 +92,11 @@ body {
 .hearts {
   position: absolute;
   top: 250px;
-  left: 43%;
-  font-size: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: auto;
+  object-fit: contain;
 }
 
 .cloud {
@@ -167,29 +125,39 @@ body {
 /* SECCIONES */
 main {
   background: #121535;
+  padding-bottom: 150px;
 }
 
 .historia,
 .mision-vision,
 .valores {
-  padding: 25px;
+  padding: 50px 80px;
   border-bottom: 4px solid #00ff1e;
 }
 
 h3 {
   color: #00ff1e;
   text-align: center;
-  font-size: 10px;
-  margin-bottom: 20px;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
 }
 
 .arcade-img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  height: auto;
+  object-fit: cover;
   border: 3px solid #ff2b9d;
   box-shadow: 0 0 20px #ff2b9d;
 }
 
 .historia p {
+  font-size: 0.93rem;
   line-height: 1.8;
+  max-width: 720px;
+  margin: 0 auto 25px;
   text-align: center;
 }
 
@@ -197,21 +165,81 @@ h3 {
 .card-retro {
   border: 3px solid #00ff1e;
   border-radius: 10px;
-  padding: 20px;
-  min-height: 220px;
+  padding: 25px 35px;
+  min-height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
   text-align: center;
 }
 
-.icon {
-  font-size: 55px;
+.icon-retro {
+  width: 160px;
+  flex-shrink: 0;
+  margin: 0;
+  filter: drop-shadow(0 0 10px #ff2b9d);
+}
+
+.card-retro div {
+  flex: 1;
 }
 
 .card-retro h4 {
   color: #00ff1e;
-  font-size: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
 
 .card-retro p {
-  line-height: 1.8;
+  line-height: 1.6;
+  font-size: 0.85rem;
+  text-align: center;
 }
 
+/* VALORES */
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  border-radius: 10px;
+  border-top: 3px solid #e91e63;
+  border-bottom: 3px solid #e91e63;
+  border-left: 2px solid #e91e63;
+  border-right: 2px solid #e91e63;
+}
+
+.valor {
+  text-align: center;
+  padding: 15px;
+  border-right: 2px solid #e91e63;
+}
+
+.valor:last-child {
+  border-right: none;
+}
+
+.valor-icon {
+  font-size: 45px;
+}
+
+.valor h5 {
+  color: #00ff1e;
+  font-size: 1rem;
+  margin: 15px 0;
+}
+
+.valor p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* FUENTE RETRO */
+h1,
+h2,
+h3,
+h4,
+h5,
+.btn-retro {
+  font-family: "Press Start 2P", cursive;
+}

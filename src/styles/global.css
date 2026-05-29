@@ -57,3 +57,108 @@
   font-weight: bold;
   font-size: 18px;
 }
+/*AQUI EMPIEZA FOOTER */
+/*lETRAS */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+.font-pixel {
+  font-family: "Press Start 2P", monospace;
+  text-transform: uppercase;
+  color: white;
+}
+.bg-dark-retro {
+  background-color: #000000;
+}
+.bg-green-retro {
+  background-color: #1be628;
+}
+/*Bordes pixelados con patrones*/
+.pixel-border-top {
+  height: 20px;
+  margin-top: -8px;
+  background: repeating-linear-gradient(
+    90deg,
+    #1be628 0px,
+    #1be628 50px,
+    rgb(48, 47, 47) 50px,
+    rgb(48, 47, 47) 51px
+  );
+}
+/*Títulos Principales*/
+.footer-title {
+  font-size: 13px; 
+  font-weight: bold;
+  margin-bottom: 0; 
+  line-height: 1.4;
+}
+/*Enlaces del Footer*/
+.footer-links a {
+  text-decoration: none;
+  font-size: 8px; 
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  transition: color 0.2s ease-in-out;
+  word-break: break-word;
+}
+/* Color de los enlaces en estado normal */
+.font-pixel .footer-links a:hover {
+  color: #1be628 !important; 
+}
+/*Iconos de Redes Sociales*/
+.social-icons a {
+  color: white;
+  font-size: 1.2rem;
+  margin-right: 12px; 
+  transition:
+    transform 0.2s,
+    color 0.2s;
+  display: inline-block;
+}
+.social-icons a:hover {
+  color: #1be628;
+  transform: scale(1.2);
+}
+/*Interactividad y Accesibilidad Móvil*/
+button[data-bs-toggle="collapse"] {
+  outline: none;
+  box-shadow: none;
+}
+.arrow-icon {
+  font-size: 1rem;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+/* Rotación y cambio de color de la flecha al abrir menú */
+button[aria-expanded="true"] .arrow-icon {
+  transform: rotate(180deg);
+  color: #1be628;
+}
+/*Barra de Copyright*/
+.copyright-text {
+  font-size: 8px;
+  line-height: 2;
+  background: repeating-linear-gradient(
+    90deg,
+    #1be628 0px,
+    #1be628 50px,
+    rgb(48, 47, 47) 50px,
+    rgb(48, 47, 47) 51px
+  );
+}
+/*Media Queries (Responsividad)*/
+@media (min-width: 768px) {
+  .collapse.d-md-block {
+    display: block !important;
+    height: auto !important;
+    visibility: visible !important;
+  }
+  .border-md-0 {
+    border-bottom: 0 !important;
+  }
+  .footer-title {
+    margin-bottom: 15px;
+  }
+}
+/* AQUI TERMINA FOOTER */
+  

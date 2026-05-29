@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #121535;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-size: 15px;
+  padding-top: 150px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 340px;
+  padding: 50px 25px 40px;
+  background: #121535;
+  overflow: hidden;
+  border-bottom: 20px solid #e91e63;
+}
+
+.hero h1 {
+  text-align: center;
+  color: #fff36d;
+  font-size: 50px;
+  text-shadow: 4px 4px #111;
+}
+
+.hero h1 span {
+  border: 3px dashed white;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+}
+
+.about-intro {
+  width: 45%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-label {
+  color: #ff2b9d;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin: 0 0 15px 0;
+  line-height: 1;
+  font-weight: normal;
+}
+
+.about-intro h2 {
+  color: #00ff1e;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  text-align: left;
+  margin: 0 0 25px 0;
+  text-align: left;
+}
+
+.about-intro p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: left;
+  max-width: 350px;
+  margin-bottom: 70px;
+}
+
+.btn-retro {
+  position: absolute;
+  top: 185px;
+  left: 43%;
+  background: white;
+  color: #2b2bff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 25px;
+  font-size: 8px;
+}
+
+.hearts {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+.cloud {
+  position: absolute;
+  font-size: 35px;
+}
+
+.cloud1 {
+  top: 70px;
+  left: 20px;
+}
+
+.cloud2 {
+  top: 60px;
+  right: 50px;
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 8px dotted #00ff1e;
+}
+
+/* SECCIONES */
+main {
+  background: #121535;
+  padding-bottom: 150px;
+}
+
+.historia,
+.mision-vision,
+.valores {
+  padding: 50px 80px;
+  border-bottom: 4px solid #00ff1e;
+}
+
+h3 {
+  color: #00ff1e;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+}
+
+.arcade-img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  height: auto;
+  object-fit: cover;
+  border: 3px solid #ff2b9d;
+  box-shadow: 0 0 20px #ff2b9d;
+}
+
+.historia p {
+  font-size: 0.93rem;
+  line-height: 1.8;
+  max-width: 720px;
+  margin: 0 auto 25px;
+  text-align: center;
+}
+
+/* MISION Y VISION */
+.card-retro {
+  border: 3px solid #00ff1e;
+  border-radius: 10px;
+  padding: 25px 35px;
+  min-height: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  text-align: center;
+}
+
+.icon-retro {
+  width: 160px;
+  flex-shrink: 0;
+  margin: 0;
+  filter: drop-shadow(0 0 10px #ff2b9d);
+}
+
+.card-retro div {
+  flex: 1;
+}
+
+.card-retro h4 {
+  color: #00ff1e;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.card-retro p {
+  line-height: 1.6;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* VALORES */
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  border-radius: 10px;
+  border-top: 3px solid #e91e63;
+  border-bottom: 3px solid #e91e63;
+  border-left: 2px solid #e91e63;
+  border-right: 2px solid #e91e63;
+}
+
+.valor {
+  text-align: center;
+  padding: 15px;
+  border-right: 2px solid #e91e63;
+}
+
+.valor:last-child {
+  border-right: none;
+}
+
+.valor-icon {
+  font-size: 45px;
+}
+
+.valor h5 {
+  color: #00ff1e;
+  font-size: 1rem;
+  margin: 15px 0;
+}
+
+.valor p {
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* FUENTE RETRO */
+h1,
+h2,
+h3,
+h4,
+h5,
+.btn-retro {
+  font-family: "Press Start 2P", cursive;
+}

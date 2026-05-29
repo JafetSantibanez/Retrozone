@@ -10,7 +10,11 @@ body {
   color: white;
   font-family: "Orbitron", sans-serif;
   font-size: 15px;
+<<<<<<< HEAD
   padding-top: 150px;
+=======
+  padding-top: 0;
+>>>>>>> origin/dev-Aura
 }
 
 /* HERO */
@@ -131,16 +135,12 @@ main {
 .historia,
 .mision-vision,
 .valores {
+<<<<<<< HEAD
   padding: 50px 80px;
+=======
+  padding: 40px 40px;
+>>>>>>> origin/dev-Aura
   border-bottom: 4px solid #00ff1e;
-}
-
-h3 {
-  color: #00ff1e;
-  text-align: center;
-  font-size: 1.4rem;
-  margin-bottom: 30px;
-  letter-spacing: 3px;
 }
 
 main h3 {
@@ -158,6 +158,32 @@ main h3::after {
   background: #e91e63;
 }
 
+h3 {
+  color: #00ff1e;
+  text-align: center;
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+}
+
+<<<<<<< HEAD
+main h3 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap;
+}
+
+main h3::before,
+main h3::after {
+  content: '';
+  flex: 1;
+  height: 3px;
+  background: #e91e63;
+}
+
+=======
+>>>>>>> origin/dev-Aura
 .arcade-img {
   width: 100%;
   max-width: 450px;
@@ -257,4 +283,8 @@ h4,
 h5,
 .btn-retro {
   font-family: "Press Start 2P", cursive;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/dev-Aura

@@ -4,7 +4,7 @@
 
 /* Configuración general de la barra */
 .mi-navbar-retro {
-  background-color: #1be628 !important; /* El verde brillante de tu imagen */
+  background-color: #1be628 !important;
   font-family: "Press Start 2P", monospace;
   font-size: 12px; /* Las fuentes pixel de Google se ven mejor en tamaños múltiplos de 8 o 12 */
   padding: 10px 20px;
@@ -13,36 +13,32 @@
   align-items: center;
 }
 
-.container-fluid {
-  display: flex;
-
-  align-items: center;
-
-  width: 100%;
-}
-
 /* 2. El truco del botón pixeleado con relieve */
 .boton-pixel {
   color: #1be628 !important;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
+/* esto hace que los botones den la  sensacion de undirse */
+.boton-pixel:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px #161616;
+}
+
+/* esto ajusta el tamaño de la imagene a los botones*/
 .boton-pixel {
   width: 140px;
   height: 60px;
-
-  background-image: url("/botonRetro.jpeg") !important;
+  background-image: url("./botonRetro.jpeg") !important;
   background-size: cover;
 
   /*Bordes rectos imitando curvas de pixeles antiguos */
   border: 4px solid hsla(64, 86%, 52%, 0.781);
   border-radius: 20px; /* Un radio pequeño da la ilusión de escalón pixelado */
 
-  /* Sombra interna para dar el efecto de relieve/cápsula retro */
+  /* Sombra externa en color negro*/
   box-shadow: 3px 3px 0px #161616;
-
   text-decoration: none;
   text-align: center;
 }
@@ -52,13 +48,12 @@
   background-color: #25331c !important;
   color: #1be628 !important;
   /* Invierte las sombras para que parezca que se hunde */
-
   box-shadow: 3px 3px 0px #161616;
+
+  border-color: #ededa9;
+  cursor: pointer;
 }
 
-/* 3. Ajustes específicos para el buscador */
-
-/* 4. Logo retro (El cuadro de la izquierda) */
 /* Esto va a obligar al grupo de 4 botones a separarse del logo */
 .enlaces-retro {
   display: flex;
@@ -68,13 +63,12 @@
   margin-right: auto !important; /* Esto empuja al carrito y buscador todo a la derecha */
 
   /*Bordes rectos imitando curvas de pixeles antiguos */
-  /* border: 4px solid #bff10cc0; */
   border-radius: 20px; /* Un radio pequeño da la ilusión de escalón pixelado */
-
   text-decoration: none;
   text-align: center;
 }
 
+/* buscador y carrito de nadvar*/
 .derecha-navbar {
   display: flex;
   align-items: center;
@@ -86,45 +80,49 @@
 /* CARRITO */
 .carrito-retro {
   width: 60px;
-
   height: 60px;
-
   background-image: url("/carritoRetro.jpeg");
-
   background-size: 35px;
-
   background-repeat: no-repeat;
-
   background-position: center;
-
   border: 4px solid #000000;
-
   border-radius: 12px;
-
   background-color: #ffffc4;
-
   box-shadow: 3px 3px 0px #161616;
-
   flex-shrink: 0;
 }
 
-/* 3. Ajustes específicos para el buscador */
+.carrito-retro:active {
+  transform: translate(1px, 1px);
+  box-shadow: 2px 2px 0px #161616;
+  border-color: #ededa9;
+  cursor: pointer;
+}
+
+/*  Ajustes específicos para el buscador */
 .buscador-retro {
-  color: #1be628 !important;
   border-radius: 20px;
 }
 
 /* 4. Logo retro (El cuadro de la izquierda) */
 .logo-pixel {
-  background-image: url("/public/logoRetro.jpeg");
-  background-size: auto;
+  width: 60px; /* Ancho del cuadro */
+  height: 60px;
+  background-image: url("logoRetro.jpeg");
+  background-size: contain; /* Escala la imagen para que quepa entera */
+  background-repeat: no-repeat; /* Evita que la imagen se duplique en mosaico */
+  background-position: center;
+  image-rendering: pixelated;
+  flex-shrink: 0;
+  border-color: #ededa9;
+  cursor: pointer;
 }
+
 /* Esto va a obligar al grupo de 4 botones a separarse del logo */
 .enlaces-retro {
   display: flex;
   align-items: center;
   gap: 15px;
-
   display: flex;
   align-items: center;
   gap: 15px;

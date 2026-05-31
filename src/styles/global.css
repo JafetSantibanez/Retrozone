@@ -58,21 +58,24 @@
   font-size: 18px;
 }
 /*AQUI EMPIEZA FOOTER */
-/*lETRAS */
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
-.font-pixel {
-  font-family: "Press Start 2P", monospace;
-  text-transform: uppercase;
-  color: white;
+
+/* El escudo protector: SOLO aplica la fuente pixel a lo que esté dentro del footer */
+.retro-footer-block {
+  font-family: "Press Start 2P", monospace !important;
+  text-transform: uppercase !important;
 }
+
 .bg-dark-retro {
-  background-color: #000000;
+  background-color: #000000 !important;
 }
+
 .bg-green-retro {
-  background-color: #1be628;
+  background-color: #1be628 !important;
 }
+
 /*Bordes pixelados con patrones*/
-.pixel-border-top {
+.retro-footer-block .pixel-border-top {
   height: 20px;
   margin-top: -8px;
   background: repeating-linear-gradient(
@@ -83,60 +86,62 @@
     rgb(48, 47, 47) 51px
   );
 }
+
 /*Títulos Principales*/
-.footer-title {
-  font-size: 13px; 
-  font-weight: bold;
-  margin-bottom: 0; 
+.retro-footer-block .footer-title {
+  font-size: 13px !important; 
+  font-weight: bold !important;
   line-height: 1.4;
 }
-/*Enlaces del Footer*/
-.footer-links a {
-  text-decoration: none;
-  font-size: 8px; 
+
+/*Enlaces del Footer (Forzamos a que sean blancos heredados de Bootstrap) */
+.retro-footer-block .footer-links a {
+  text-decoration: none !important;
+  font-size: 8px !important; 
   display: block;
   margin-bottom: 10px;
   line-height: 1.6;
   transition: color 0.2s ease-in-out;
   word-break: break-word;
 }
-/* Color de los enlaces en estado normal */
-.font-pixel .footer-links a:hover {
+
+/* Color de los enlaces al pasar el mouse */
+.retro-footer-block .footer-links a:hover {
   color: #1be628 !important; 
 }
+
 /*Iconos de Redes Sociales*/
-.social-icons a {
-  color: white;
-  font-size: 1.2rem;
+.retro-footer-block .social-icons a {
+  font-size: 1.2rem !important;
   margin-right: 12px; 
-  transition:
-    transform 0.2s,
-    color 0.2s;
+  transition: transform 0.2s, color 0.2s;
   display: inline-block;
 }
-.social-icons a:hover {
-  color: #1be628;
+
+.retro-footer-block .social-icons a:hover {
+  color: #1be628 !important;
   transform: scale(1.2);
 }
+
 /*Interactividad y Accesibilidad Móvil*/
-button[data-bs-toggle="collapse"] {
+.retro-footer-block button[data-bs-toggle="collapse"] {
   outline: none;
   box-shadow: none;
 }
-.arrow-icon {
+
+.retro-footer-block .arrow-icon {
   font-size: 1rem;
-  transition:
-    transform 0.3s ease,
-    color 0.3s ease;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
-/* Rotación y cambio de color de la flecha al abrir menú */
-button[aria-expanded="true"] .arrow-icon {
+
+.retro-footer-block button[aria-expanded="true"] .arrow-icon {
   transform: rotate(180deg);
   color: #1be628;
 }
+
 /*Barra de Copyright*/
-.copyright-text {
-  font-size: 8px;
+.retro-footer-block .copyright-text {
+  font-size: 8px !important;
   line-height: 2;
   background: repeating-linear-gradient(
     90deg,
@@ -146,18 +151,19 @@ button[aria-expanded="true"] .arrow-icon {
     rgb(48, 47, 47) 51px
   );
 }
+
 /*Media Queries (Responsividad)*/
 @media (min-width: 768px) {
-  .collapse.d-md-block {
+  .retro-footer-block .collapse.d-md-block {
     display: block !important;
     height: auto !important;
     visibility: visible !important;
   }
-  .border-md-0 {
+  .retro-footer-block .border-md-0 {
     border-bottom: 0 !important;
   }
-  .footer-title {
-    margin-bottom: 15px;
+  .retro-footer-block .footer-title {
+    margin-bottom: 15px !important;
   }
 }
 /* AQUI TERMINA FOOTER */

@@ -9,3 +9,24 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Esta función sirve para cargar el Footer en las páginas
+document.addEventListener("DOMContentLoaded", () => {
+    cargarFooter();
+});
+
+function cargarFooter() {
+    fetch('../../components/Footer.html')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("No se pudo cargar el footer");
+            }
+            return response.text();
+        })
+        .then(html => {
+             document.getElementById('footer-container').innerHTML = html;
+        })
+        .catch(error => {
+            console.error("Error al cargar el componente:", error);
+        });
+}

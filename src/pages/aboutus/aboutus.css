@@ -126,6 +126,8 @@ body {
 main {
   background: #121535;
   padding-bottom: 20px;
+  color: white;   /* ← agregar esto */
+
 }
 
 .historia,
@@ -284,13 +286,15 @@ h5,
 
 .team-avatar img {
   height: 360px;
+  width: 360px;        /* ← cambio de Andriy */
+  object-position: center;   /* ← cambio de Andriy 2 */
   object-fit: cover;
   border-radius: 10px;
 }
 
 .team .team-content {
     position: absolute;
-    bottom: 25px;
+    bottom: 0px; /* Cambio Andriy 5 */
     margin: 0 20px;
     left: 0;
     right: 0;
@@ -325,7 +329,7 @@ h5,
 }
 
 .team:hover .team-content-inner {
-    background-color: #1C2B24
+    background-color: #1C2B24;
     color: #fbff00;
     padding: 20px 20px 90px;
 }
@@ -362,6 +366,8 @@ h5,
 .team-content-inner .team-info .avatar-name {
     margin-bottom: 0;
     font-weight: 600;
+    color: #00ff1e;   /* ← Cambio Andriy 3 */
+    text-decoration: none;  /* Cambio Andriy 4 */
 }
 
 .team-content-inner .team-info .team-position {
@@ -414,7 +420,6 @@ h5,
 .social a.text-muted:hover {
     color: #009b72 !important;
 }
-
 
 .nav {
     display: -webkit-box;

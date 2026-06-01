@@ -711,10 +711,11 @@ h5,
   }
 
   .team-avatar img {
-    width: 100%;
+    width: 70%;
     height: 100%;
     object-fit: cover;
     object-position: center top;
+    transform: translateY(-10px);
   }
 
   .historia h3,

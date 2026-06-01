@@ -10,11 +10,7 @@ body {
   color: white;
   font-family: "Orbitron", sans-serif;
   font-size: 15px;
-<<<<<<< HEAD
-  padding-top: 150px;
-=======
   padding-top: 0;
->>>>>>> origin/dev-Aura
 }
 
 /* HERO */
@@ -59,7 +55,7 @@ body {
   font-family: "Press Start 2P", cursive;
   font-size: 1.5rem;
   letter-spacing: 2px;
-  margin: 0 0 15px 0;
+  margin: 0 0 45px 0;
   line-height: 1;
   font-weight: normal;
 }
@@ -130,32 +126,16 @@ body {
 main {
   background: #121535;
   padding-bottom: 150px;
+  color: white;   /* ← agregar esto */
+
 }
 
 .historia,
 .mision-vision,
-.valores {
-<<<<<<< HEAD
+.valores,
+.conocenos {
   padding: 50px 80px;
-=======
-  padding: 40px 40px;
->>>>>>> origin/dev-Aura
   border-bottom: 4px solid #00ff1e;
-}
-
-main h3 {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  white-space: nowrap;
-}
-
-main h3::before,
-main h3::after {
-  content: '';
-  flex: 1;
-  height: 3px;
-  background: #e91e63;
 }
 
 h3 {
@@ -166,24 +146,27 @@ h3 {
   letter-spacing: 3px;
 }
 
-<<<<<<< HEAD
-main h3 {
+.historia h3,
+.valores h3,
+.conocenos h3 {
   display: flex;
   align-items: center;
   gap: 20px;
   white-space: nowrap;
 }
 
-main h3::before,
-main h3::after {
+.historia h3::before,
+.historia h3::after,
+.valores h3::before,
+.valores h3::after,
+.conocenos h3::before,
+.conocenos h3::after {
   content: '';
   flex: 1;
   height: 3px;
   background: #e91e63;
 }
 
-=======
->>>>>>> origin/dev-Aura
 .arcade-img {
   width: 100%;
   max-width: 450px;
@@ -195,7 +178,7 @@ main h3::after {
 }
 
 .historia p {
-  font-size: 0.93rem;
+  font-size: 0.85rem;
   line-height: 1.8;
   max-width: 720px;
   margin: 0 auto 25px;
@@ -207,7 +190,7 @@ main h3::after {
   border: 3px solid #00ff1e;
   border-radius: 10px;
   padding: 25px 35px;
-  min-height: 230px;
+  min-height: 310px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -228,7 +211,7 @@ main h3::after {
 
 .card-retro h4 {
   color: #00ff1e;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 20px;
 }
 
@@ -272,7 +255,7 @@ main h3::after {
 
 .valor p {
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 
 /* FUENTE RETRO */
@@ -283,8 +266,274 @@ h4,
 h5,
 .btn-retro {
   font-family: "Press Start 2P", cursive;
-<<<<<<< HEAD
 }
-=======
+
+.subtitulo-equipo {
+    color: #ff2b9d;
+    font-size: 1rem;
+    font-family: "Press Start 2P", cursive;
+    text-align: center;
 }
->>>>>>> origin/dev-Aura
+
+
+/*CARD TEAM */
+
+
+.team {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.team-avatar img {
+  height: 360px;
+  width: 360px;        /* ← cambio de Andriy */
+  object-position: center;   /* ← cambio de Andriy 2 */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.team .team-content {
+    position: absolute;
+    bottom: 0px; /* Cambio Andriy 5 */
+    margin: 0 20px;
+    left: 0;
+    right: 0;
+}
+
+.team .team-content-inner {
+    background-color:  hsl(164, 21%, 14%);
+    padding: 20px 20px;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.team .team-content-inner .team-social {
+    margin-left: auto;
+}
+
+.team .team-content-inner .team-social .nav .nav-link {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.team .team-content-inner .team-contact {
+    opacity: 0;
+    position: absolute;
+    bottom: 0px;
+    left: 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.team:hover .team-content-inner {
+    background-color: #1C2B24;
+    color: #fbff00;
+    padding: 20px 20px 90px;
+}
+
+.team:hover .team-content-inner .team-info .team-position {
+    color: #00ff1e;
+}
+
+.team:hover .team-content-inner .team-contact {
+    opacity: 1;
+    bottom: 20px;
+}
+
+.team:hover .team-content-inner .team-contact .nav .nav-link {
+    color: #eeff00;
+}
+
+.team:hover .team-content-inner .team-contact .nav .nav-link:hover {
+    color: #ffff00;
+}
+
+.team:hover .team-content-inner .team-social .nav .nav-link {
+    color: #ffffff;
+}
+
+.team:hover .team-content-inner .team-social .nav .nav-link:hover {
+    color: #000000;
+}
+
+.team:hover .team-info .avatar-name {
+    color: #00ff1e;
+}
+
+.team-content-inner .team-info .avatar-name {
+    margin-bottom: 0;
+    font-weight: 600;
+    color: #00ff1e;   /* ← Cambio Andriy 3 */
+    text-decoration: none;  /* Cambio Andriy 4 */
+}
+
+.team-content-inner .team-info .team-position {
+    color: #00ff1e;
+
+}
+
+.team-02 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.team-02 .team-avatar {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 50%;
+    flex: 0 50%;
+}
+
+.team-02 .team-content {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 50%;
+    flex: 0 50%;
+}
+
+.team-02 .team-content-inner {
+    padding: 0px;
+}
+
+.team-02 .team-content-inner .team-contact {
+    margin-top: 20px;
+}
+
+.team-02 .team-content-inner .team-contact .nav .nav-link {
+    color: #ffffff;
+    padding: 5px;
+}
+
+.team-02 .team-content-inner .team-contact .nav .nav-link:hover {
+    color: #009b72;
+}
+
+.team-02 .team-content-inner .team-desc {
+    color: #2d3037;
+}
+
+.social a.text-muted:hover {
+    color: #009b72 !important;
+}
+
+@media (max-width: 575.98px) {
+    .team .team-content {
+        margin: 0 15px;
+    }
+}
+.nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+
+/* RESPONSIVE TABLET */
+@media (max-width: 992px) {
+  body {
+    padding-top: 0;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .subtitle {
+    font-size: 25px;
+  }
+
+  .about-intro {
+    width: 70%;
+  }
+
+  .card-retro {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .valores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* RESPONSIVE CELULAR */
+@media (max-width: 576px) {
+  body {
+    padding-top: 0;
+  }
+
+  .hero {
+    padding: 35px 20px;
+    min-height: auto;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .about-intro {
+    width: 100%;
+  }
+
+  .about-label {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .about-intro h2 {
+    font-size: 1.2rem;
+  }
+
+  .btn-retro,
+  .hearts {
+    position: static;
+    transform: none;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .historia,
+  .mision-vision,
+  .valores,
+  .conocenos {
+    padding: 35px 20px;
+  }
+
+  main h3 {
+    font-size: 1rem;
+    gap: 10px;
+  }
+
+  .valores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-retro {
+    flex-direction: column;
+    min-height: auto;
+    padding: 25px 20px;
+  }
+
+  .icon-retro {
+    width: 120px;
+  }
+
+  .team {
+    margin-bottom: 25px;
+  }
+}

@@ -1,16 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap");
 
-* {
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
   background: #121535;
-  color: white;
+  color: white !important;
   font-family: "Orbitron", sans-serif;
   font-size: 15px;
-  padding-top: 150px;
+  padding-top: 0;
 }
 
 /* HERO */
@@ -55,7 +55,7 @@ body {
   font-family: "Press Start 2P", cursive;
   font-size: 1.5rem;
   letter-spacing: 2px;
-  margin: 0 0 15px 0;
+  margin: 0 0 45px 0;
   line-height: 1;
   font-weight: normal;
 }
@@ -125,12 +125,14 @@ body {
 /* SECCIONES */
 main {
   background: #121535;
-  padding-bottom: 150px;
+  padding-bottom: 20px;
+  color: white;
 }
 
 .historia,
 .mision-vision,
-.valores {
+.valores,
+.conocenos {
   padding: 50px 80px;
   border-bottom: 4px solid #00ff1e;
 }
@@ -143,16 +145,22 @@ h3 {
   letter-spacing: 3px;
 }
 
-main h3 {
+.historia h3,
+.valores h3,
+.conocenos h3 {
   display: flex;
   align-items: center;
   gap: 20px;
   white-space: nowrap;
 }
 
-main h3::before,
-main h3::after {
-  content: '';
+.historia h3::before,
+.historia h3::after,
+.valores h3::before,
+.valores h3::after,
+.conocenos h3::before,
+.conocenos h3::after {
+  content: "";
   flex: 1;
   height: 3px;
   background: #e91e63;
@@ -169,7 +177,7 @@ main h3::after {
 }
 
 .historia p {
-  font-size: 0.93rem;
+  font-size: 0.85rem;
   line-height: 1.8;
   max-width: 720px;
   margin: 0 auto 25px;
@@ -181,7 +189,7 @@ main h3::after {
   border: 3px solid #00ff1e;
   border-radius: 10px;
   padding: 25px 35px;
-  min-height: 230px;
+  min-height: 310px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,7 +210,7 @@ main h3::after {
 
 .card-retro h4 {
   color: #00ff1e;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 20px;
 }
 
@@ -246,7 +254,7 @@ main h3::after {
 
 .valor p {
   line-height: 1.6;
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
 
 /* FUENTE RETRO */
@@ -256,5 +264,502 @@ h3,
 h4,
 h5,
 .btn-retro {
+  font-family: "Press Start 2P", cursive !important;
+}
+
+.conocenos .row {
+  row-gap: 35px;
+}
+
+.subtitulo-equipo {
+  color: #ff2b9d;
+  font-size: 1rem;
   font-family: "Press Start 2P", cursive;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/*CARD TEAM */
+
+.team {
+  position: relative;
+  margin-bottom: 60px;
+  height: 420px;
+  width: 405px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #142b20;
+  box-shadow: 0 0 15px rgba(0, 255, 30, 0.25);
+}
+
+.team-avatar {
+  width: 100%;
+  height: 100%;
+}
+
+.team-avatar img {
+  height: 100%;
+  width: 100%;
+  object-position: center 15%; /* ← cambio de Andriy 2 */
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.avatar-name {
+  color: #ffffff;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.8rem;
+  text-decoration: none;
+  line-height: 1.3;
+}
+
+.team-position {
+  color: #00ff1e;
+  font-size: 1rem;
+}
+
+.team .team-content {
+  position: absolute;
+  bottom: 0; /* Cambio Andriy 5 */
+  margin: 0 20px;
+  left: 0;
+  right: 0;
+}
+
+.team .team-content-inner {
+  background-color: hsl(164, 21%, 14%);
+  padding: 10px 12px;
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.team .team-content-inner .team-social {
+  margin-left: auto;
+}
+
+.team .team-content-inner .team-social .nav .nav-link {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.team .team-content-inner .team-contact {
+  opacity: 0;
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.team:hover .team-content-inner {
+  background-color: #1c2b24;
+  color: #fbff00;
+  padding: 20px 20px 90px;
+}
+
+.team:hover .team-content-inner .team-info .team-position {
+  color: #00ff1e;
+}
+
+.team:hover .team-content-inner .team-contact {
+  opacity: 1;
+  bottom: 20px;
+}
+
+.team:hover .team-content-inner .team-contact .nav .nav-link {
+  color: #eeff00;
+}
+
+.team:hover .team-content-inner .team-contact .nav .nav-link:hover {
+  color: #ffff00;
+}
+
+.team:hover .team-content-inner .team-social .nav .nav-link {
+  color: #ffffff;
+}
+
+.team:hover .team-content-inner .team-social .nav .nav-link:hover {
+  color: #000000;
+}
+
+.team:hover .team-info .avatar-name {
+  color: #00ff1e;
+}
+
+.team-content-inner .team-info .avatar-name {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: #00ff1e; /* ← Cambio Andriy 3 */
+  text-decoration: none; /* Cambio Andriy 4 */
+}
+
+.team-content-inner .team-info .team-position {
+  color: #00ff1e;
+}
+
+.social a.text-muted:hover {
+  color: #009b72 !important;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 992px) {
+  body {
+    padding-top: 0;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 35px 30px 55px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 35px;
+  }
+
+  .subtitle {
+    font-size: 25px;
+  }
+
+  .about-intro {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .about-label {
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+  }
+
+  .about-intro h2 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  .about-intro p {
+    font-size: 0.85rem;
+    max-width: 650px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .btn-retro {
+    position: static;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .hearts {
+    position: static;
+    transform: none;
+    display: block;
+    margin: 25px auto 0;
+    width: 200px;
+  }
+
+  .historia,
+  .mision-vision,
+  .valores,
+  .conocenos {
+    padding: 45px 35px;
+  }
+
+  .historia h3,
+  .valores h3,
+  .conocenos h3 {
+    font-size: 1.1rem;
+    gap: 15px;
+  }
+
+  .arcade-img {
+    max-width: 420px;
+    margin: 0 auto 30px;
+    display: block;
+  }
+
+  .historia p {
+    max-width: 720px;
+    font-size: 0.85rem;
+    line-height: 1.8;
+    margin: 0 auto 25px;
+  }
+
+  .historia .row {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .historia .col-md-5,
+  .historia .col-md-7 {
+    width: 100%;
+  }
+
+  .historia img {
+    margin-bottom: 25px;
+  }
+
+  .card-retro {
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 410px;
+    padding: 25px 22px;
+    gap: 22px;
+    text-align: center;
+  }
+
+  .icon-retro {
+    width: 130px;
+  }
+
+  .card-retro h4 {
+    font-size: 1rem;
+  }
+
+  .card-retro p {
+    font-size: 0.78rem;
+  }
+
+  .valores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .valor {
+    border-bottom: 2px solid #e91e63;
+  }
+
+  .valor:nth-child(2),
+  .valor:nth-child(4) {
+    border-right: none;
+  }
+
+  .valor:last-child {
+    grid-column: 1 / -1;
+    border-bottom: none;
+  }
+
+  .team {
+    height: 300px;
+  }
+
+  .team-content-inner {
+    padding: 15px;
+  }
+
+  .avatar-name {
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+
+  .team-position {
+    font-size: 0.65rem;
+  }
+
+  .conocenos .col-lg-4 {
+    margin-bottom: 25px;
+  }
+
+  .subtitulo-equipo {
+    font-size: 0.85rem;
+  }
+} /* CIERRA EL MEDIA QUERY DE TABLET */
+
+/* RESPONSIVE CELULAR */
+
+@media (max-width: 576px) {
+  .team {
+    height: 330px;
+  }
+
+  .team .team-content {
+    margin: 0 15px;
+  }
+
+  body {
+    padding-top: 0;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 35px 18px 60px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .about-intro {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-label,
+  .about-intro h2,
+  .about-intro p {
+    text-align: center;
+  }
+
+  .about-intro h2 {
+    font-size: 1rem;
+  }
+
+  .about-intro p {
+    max-width: 100%;
+    font-size: 0.75rem;
+    margin-bottom: 25px;
+  }
+
+  .btn-retro,
+  .hearts {
+    position: static;
+    transform: none;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .hearts {
+    width: 180px;
+  }
+
+  .historia,
+  .mision-vision,
+  .valores,
+  .conocenos {
+    padding: 30px 15px;
+  }
+
+  .historia p {
+    font-size: 0.75rem;
+  }
+
+  .historia .row {
+    gap: 25px;
+  }
+
+  .arcade-img {
+    max-width: 100%;
+  }
+
+  .card-retro {
+    flex-direction: column;
+    min-height: auto;
+    padding: 25px 18px;
+    gap: 20px;
+  }
+
+  .icon-retro {
+    width: 120px;
+  }
+
+  .card-retro h4 {
+    color: #00ff1e;
+    font-size: 0.85rem;
+  }
+
+  .card-retro p {
+    font-size: 0.75rem;
+    text-align: center;
+  }
+
+  .valores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .valor h5 {
+    color: #00ff1e;
+    font-size: 0.85rem;
+  }
+
+  .valor p {
+    font-size: 0.75rem;
+  }
+
+  .valor {
+    border-right: none;
+    border-bottom: 2px solid #e91e63;
+  }
+
+  .valor:last-child {
+    border-bottom: none;
+  }
+
+  .team {
+    height: 320px;
+    max-width: 320px;
+    margin: 0 auto 25px;
+  }
+
+  .team-avatar {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+
+  .team-avatar img {
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transform: translateY(-10px);
+  }
+
+  .historia h3,
+  .valores h3,
+  .conocenos h3 {
+    white-space: normal;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    gap: 12px;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .historia h3::before,
+  .historia h3::after,
+  .valores h3::before,
+  .valores h3::after,
+  .conocenos h3::before,
+  .conocenos h3::after {
+    content: "";
+    flex: none;
+    width: 150px;
+    height: 3px;
+    background: #e91e63;
+  }
+
+  .avatar-name {
+    font-size: 0.8rem;
+  }
+
+  .team-position {
+    font-size: 0.75rem;
+  }
+
+  .team-content {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+  }
+
+  .team-content-inner {
+    padding: 10px;
+  }
 }

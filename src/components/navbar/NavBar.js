@@ -1,6 +1,6 @@
 // Importación del HTML 
 import navHtml from "./NavBar.html?raw";
-import "../styles/global.css";
+import "../../styles/global.css";
 
 // Función para renderizar
 export function renderNavBar() {

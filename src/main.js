@@ -1,4 +1,4 @@
-import { renderNavBar } from "./components/NavBar.js";
+import { renderNavBar } from "./components/navbar/NavBar.js";
 
 // Selecciona el contenedor <div id="app"></div> de tu index.html
 const app = document.querySelector("#app");

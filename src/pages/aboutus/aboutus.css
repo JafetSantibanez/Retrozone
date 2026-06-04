@@ -405,6 +405,21 @@ h5,
   color: #009b72 !important;
 }
 
+.git {
+	width: 28px;
+	height: 28px;
+	margin-top: 10px;
+	transition: 0.3s;
+}
+
+.git:hover {
+	transform: scale(1.15);
+}
+
+.github-link {
+	display: inline-block;
+}
+
 /* RESPONSIVE TABLET */
 @media (max-width: 992px) {
   body {

@@ -1,20 +1,12 @@
+<!--De acuerdo a documentación, quitamos el cuerpo de HTML ya que, la función al jalar el html puro, encuentra un error si lo dejaba completo-->
 <nav class="navbar navbar-expand-lg mi-navbar-retro">
   <div class="container-fluid">
-    <a class="navbar-brand logo-pixel" href="#"></a>
-
-    <!---Codigo del nadvar -->
-    <div class="navbar-nav enlaces-retro">
-      <a class="nav-link boton-pixel" href="#">Inicio</a>
-      <a class="nav-link boton-pixel" href="#">Juegos </a>
-      <a class="nav-link boton-pixel" href="#">Consolas</a>
-      <a class="nav-link boton-pixel" href="#">Perfil</a>
-    </div>
-
-    <!-----------carrito y buscador del Navdar-------------->
-    <div class="derecha-navbar">
-      <a href="carritoRetro" class="carrito-retro" aria-label="Ver carrito"></a>
-
-      <form class="d-flex gap-2" role="search">
+   
+    <a class="logo-pixel" href="/index.html"></a> <!--Picarle al logo te manda a index.html-->
+    
+    <div class="derecha-navbar d-flex align-items-center order-lg-last">
+      <a href="#" class="carrito-retro" aria-label="Ver carrito"></a>
+      <form class="d-none d-lg-flex d-flex gap-2 formulario-busqueda-retro" role="search">
         <input
           class="form-control buscador-retro input-busqueda"
           type="search"
@@ -23,7 +15,23 @@
         <button class="btn boton-pixel buscador-retro" type="submit">
           Buscar
         </button>
-      </form>
+      </form>   
+      <!--Esta parte corresponde a el responsive al menú de hamburguesa-->
+      <button id="boton-menu" class="boton-hamburguesa-retro" aria-label="Abrir menú">
+        <span class="linea-retro"></span>
+        <span class="linea-retro"></span>
+        <span class="linea-retro"></span>
+      </button>
+    </div>
+    <!--Corresponde a los botones de navegación, su ID nos ayuda con el responsive-->
+    <div id="menu-desplegable" class="collapse navbar-collapse">
+      <div class="navbar-nav enlaces-retro">
+        <a class="nav-link boton-pixel" href="#">Home</a>
+        <a class="nav-link boton-pixel" href="#">Juegos </a>
+        <a class="nav-link boton-pixel" href="#">Consolas</a>
+        <a class="nav-link boton-pixel" href="/src/pages/aboutus/aboutus.html">Sobre Nosotros</a>
+      </div>
     </div>
   </div>
 </nav>
+<script type="module" src="/src/components/NavBar.js"></script>

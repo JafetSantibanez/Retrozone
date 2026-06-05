@@ -1,0 +1,90 @@
+body{
+    background-color: #16184B;
+}
+
+/* Contenedor */
+.contactanos-container{
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Título */
+.contact-title{
+    text-align: center;
+    color: #39FF14;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Inputs Bootstrap */
+.form-control{
+    background-color: #F3F3E6 !important;
+    border: none !important;
+    border-radius: 25px !important;
+    color: #16184B !important;
+}
+
+
+/* Focus */
+.form-control:focus{
+    background-color: #F3F3E6 !important;
+
+    border-color: #39FF14 !important;
+
+    box-shadow: 0 0 10px rgba(57,255,20,.5) !important;
+}
+
+/* Labels */
+.form-floating label{
+    color: #000000 !important;
+    font-weight: 500;
+}
+
+/* Textarea */
+#floatingTextarea2{
+    min-height: 180px !important;
+    border-radius: 25px !important;
+}
+
+.form-floating > label::after {
+    background-color: #F3F3E6 !important;
+}
+
+/* Botón */
+.btn-primary{
+    background-color: #39FF14 !important;
+    border: none !important;
+
+    color: #16184B !important;
+    font-weight: bold;
+
+    border-radius: 25px !important;
+
+    padding: 12px;
+
+    transition: .3s;
+}
+
+/* Hover */
+.btn-primary:hover{
+    background-color: #4BFF29 !important;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 0 15px rgba(57,255,20,.7);
+}
+
+/* Responsive */
+@media (max-width: 768px){
+
+    .contactanos-container{
+        padding: 15px;
+    }
+
+    .contact-title{
+        font-size: 1.4rem;
+    }
+
+}

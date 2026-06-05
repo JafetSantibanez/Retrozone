@@ -279,7 +279,7 @@ h5,
   margin-bottom: 40px;
 }
 
-/*CARD TEAM */
+/*-----------CARDS del TEAM --------------*/
 
 .team {
   position: relative;
@@ -357,7 +357,7 @@ h5,
 
 .team:hover .team-content-inner {
   background-color: #1c2b24;
-  color: #fbff00;
+  color: #00ff1e;  /*Cambio de color */
   padding: 20px 20px 90px;
 }
 

@@ -1,157 +1,157 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap");
 
-*, *::before, *::after {
-  box-sizing: border-box;
+* {
+	box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  background: #121535;
-  color: white !important;
-  font-family: "Orbitron", sans-serif;
-  font-size: 15px;
-  padding-top: 0;
+	margin: 0;
+	background: #121535;
+	color: white;
+	font-family: "Orbitron", sans-serif;
+	font-size: 15px;
+	padding-top: 0;
 }
 
 /* HERO */
 .hero {
-  position: relative;
-  min-height: 340px;
-  padding: 50px 25px 40px;
-  background: #121535;
-  overflow: hidden;
-  border-bottom: 20px solid #e91e63;
+	position: relative;
+	min-height: 340px;
+	padding: 50px 25px 40px;
+	background: #121535;
+	overflow: hidden;
+	border-bottom: 20px solid #e91e63;
 }
 
 .hero h1 {
-  text-align: center;
-  color: #fff36d;
-  font-size: 50px;
-  text-shadow: 4px 4px #111;
+	text-align: center;
+	color: #fff36d;
+	font-size: 50px;
+	text-shadow: 4px 4px #111;
 }
 
 .hero h1 span {
-  border: 3px dashed white;
-  padding: 5px;
-  margin-right: 5px;
+	border: 3px dashed white;
+	padding: 5px;
+	margin-right: 5px;
 }
 
 .subtitle {
-  text-align: center;
-  color: white;
-  font-size: 40px;
+	text-align: center;
+	color: white;
+	font-size: 40px;
 }
 
 .about-intro {
-  width: 45%;
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+	width: 45%;
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 
 .about-label {
-  color: #ff2b9d;
-  font-family: "Press Start 2P", cursive;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-  margin: 0 0 45px 0;
-  line-height: 1;
-  font-weight: normal;
+	color: #ff2b9d;
+	font-family: "Press Start 2P", cursive;
+	font-size: 1.5rem;
+	letter-spacing: 2px;
+	margin: 0 0 45px 0;
+	line-height: 1;
+	font-weight: normal;
 }
 
 .about-intro h2 {
-  color: #00ff1e;
-  font-size: 1.8rem;
-  line-height: 1.2;
-  text-align: left;
-  margin: 0 0 25px 0;
-  text-align: left;
+	color: #00ff1e;
+	font-size: 1.8rem;
+	line-height: 1.2;
+	text-align: left;
+	margin: 0 0 25px 0;
+	text-align: left;
 }
 
 .about-intro p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  text-align: left;
-  max-width: 350px;
-  margin-bottom: 70px;
+	font-size: 0.95rem;
+	line-height: 1.5;
+	text-align: left;
+	max-width: 350px;
+	margin-bottom: 70px;
 }
 
 .btn-retro {
-  position: absolute;
-  top: 185px;
-  left: 43%;
-  background: white;
-  color: #2b2bff;
-  border: none;
-  border-radius: 20px;
-  padding: 8px 25px;
-  font-size: 8px;
+	position: absolute;
+	top: 185px;
+	left: 43%;
+	background: white;
+	color: #2b2bff;
+	border: none;
+	border-radius: 20px;
+	padding: 8px 25px;
+	font-size: 8px;
 }
 
 .hearts {
-  position: absolute;
-  top: 250px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 300px;
-  height: auto;
-  object-fit: contain;
+	position: absolute;
+	top: 250px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 300px;
+	height: auto;
+	object-fit: contain;
 }
 
 .cloud {
-  position: absolute;
-  font-size: 35px;
+	position: absolute;
+	font-size: 35px;
 }
 
 .cloud1 {
-  top: 70px;
-  left: 20px;
+	top: 70px;
+	left: 20px;
 }
 
 .cloud2 {
-  top: 60px;
-  right: 50px;
+	top: 60px;
+	right: 50px;
 }
 
 .ground {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  border-bottom: 8px dotted #00ff1e;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	border-bottom: 8px dotted #00ff1e;
 }
 
 /* SECCIONES */
 main {
-  background: #121535;
-  padding-bottom: 20px;
-  color: white;
+	background: #121535;
+	padding-bottom: 20px;
+	color: white;
 }
 
 .historia,
 .mision-vision,
 .valores,
 .conocenos {
-  padding: 50px 80px;
-  border-bottom: 4px solid #00ff1e;
+	padding: 50px 80px;
+	border-bottom: 4px solid #00ff1e;
 }
 
 h3 {
-  color: #00ff1e;
-  text-align: center;
-  font-size: 1.4rem;
-  margin-bottom: 30px;
-  letter-spacing: 3px;
+	color: #00ff1e;
+	text-align: center;
+	font-size: 1.4rem;
+	margin-bottom: 30px;
+	letter-spacing: 3px;
 }
 
 .historia h3,
 .valores h3,
 .conocenos h3 {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  white-space: nowrap;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	white-space: nowrap;
 }
 
 .historia h3::before,
@@ -160,101 +160,101 @@ h3 {
 .valores h3::after,
 .conocenos h3::before,
 .conocenos h3::after {
-  content: "";
-  flex: 1;
-  height: 3px;
-  background: #e91e63;
+	content: "";
+	flex: 1;
+	height: 3px;
+	background: #e91e63;
 }
 
 .arcade-img {
-  width: 100%;
-  max-width: 450px;
-  border-radius: 10px;
-  height: auto;
-  object-fit: cover;
-  border: 3px solid #ff2b9d;
-  box-shadow: 0 0 20px #ff2b9d;
+	width: 100%;
+	max-width: 450px;
+	border-radius: 10px;
+	height: auto;
+	object-fit: cover;
+	border: 3px solid #ff2b9d;
+	box-shadow: 0 0 20px #ff2b9d;
 }
 
 .historia p {
-  font-size: 0.85rem;
-  line-height: 1.8;
-  max-width: 720px;
-  margin: 0 auto 25px;
-  text-align: center;
+	font-size: 0.85rem;
+	line-height: 1.8;
+	max-width: 720px;
+	margin: 0 auto 25px;
+	text-align: center;
 }
 
 /* MISION Y VISION */
 .card-retro {
-  border: 3px solid #00ff1e;
-  border-radius: 10px;
-  padding: 25px 35px;
-  min-height: 310px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 35px;
-  text-align: center;
+	border: 3px solid #00ff1e;
+	border-radius: 10px;
+	padding: 25px 35px;
+	min-height: 310px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 35px;
+	text-align: center;
 }
 
 .icon-retro {
-  width: 160px;
-  flex-shrink: 0;
-  margin: 0;
-  filter: drop-shadow(0 0 10px #ff2b9d);
+	width: 160px;
+	flex-shrink: 0;
+	margin: 0;
+	filter: drop-shadow(0 0 10px #ff2b9d);
 }
 
 .card-retro div {
-  flex: 1;
+	flex: 1;
 }
 
 .card-retro h4 {
-  color: #00ff1e;
-  font-size: 1.4rem;
-  margin-bottom: 20px;
+	color: #00ff1e;
+	font-size: 1.4rem;
+	margin-bottom: 20px;
 }
 
 .card-retro p {
-  line-height: 1.6;
-  font-size: 0.85rem;
-  text-align: center;
+	line-height: 1.6;
+	font-size: 0.85rem;
+	text-align: center;
 }
 
 /* VALORES */
 .valores-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0;
-  border-radius: 10px;
-  border-top: 3px solid #e91e63;
-  border-bottom: 3px solid #e91e63;
-  border-left: 2px solid #e91e63;
-  border-right: 2px solid #e91e63;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 0;
+	border-radius: 10px;
+	border-top: 3px solid #e91e63;
+	border-bottom: 3px solid #e91e63;
+	border-left: 2px solid #e91e63;
+	border-right: 2px solid #e91e63;
 }
 
 .valor {
-  text-align: center;
-  padding: 15px;
-  border-right: 2px solid #e91e63;
+	text-align: center;
+	padding: 15px;
+	border-right: 2px solid #e91e63;
 }
 
 .valor:last-child {
-  border-right: none;
+	border-right: none;
 }
 
 .valor-icon {
-  font-size: 45px;
+	font-size: 45px;
 }
 
 .valor h5 {
-  color: #00ff1e;
-  font-size: 1rem;
-  margin: 15px 0;
+	color: #00ff1e;
+	font-size: 1rem;
+	margin: 15px 0;
 }
 
 .valor p {
-  line-height: 1.6;
-  font-size: 0.85rem;
+	line-height: 1.6;
+	font-size: 0.85rem;
 }
 
 /* FUENTE RETRO */
@@ -264,502 +264,508 @@ h3,
 h4,
 h5,
 .btn-retro {
-  font-family: "Press Start 2P", cursive !important;
+	font-family: "Press Start 2P", cursive;
 }
 
 .conocenos .row {
-  row-gap: 35px;
+	row-gap: 35px;
 }
 
 .subtitulo-equipo {
-  color: #ff2b9d;
-  font-size: 1rem;
-  font-family: "Press Start 2P", cursive;
-  text-align: center;
-  margin-bottom: 40px;
+	color: #ff2b9d;
+	font-size: 1rem;
+	font-family: "Press Start 2P", cursive;
+	text-align: center;
+	margin-bottom: 40px;
 }
 
-/*CARD TEAM */
+/*-----------CARDS del TEAM --------------*/
 
 .team {
-  position: relative;
-  margin-bottom: 60px;
-  height: 420px;
-  width: 405px;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #142b20;
-  box-shadow: 0 0 15px rgba(0, 255, 30, 0.25);
+	position: relative;
+	margin-bottom: 60px;
+	height: 420px;
+	width: 405px;
+	border-radius: 12px;
+	overflow: hidden;
+	background: #142b20;
+	box-shadow: 0 0 15px rgba(0, 255, 30, 0.25);
 }
 
 .team-avatar {
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 .team-avatar img {
-  height: 100%;
-  width: 100%;
-  object-position: center 15%; /* ← cambio de Andriy 2 */
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
+	height: 100%;
+	width: 100%;
+	object-position: center 15%; /* ← cambio de Andriy 2 */
+	object-fit: cover;
+	border-radius: 10px;
+	display: block;
 }
 
 .avatar-name {
-  color: #ffffff;
-  font-family: "Press Start 2P", cursive;
-  font-size: 0.8rem;
-  text-decoration: none;
-  line-height: 1.3;
+	color: #ffffff;
+	font-family: "Press Start 2P", cursive;
+	font-size: 0.8rem;
+	text-decoration: none;
+	line-height: 1.3;
 }
 
 .team-position {
-  color: #00ff1e;
-  font-size: 1rem;
+	color: #00ff1e;
+	font-size: 1rem;
 }
 
 .team .team-content {
-  position: absolute;
-  bottom: 0; /* Cambio Andriy 5 */
-  margin: 0 20px;
-  left: 0;
-  right: 0;
+	position: absolute;
+	bottom: 0; /* Cambio Andriy 5 */
+	margin: 0 20px;
+	left: 0;
+	right: 0;
 }
 
 .team .team-content-inner {
-  background-color: hsl(164, 21%, 14%);
-  padding: 10px 12px;
-  width: 100%;
-  border-radius: 6px;
-  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+	background-color: hsl(164, 21%, 14%);
+	padding: 10px 12px;
+	width: 100%;
+	border-radius: 6px;
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .team .team-content-inner .team-social {
-  margin-left: auto;
+	margin-left: auto;
 }
 
 .team .team-content-inner .team-social .nav .nav-link {
-  padding-top: 0;
-  padding-bottom: 0;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 .team .team-content-inner .team-contact {
-  opacity: 0;
-  position: absolute;
-  bottom: 0px;
-  left: 20px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+	opacity: 0;
+	position: absolute;
+	bottom: 0px;
+	left: 20px;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .team:hover .team-content-inner {
+<<<<<<< HEAD
   background-color: #1c2b24;
-  color: #fbff00;
+  color: #00ff1e;  /*Cambio de color */
   padding: 20px 20px 90px;
+=======
+	background-color: #1c2b24;
+	color: #fbff00;
+	padding: 20px 20px 90px;
+>>>>>>> 1713ae9 (Actualizacion seccion About Us)
 }
 
 .team:hover .team-content-inner .team-info .team-position {
-  color: #00ff1e;
+	color: #00ff1e;
 }
 
 .team:hover .team-content-inner .team-contact {
-  opacity: 1;
-  bottom: 20px;
+	opacity: 1;
+	bottom: 20px;
 }
 
 .team:hover .team-content-inner .team-contact .nav .nav-link {
-  color: #eeff00;
+	color: #eeff00;
 }
 
 .team:hover .team-content-inner .team-contact .nav .nav-link:hover {
-  color: #ffff00;
+	color: #ffff00;
 }
 
 .team:hover .team-content-inner .team-social .nav .nav-link {
-  color: #ffffff;
+	color: #ffffff;
 }
 
 .team:hover .team-content-inner .team-social .nav .nav-link:hover {
-  color: #000000;
+	color: #000000;
 }
 
 .team:hover .team-info .avatar-name {
-  color: #00ff1e;
+	color: #00ff1e;
 }
 
 .team-content-inner .team-info .avatar-name {
-  margin-bottom: 0;
-  font-weight: 600;
-  color: #00ff1e; /* ← Cambio Andriy 3 */
-  text-decoration: none; /* Cambio Andriy 4 */
+	margin-bottom: 0;
+	font-weight: 600;
+	color: #00ff1e; /* ← Cambio Andriy 3 */
+	text-decoration: none; /* Cambio Andriy 4 */
 }
 
 .team-content-inner .team-info .team-position {
-  color: #00ff1e;
+	color: #00ff1e;
 }
 
 .social a.text-muted:hover {
-  color: #009b72 !important;
+	color: #009b72 !important;
 }
 
 /* RESPONSIVE TABLET */
 @media (max-width: 992px) {
-  body {
-    padding-top: 0;
-    overflow-x: hidden;
-  }
+	body {
+		padding-top: 0;
+		overflow-x: hidden;
+	}
 
-  .hero {
-    min-height: auto;
-    padding: 35px 30px 55px;
-    text-align: center;
-  }
+	.hero {
+		min-height: auto;
+		padding: 35px 30px 55px;
+		text-align: center;
+	}
 
-  .hero h1 {
-    font-size: 35px;
-  }
+	.hero h1 {
+		font-size: 35px;
+	}
 
-  .subtitle {
-    font-size: 25px;
-  }
+	.subtitle {
+		font-size: 25px;
+	}
 
-  .about-intro {
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    margin-top: 20px;
-  }
+	.about-intro {
+		width: 100%;
+		text-align: center;
+		align-items: center;
+		margin-top: 20px;
+	}
 
-  .about-label {
-    font-size: 1.2rem;
-    margin-bottom: 18px;
-  }
+	.about-label {
+		font-size: 1.2rem;
+		margin-bottom: 18px;
+	}
 
-  .about-intro h2 {
-    font-size: 1.2rem;
-    line-height: 1.4;
-    text-align: center;
-    margin-bottom: 18px;
-  }
+	.about-intro h2 {
+		font-size: 1.2rem;
+		line-height: 1.4;
+		text-align: center;
+		margin-bottom: 18px;
+	}
 
-  .about-intro p {
-    font-size: 0.85rem;
-    max-width: 650px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
+	.about-intro p {
+		font-size: 0.85rem;
+		max-width: 650px;
+		margin-bottom: 20px;
+		text-align: center;
+	}
 
-  .btn-retro {
-    position: static;
-    display: block;
-    margin: 20px auto;
-  }
+	.btn-retro {
+		position: static;
+		display: block;
+		margin: 20px auto;
+	}
 
-  .hearts {
-    position: static;
-    transform: none;
-    display: block;
-    margin: 25px auto 0;
-    width: 200px;
-  }
+	.hearts {
+		position: static;
+		transform: none;
+		display: block;
+		margin: 25px auto 0;
+		width: 200px;
+	}
 
-  .historia,
-  .mision-vision,
-  .valores,
-  .conocenos {
-    padding: 45px 35px;
-  }
+	.historia,
+	.mision-vision,
+	.valores,
+	.conocenos {
+		padding: 45px 35px;
+	}
 
-  .historia h3,
-  .valores h3,
-  .conocenos h3 {
-    font-size: 1.1rem;
-    gap: 15px;
-  }
+	.historia h3,
+	.valores h3,
+	.conocenos h3 {
+		font-size: 1.1rem;
+		gap: 15px;
+	}
 
-  .arcade-img {
-    max-width: 420px;
-    margin: 0 auto 30px;
-    display: block;
-  }
+	.arcade-img {
+		max-width: 420px;
+		margin: 0 auto 30px;
+		display: block;
+	}
 
-  .historia p {
-    max-width: 720px;
-    font-size: 0.85rem;
-    line-height: 1.8;
-    margin: 0 auto 25px;
-  }
+	.historia p {
+		max-width: 720px;
+		font-size: 0.85rem;
+		line-height: 1.8;
+		margin: 0 auto 25px;
+	}
 
-  .historia .row {
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-  }
+	.historia .row {
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
 
-  .historia .col-md-5,
-  .historia .col-md-7 {
-    width: 100%;
-  }
+	.historia .col-md-5,
+	.historia .col-md-7 {
+		width: 100%;
+	}
 
-  .historia img {
-    margin-bottom: 25px;
-  }
+	.historia img {
+		margin-bottom: 25px;
+	}
 
-  .card-retro {
-    flex-direction: column;
-    justify-content: flex-start;
-    min-height: 410px;
-    padding: 25px 22px;
-    gap: 22px;
-    text-align: center;
-  }
+	.card-retro {
+		flex-direction: column;
+		justify-content: flex-start;
+		min-height: 410px;
+		padding: 25px 22px;
+		gap: 22px;
+		text-align: center;
+	}
 
-  .icon-retro {
-    width: 130px;
-  }
+	.icon-retro {
+		width: 130px;
+	}
 
-  .card-retro h4 {
-    font-size: 1rem;
-  }
+	.card-retro h4 {
+		font-size: 1rem;
+	}
 
-  .card-retro p {
-    font-size: 0.78rem;
-  }
+	.card-retro p {
+		font-size: 0.78rem;
+	}
 
-  .valores-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+	.valores-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
 
-  .valor {
-    border-bottom: 2px solid #e91e63;
-  }
+	.valor {
+		border-bottom: 2px solid #e91e63;
+	}
 
-  .valor:nth-child(2),
-  .valor:nth-child(4) {
-    border-right: none;
-  }
+	.valor:nth-child(2),
+	.valor:nth-child(4) {
+		border-right: none;
+	}
 
-  .valor:last-child {
-    grid-column: 1 / -1;
-    border-bottom: none;
-  }
+	.valor:last-child {
+		grid-column: 1 / -1;
+		border-bottom: none;
+	}
 
-  .team {
-    height: 300px;
-  }
+	.team {
+		height: 300px;
+	}
 
-  .team-content-inner {
-    padding: 15px;
-  }
+	.team-content-inner {
+		padding: 15px;
+	}
 
-  .avatar-name {
-    font-size: 0.7rem;
-    line-height: 1.4;
-  }
+	.avatar-name {
+		font-size: 0.7rem;
+		line-height: 1.4;
+	}
 
-  .team-position {
-    font-size: 0.65rem;
-  }
+	.team-position {
+		font-size: 0.65rem;
+	}
 
-  .conocenos .col-lg-4 {
-    margin-bottom: 25px;
-  }
+	.conocenos .col-lg-4 {
+		margin-bottom: 25px;
+	}
 
-  .subtitulo-equipo {
-    font-size: 0.85rem;
-  }
+	.subtitulo-equipo {
+		font-size: 0.85rem;
+	}
 } /* CIERRA EL MEDIA QUERY DE TABLET */
 
 /* RESPONSIVE CELULAR */
 
 @media (max-width: 576px) {
-  .team {
-    height: 330px;
-  }
+	.team {
+		height: 330px;
+	}
 
-  .team .team-content {
-    margin: 0 15px;
-  }
+	.team .team-content {
+		margin: 0 15px;
+	}
 
-  body {
-    padding-top: 0;
-    overflow-x: hidden;
-  }
+	body {
+		padding-top: 0;
+		overflow-x: hidden;
+	}
 
-  .hero {
-    min-height: auto;
-    padding: 35px 18px 60px;
-    text-align: center;
-  }
+	.hero {
+		min-height: auto;
+		padding: 35px 18px 60px;
+		text-align: center;
+	}
 
-  .hero h1 {
-    font-size: 1.5rem;
-  }
+	.hero h1 {
+		font-size: 1.5rem;
+	}
 
-  .subtitle {
-    font-size: 1rem;
-  }
+	.subtitle {
+		font-size: 1rem;
+	}
 
-  .about-intro {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-  }
+	.about-intro {
+		width: 100%;
+		align-items: center;
+		text-align: center;
+	}
 
-  .about-label,
-  .about-intro h2,
-  .about-intro p {
-    text-align: center;
-  }
+	.about-label,
+	.about-intro h2,
+	.about-intro p {
+		text-align: center;
+	}
 
-  .about-intro h2 {
-    font-size: 1rem;
-  }
+	.about-intro h2 {
+		font-size: 1rem;
+	}
 
-  .about-intro p {
-    max-width: 100%;
-    font-size: 0.75rem;
-    margin-bottom: 25px;
-  }
+	.about-intro p {
+		max-width: 100%;
+		font-size: 0.75rem;
+		margin-bottom: 25px;
+	}
 
-  .btn-retro,
-  .hearts {
-    position: static;
-    transform: none;
-    display: block;
-    margin: 20px auto;
-  }
+	.btn-retro,
+	.hearts {
+		position: static;
+		transform: none;
+		display: block;
+		margin: 20px auto;
+	}
 
-  .hearts {
-    width: 180px;
-  }
+	.hearts {
+		width: 180px;
+	}
 
-  .historia,
-  .mision-vision,
-  .valores,
-  .conocenos {
-    padding: 30px 15px;
-  }
+	.historia,
+	.mision-vision,
+	.valores,
+	.conocenos {
+		padding: 30px 15px;
+	}
 
-  .historia p {
-    font-size: 0.75rem;
-  }
+	.historia p {
+		font-size: 0.75rem;
+	}
 
-  .historia .row {
-    gap: 25px;
-  }
+	.historia .row {
+		gap: 25px;
+	}
 
-  .arcade-img {
-    max-width: 100%;
-  }
+	.arcade-img {
+		max-width: 100%;
+	}
 
-  .card-retro {
-    flex-direction: column;
-    min-height: auto;
-    padding: 25px 18px;
-    gap: 20px;
-  }
+	.card-retro {
+		flex-direction: column;
+		min-height: auto;
+		padding: 25px 18px;
+		gap: 20px;
+	}
 
-  .icon-retro {
-    width: 120px;
-  }
+	.icon-retro {
+		width: 120px;
+	}
 
-  .card-retro h4 {
-    color: #00ff1e;
-    font-size: 0.85rem;
-  }
+	.card-retro h4 {
+		color: #00ff1e;
+		font-size: 0.85rem;
+	}
 
-  .card-retro p {
-    font-size: 0.75rem;
-    text-align: center;
-  }
+	.card-retro p {
+		font-size: 0.75rem;
+		text-align: center;
+	}
 
-  .valores-grid {
-    grid-template-columns: 1fr;
-  }
+	.valores-grid {
+		grid-template-columns: 1fr;
+	}
 
-  .valor h5 {
-    color: #00ff1e;
-    font-size: 0.85rem;
-  }
+	.valor h5 {
+		color: #00ff1e;
+		font-size: 0.85rem;
+	}
 
-  .valor p {
-    font-size: 0.75rem;
-  }
+	.valor p {
+		font-size: 0.75rem;
+	}
 
-  .valor {
-    border-right: none;
-    border-bottom: 2px solid #e91e63;
-  }
+	.valor {
+		border-right: none;
+		border-bottom: 2px solid #e91e63;
+	}
 
-  .valor:last-child {
-    border-bottom: none;
-  }
+	.valor:last-child {
+		border-bottom: none;
+	}
 
-  .team {
-    height: 320px;
-    max-width: 320px;
-    margin: 0 auto 25px;
-  }
+	.team {
+		height: 320px;
+		max-width: 320px;
+		margin: 0 auto 25px;
+	}
 
-  .team-avatar {
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-  }
+	.team-avatar {
+		aspect-ratio: 1 / 1;
+		overflow: hidden;
+	}
 
-  .team-avatar img {
-    width: 70%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    transform: translateY(-10px);
-  }
+	.team-avatar img {
+		width: 70%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center top;
+		transform: translateY(-10px);
+	}
 
-  .historia h3,
-  .valores h3,
-  .conocenos h3 {
-    white-space: normal;
-    font-size: 0.85rem;
-    line-height: 1.4;
-    gap: 12px;
-    text-align: center;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-  }
+	.historia h3,
+	.valores h3,
+	.conocenos h3 {
+		white-space: normal;
+		font-size: 0.85rem;
+		line-height: 1.4;
+		gap: 12px;
+		text-align: center;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+	}
 
-  .historia h3::before,
-  .historia h3::after,
-  .valores h3::before,
-  .valores h3::after,
-  .conocenos h3::before,
-  .conocenos h3::after {
-    content: "";
-    flex: none;
-    width: 150px;
-    height: 3px;
-    background: #e91e63;
-  }
+	.historia h3::before,
+	.historia h3::after,
+	.valores h3::before,
+	.valores h3::after,
+	.conocenos h3::before,
+	.conocenos h3::after {
+		content: "";
+		flex: none;
+		width: 150px;
+		height: 3px;
+		background: #e91e63;
+	}
 
-  .avatar-name {
-    font-size: 0.8rem;
-  }
+	.avatar-name {
+		font-size: 0.8rem;
+	}
 
-  .team-position {
-    font-size: 0.75rem;
-  }
+	.team-position {
+		font-size: 0.75rem;
+	}
 
-  .team-content {
-    left: 10px;
-    right: 10px;
-    bottom: 10px;
-  }
+	.team-content {
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+	}
 
-  .team-content-inner {
-    padding: 10px;
-  }
+	.team-content-inner {
+		padding: 10px;
+	}
 }

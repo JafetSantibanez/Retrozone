@@ -1,7 +1,66 @@
-body{
-    background-color: #16184B;
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap");
+
+
+body {
+  margin: 0;
+  background: #121535;
+  color: white !important;
+  font-family: "Orbitron", sans-serif;
+  font-size: 15px;
+  padding-top: 0;
+}
+h3 {
+
+  color: #00ff1e;
+  font-family: "Press Start 2P", cursive;
+  text-align: left;
+  font-size: 1rem;
+  margin-top: 15px;
+  letter-spacing: 2px;
+}
+/*-------------------VISITANOS-------------------*/
+
+.gif-overlay {
+  position: absolute;
+  top: 320px;
+  left: 680px;
+  width: 60px;   /* ajusta el tamaño */
+  height: 150px;
+  background-image: url(/src/assets/Contact/tumblr_mszobq8kHk1rfjowdo1_1280.gif);
+  background-size: cover;
+  pointer-events: none;  /* el gif no bloquea clicks */
+  z-index: 10;
+}
+/* 1. ANIMACIÓN: Define cómo aparece el mapa */
+@keyframes fadeInScreen {
+  0% { opacity: 0; transform: scale(0.9); } /* Empieza invisible y pequeño */
+  100% { opacity: 1; transform: scale(1); }  /* Termina visible y en tamaño normal */
 }
 
+/* 2. CONTENEDOR CONSOLA: Pone la imagen de fondo */
+.console-container {
+  /background-image: url('/src/assets/Contact/CONSOLA.png'); /* Poner aquí el link de tu consola */
+  background-size: contain; red;   /* Asegura que la imagen no se corte */
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+  position: relative;            /* Necesario para que el mapa se posicione dentro */
+}
+
+/* 3. PANTALLA MAPA: Aquí está la animación y el ajuste de posición */
+.map-screen {
+  position: absolute;            /* Lo saca del flujo normal para moverlo a mano */
+  top: 50px;                     /* Distancia desde arriba (ajusta hasta que encaje) */
+  left: 0px;                   /* Distancia desde la izquierda (ajusta hasta que encaje) */
+  width: 100%;                  /* Ancho de la pantalla del dibujo */
+  height: 100%;                 /* Alto de la pantalla del dibujo */
+  overflow: hidden;              /* Corta lo que se salga del recuadro */
+  
+  /* Aquí aplicamos la animación: dura 2 segundos, efecto suave y se queda al final */
+  animation: fadeInScreen 2s ease-out forwards; 
+}
+
+/*-------------------FORMULARIO-------------------*/
 /* Contenedor */
 .contactanos-container{
     max-width: 900px;

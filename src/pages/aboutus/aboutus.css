@@ -1,4 +1,4 @@
-impor@t url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap");
 
 * {
 	box-sizing: border-box;
@@ -356,15 +356,9 @@ h5,
 }
 
 .team:hover .team-content-inner {
-<<<<<<< HEAD
   background-color: #1c2b24;
   color: #00ff1e;  /*Cambio de color */
   padding: 20px 20px 90px;
-=======
-	background-color: #1c2b24;
-	color: #fbff00;
-	padding: 20px 20px 90px;
->>>>>>> 1713ae9 (Actualizacion seccion About Us)
 }
 
 .team:hover .team-content-inner .team-info .team-position {

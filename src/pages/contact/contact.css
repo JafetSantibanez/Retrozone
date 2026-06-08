@@ -39,7 +39,7 @@ h3 {
 
 /* 2. CONTENEDOR CONSOLA: Pone la imagen de fondo */
 .console-container {
-  /background-image: url('/src/assets/Contact/CONSOLA.png'); /* Poner aquí el link de tu consola */
+  /background-image: url('#'); /* Poner aquí el link de tu consola */
   background-size: contain; red;   /* Asegura que la imagen no se corte */
   background-repeat: no-repeat;
   width: 100%;

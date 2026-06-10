@@ -33,7 +33,7 @@ main.container-fluid {
   padding-bottom: 40px !important;
   box-sizing: border-box;
   z-index: 100;
-  color: #fff ;
+  color: #fdffae ;
 }
 
 /* banner negro */
@@ -83,12 +83,12 @@ main.container-fluid {
   padding: 0.5rem 0.75rem;
   border-radius: 15px;
   border: 2px solid #000000;
-  background-color: #fdffae !important;
+  background-color: #fdfeea !important;
   color: #000000 !important;
 }
 
 .form-control:focus {
-  background-color: #fdffae !important;
+  background-color: #fdfeea !important;
   color: #000000 !important;
   border-color: #1be628 !important;
   box-shadow: 0 0 0 0.25rem rgba(27, 230, 40, 0.25);
@@ -174,7 +174,7 @@ main.container-fluid {
 }
 
 .form-check-input {
-  background-color: #fdffae !important;
+  background-color: #fdfeea !important;
   border: 2px solid #000000 !important;
   border-radius: 4px !important;
   width: 1.1rem !important;

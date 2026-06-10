@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function cargarFooter() {
-  fetch('../../components/footer/Footer.html')
+  fetch('/src/components/footer/Footer.html')
     .then(response => {
       if (!response.ok) throw new Error("No se pudo cargar el footer");
       return response.text();

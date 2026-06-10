@@ -1,33 +1,31 @@
-// Importación del HTML 
-import navHtml from "./NavBar.html?raw";
-import "../../styles/global.css";
+document.addEventListener("DOMContentLoaded", () => {
+	cargarNavbar();
+});
 
-// Función para renderizar
-export function renderNavBar() {
-  return navHtml;
-}
-
-// Al ser un módulo, esto se ejecuta de forma segura
-const navbarContainer = document.getElementById('navbar');
-if (navbarContainer) {
-  navbarContainer.innerHTML = navHtml;
-  // Inicialización del menu de hamburguesa
-  configurarMenuHamburguesa();
+function cargarNavbar() {
+	fetch("../../components/navbar/NavBar.html")
+		.then((response) => {
+			if (!response.ok) {
+				throw new Error("No se pudo cargar el navbar");
+			}
+			return response.text();
+		})
+		.then((html) => {
+			document.getElementById("navbar").innerHTML = html;
+			configurarMenuHamburguesa();
+		})
+		.catch((error) => {
+			console.error("Error cargando navbar:", error);
+		});
 }
 
 function configurarMenuHamburguesa() {
-  const botonMenu = document.getElementById("boton-menu");
-  const menuDesplegable = document.getElementById("menu-desplegable");
+	const botonMenu = document.getElementById("boton-menu");
+	const menuDesplegable = document.getElementById("menu-desplegable");
 
-  // Verificación de que se encuentren los elementos 
-  if (botonMenu && menuDesplegable) {
-    botonMenu.addEventListener("click", () => {
-            menuDesplegable.classList.toggle("mostrar-menu-retro");
-      // Feedback visual recomendada por documentación
-      botonMenu.style.transform = "scale(0.95)";
-      setTimeout(() => {
-        botonMenu.style.transform = "scale(1)";
-      }, 100);
-    });
-  }
+	if (botonMenu && menuDesplegable) {
+		botonMenu.addEventListener("click", () => {
+			menuDesplegable.classList.toggle("mostrar-menu-retro");
+		});
+	}
 }

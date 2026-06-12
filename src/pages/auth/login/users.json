@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "email": "retro@zone.com",
+    "password": "Password123",
+    "username": "GamerRetro90"
+  },
+  {
+    "id": 2,
+    "email": "angy@retro.com",
+    "password": "SecurePassword1",
+    "username": "AngyGarcia"
+  }
+]

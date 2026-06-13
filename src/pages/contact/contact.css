@@ -18,55 +18,94 @@ h3 {
   margin-top: 15px;
   letter-spacing: 2px;
 }
+
 /*-------------------VISITANOS-------------------*/
 
-.gif-overlay {
-  position: absolute;
-  top: 320px;
-  left: 680px;
-  width: 60px;   /* ajusta el tamaño */
-  height: 150px;
-  background-image: url(/src/assets/Contact/tumblr_mszobq8kHk1rfjowdo1_1280.gif);
-  background-size: cover;
-  pointer-events: none;  /* el gif no bloquea clicks */
-  z-index: 10;
-}
-/* 1. ANIMACIÓN: Define cómo aparece el mapa */
+/* 1. ANIMACIÓN: Efecto de encendido */
 @keyframes fadeInScreen {
-  0% { opacity: 0; transform: scale(0.9); } /* Empieza invisible y pequeño */
-  100% { opacity: 1; transform: scale(1); }  /* Termina visible y en tamaño normal */
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
-/* 2. CONTENEDOR CONSOLA: Pone la imagen de fondo */
-.console-container {
-  background-image: url('#'); /* Poner aquí el link de tu consola */
-  background-size: contain red;   /* Asegura que la imagen no se corte */
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 300px;
-  position: relative;            /* Necesario para que el mapa se posicione dentro */
-}
-
-/* 3. PANTALLA MAPA: Aquí está la animación y el ajuste de posición */
-.map-screen {
-  position: absolute;            /* Lo saca del flujo normal para moverlo a mano */
-  top: 50px;                     /* Distancia desde arriba (ajusta hasta que encaje) */
-  left: 0px;                   /* Distancia desde la izquierda (ajusta hasta que encaje) */
-  width: 100%;                  /* Ancho de la pantalla del dibujo */
-  height: 100%;                 /* Alto de la pantalla del dibujo */
-  overflow: hidden;              /* Corta lo que se salga del recuadro */
+/* 2. CONTENEDOR DEL MAPA (Estilo retro) */
+.map-container {
+  padding: 0px;
+  background: #9cb1bf;
+  border-radius: 1px;
+  overflow: hidden;
+  /* Aplicamos la animación al mapa */
+  animation: fadeInScreen 2s ease-out forwards;
+  border: 2px solid #39ff14; 
+  border-radius: 15px; overflow: hidden
   
-  /* Aquí aplicamos la animación: dura 2 segundos, efecto suave y se queda al final */
-  animation: fadeInScreen 2s ease-out forwards; 
 }
+
+/* Ajuste de la imagen de la consola */
+.img-fluid {
+transition: filter 0.1s ease;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 3. BOTONES SOCIALES (Estilo Píldora) */
+.social-links .btn-outline-success {
+  border-radius: 50px !important;
+  padding: 10px 25px;
+  border: 2px solid #39FF14 !important;
+  color: #39FF14 !important;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.social-links .btn-outline-success:hover {
+  background-color: #39FF14 !important;
+  color: #121535 !important;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+}
+
+/* 4. TEXTO DE INFORMACIÓN */
+.contact-info h3 {
+  color: #00ff1e;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.contact-info p {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+.hero-text {
+	font-family: var(--letraPri);
+	font-size: 50px;
+	color: var(--amarillito);
+	margin: 0;
+	text-shadow:
+		0 0 10px var(--amarillito),
+		0 0 30px rgba(255, 255, 150, 0.4),
+		4px 4px 0px #333;
+	text-align: center;
+    font-family: 'Press Start 2P'
+}
+
 
 /*-------------------FORMULARIO-------------------*/
+
 /* Contenedor */
 .contactanos-container{
     max-width: 900px;
     margin: 50px auto;
     padding: 20px;
 }
+
+
+
 
 /* Título */
 .contact-title{

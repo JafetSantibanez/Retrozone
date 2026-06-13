@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //Autenticación
   async function autenticarUsuario(credenciales) {
     try {
-      const respuesta = await fetch("./users.json");
+      const respuesta = await fetch("http://localhost:3000/users");
       if (!respuesta.ok) throw new Error("No se pudo leer la base de datos.");
 
       const usuarios = await respuesta.json();
@@ -99,9 +99,17 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
-//navbar
+//footer
 fetch("../../components/Footer.html")
   .then((response) => response.text())
   .then((data) => {
-    document.getElementById("footer").innerHTML = data;
+    const contenedorFooter = document.getElementById("footer");
+    // Solo intenta meter el HTML si el contenedor realmente existe en la página
+    if (contenedorFooter) {
+      contenedorFooter.innerHTML = data;
+    }
+    //fetch("/src/components/footer/footer.html")
+    // .then((response) => response.text())
+    //.then((data) => {
+    // document.getElementById("footer").innerHTML = data;
   });

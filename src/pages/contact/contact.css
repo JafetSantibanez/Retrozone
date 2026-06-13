@@ -111,6 +111,10 @@ html {
 
 /* 2. CONTENEDOR DEL MAPA (Estilo retro) */
 .map-container {
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 7ce4338 (Style: mi parte de contacto y maps section)
   padding: 0px;
   background: #9cb1bf;
   border-radius: 1px;

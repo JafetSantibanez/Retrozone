@@ -19,7 +19,89 @@ h3 {
   letter-spacing: 2px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+.contenedor-botones-contacto {
+    display: flex;
+    flex-direction: row;
+    /* Ajusta el gap a 10px o 15px para que estén más unidos */
+    gap: 15px; 
+    
+    /* Esto los alinea a la izquierda de su contenedor */
+    justify-content: flex-start; 
+    
+    align-items: center;
+    
+    /* Ajusta este margen para subirlos o bajarlos respecto al texto */
+    margin-top: 10px; 
+    
+    /* Aseguramos que no tengan margen izquierdo extra */
+    margin-left: 0;
+    width: 100%;
+}
 /*-------------------VISITANOS-------------------*/
+ .btn-boton-personalizado {
+  /* Imagen de fondo */
+  background-image: url('/src/assets/Contact/BotonRetroneon.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 180px;  /* Aumentado de 260px a 320px para más espacio horizontal */
+  height: 50px;
+  
+  
+  /* Centrado del texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Estilos de texto */
+  color: #39FF14; 
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem; /* Un poco más pequeño para que quepa bien */
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  
+  /* Transición suave */
+  transition: all 0.3s ease;
+}
+
+/* Efecto Hover Neón */
+.btn-boton-personalizado:hover {
+  /* El brillo neón que sigue la forma de tus píxeles */
+  filter: drop-shadow(0 0 0px #39FF14) drop-shadow(0 0 5px #39FF14);
+  
+  /* Ligero efecto de escala */
+  transform: scale(1.05);
+}
+
+/* Efecto al hacer clic (opcional: el botón se hunde) */
+.btn-boton-personalizado:active {
+  transform: scale(0.98);
+  filter: brightness(0.8);
+}
+/*-------------------------------------------------------------------*/
+
+/*TEXTO NEON AMARILLO*/
+.arcade-title {
+  /* Fuente directa */
+  font-family: 'Press Start 2P', cursive;
+  
+  /* Tamaño y color */
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  color: #f1f3a4; /* Sustituido --amarillito */
+  
+  margin: 0;
+  text-align: left;
+  
+  /* Efecto Glow Neón */
+  text-shadow:
+      0 0 10px #dadc81,
+      0 0 30px rgba(255, 255, 150, 0.4),
+      4px 4px 0px #333;
+}
 
 /* 1. ANIMACIÓN: Efecto de encendido */
 @keyframes fadeInScreen {
@@ -93,6 +175,52 @@ transition: filter 0.1s ease;
 	text-align: center;
     font-family: 'Press Start 2P'
 }
+/*--------------------------IMAGEN HERO ------------------------*/
+.hero-section {
+  /* Combinamos el gradiente con la imagen */
+  background-image: 
+    linear-gradient(to bottom, transparent 60%, #121535 100%), 
+    url('/src/assets/Contact/hero3.png');
+  
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 0 -100px;
+  padding-top: 0px;
+  overflow: hidden;
+  
+  
+  /* Asegúrate de que el color de fondo de la sección 
+     coincida con el color final del gradiente (#121535) */
+  background-color: #121535;
+}
+
+/* Efecto de Inner Shadow (Viñeta) */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Gradiente desde abajo-izquierda hacia arriba-derecha */
+  background: radial-gradient(circle at 10% 80%, rgba(19, 19, 56, 0.9) 0%, rgba(19, 19, 56, 0.4) 0%, transparent 90%);
+  
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Asegura que tu contenido esté sobre la sombra */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
 
 
 /*-------------------FORMULARIO-------------------*/

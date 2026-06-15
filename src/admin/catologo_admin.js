@@ -24,21 +24,48 @@ formEl.addEventListener("submit", (event) => {
 }); 
 
 const renderGame = (objectGame) => {
+
     const cardGame = `
-    <div class="card" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">${objectGame.name}</h5>
-        <h6 class="card-subtitle mb-2 text-body-secondary">${objectGame.platform} - ${objectGame.category}</h6>
-        <p class="card-text"><strong>Precio:</strong> $${objectGame.price} MXN</p>
-        <p class="card-text"><strong>Estado:</strong> ${objectGame.status} (${objectGame.stock})</p>
-        <p class="card-text"><small>${objectGame.description || 'Sin descripción.'}</small></p>
-        <p class="card-text">
-        </p>
-      </div>
-    </div>
+    
+    <article class="game-card">
+
+        <img
+            src="https://placehold.co/400x300/142b20/ffffff?text=RetroZone"
+            alt="${objectGame.name}"
+        >
+
+        <div class="game-card-content">
+
+            <h3>${objectGame.name}</h3>
+
+            <p>
+                ${objectGame.platform} • ${objectGame.category}
+            </p>
+
+            <p>
+                Estado: ${objectGame.status}
+            </p>
+
+            <p>
+                ${objectGame.description || "Sin descripción"}
+            </p>
+
+            <p class="game-discount">
+                ${objectGame.discount || 0}% OFF
+            </p>
+
+            <p class="game-price">
+                $${objectGame.price} MXN
+            </p>
+
+        </div>
+
+    </article>
+
     `;
+
     sectiongamesEl.insertAdjacentHTML("beforeend", cardGame);
-}; 
+};
 
 const saveGamesLocal = (arrayGames) => {
   const textGames = JSON.stringify(arrayGames);

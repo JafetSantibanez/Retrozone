@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catalogo Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="stylesheet" href="./catalogo_admin.css">
 </head>
 <body>
-    <main class="p-3 d-flex gap-5"> <!--p-3 y d-flex son propiedades para acomodar -->
+    <div id="navbar"></div>
+  
+    <main class="catalog-admin-container"> <!--p-3 y d-flex son propiedades para acomodar -->
         <section class="form-section"> <!--se agregaron identificadores-->
             <!---->
     <form class="w-100" id="gameForm"> <!--Se uso w-100 para ajustar dentro del contenedor -->
@@ -26,7 +33,7 @@
       </select>
     </div>
     <div class="mb-3">
-      <label for="category" class="form-label">Categoria</label>
+      <label for="category" class="form-label">Categoría</label>
       <select id="category" class="form-select" name="category">
         <option>Plataformas</option>
         <option>Aventura</option>
@@ -58,26 +65,37 @@
         <input type="number" min="1" class="form-control" id="price" name="price"> <!--Se agrega min="1", para que haga referencia a que minimo hay una página del ,libro-->
     </div>
         <div class="mb-3">
-        <label for="originprice" class="form-label">PrecioOriginal</label>
+        <label for="originprice" class="form-label">Precio Original</label>
         <input type="number" min="1" class="form-control" id="originprice" name="originprice"> <!--Se agrega min="1", para que haga referencia a que minimo hay una página del ,libro-->
     </div>
         <div class="mb-3">
-        <label for="discount" class="form-label">descuento</label>
+        <label for="discount" class="form-label">Descuento</label>
         <input type="number" min="0" class="form-control" id="discount" name="discount"> <!--Se agrega min="1", para que haga referencia a que minimo hay una página del ,libro-->
     </div>
             <div class="mb-3">
       <label for="stock" class="form-label">Stock</label>
       <select id="stock" class="form-select" name="stock">
-        <option>En stock</option>
-        <option>Pocas unidades</option>
+        <option>En Stock</option>
+        <option>Pocas Unidades</option>
       </select>
     </div>
-    <button type="submit" class="btn btn-primary">Agregar al catalogo</button>
+    <button type="submit" class="btn btn-primary">Agregar al Catalogo</button>
     </form>
         </section>
-        <section id="games">
+        
+        <!-- Juegos agregados-->
+        <section class="games-section">
+          <h1 class="register-games">Juegos Registrados</h1>
+
+          <div id="games" class="games-grid"></div>
         </section>
+
+        <!-- Footer -->
+        <div id="footer"></div>
+
     </main>
     <script src="./catologo_admin.js"></script>
+    <script type="module" src="/src/components/navbar/NavBar-vite.js"></script>
+		<script type="module" src="/src/components/footer/Footer.js"></script>
 </body>
 </html>

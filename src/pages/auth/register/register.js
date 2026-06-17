@@ -50,18 +50,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //Base de datos simulada
   const usuariosRegistrados = [
-    {
-      id: 1,
-      email: "retro@zone.com",
-      password: "Password123",
-      username: "GamerRetro90",
-    },
-    {
-      id: 2,
-      email: "angy@retro.com",
-      password: "SecurePassword1",
-      username: "AngyGarcia",
-    },
+    "admin",
+    "goku99",
+    "retroplayer",
+    "angy_dev",
+    "link8bits",
   ];
   const inputUsername = document.getElementById("username");
   const feedbackUsername = document.getElementById("usernameFeedback");
@@ -157,9 +150,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (formularioCorrecto) {
         const nuevoUsuario = {
           nombreCompleto: document.getElementById("fullName").value.trim(),
-          username: document.getElementById("username").value.trim(),
+          username: document.getElementById("username").value.trim(), 
           email: document.getElementById("email").value.trim(),
-          telefono: iti.getNumber(),
+          telefono: iti.getNumber(), 
           password: document.getElementById("password").value,
         };
         enviarDatosAlBackend(nuevoUsuario);
@@ -168,40 +161,11 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
     // Simulación de envío al backend
-    function enviarDatosAlBackend(datosUsuario) {
-      const url = "http://localhost:3000/users";
-      const usuarioFormatoJSON = {
-        email: datosUsuario.email,
-        password: datosUsuario.password,
-        username: datosUsuario.username,
-        nombreCompleto: datosUsuario.nombreCompleto,
-        telefono: datosUsuario.telefono,
-      };
-      fetch(url, {
-        method: "POST", // Indicamos que vamos a guardar/crear datos
-        headers: {
-          "Content-Type": "application/json", // Le avisamos al servidor que le mandamos un JSON
-        },
-        body: JSON.stringify(usuarioFormatoJSON), // Convertimos el objeto de JS a texto plano JSON
-      })
-        .then((response) => {
-          if (response.ok) {
-            // alert(`¡Cuenta creada con éxito! ${usuarioFormatoJSON.username}.`);
-            //Aquí puedes redireccionar al login si quieres:
-            window.location.href = "/src/pages/auth/login/login.html";
-          } else {
-            alert("Hubo un error al registrar el usuario en el servidor.");
-          }
-        })
-        .catch((error) => {
-          console.error("Error en la conexión con el servidor:", error);
-          alert(
-            "No se pudo conectar con el servidor. ¿Está encendido el json-server?",
-          );
-        });
-
-      //console.log("Listo para enviar al backend:", datosUsuario);
-    }
+function enviarDatosAlBackend(datosUsuario) {
+    console.log("Listo para enviar al backend:", datosUsuario);
+   
+    
+}
   }
 
   //Apoyo validar username
@@ -229,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const usuarioExiste = usuariosRegistrados.some(
-      (u) => u.username.toLowerCase() === valor.toLowerCase(),
+      (u) => u.toLowerCase() === valor.toLowerCase(),
     );
     if (usuarioExiste) {
       if (feedbackUsername)
@@ -244,9 +208,9 @@ document.addEventListener("DOMContentLoaded", () => {
     return true;
   }
 });
-//footer
+//navbar
 fetch("../../components/Footer.html")
-  .then((response) => response.text())
-  .then((data) => {
+  .then(response => response.text())
+  .then(data => {
     document.getElementById("footer").innerHTML = data;
   });

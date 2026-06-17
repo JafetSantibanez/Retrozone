@@ -1,6 +1,6 @@
-html,
-body {
-  min-height: 100vh;
+html, body {
+  /* Cambiamos min-height para que se adapte si el formulario es alto */
+  min-height: 100vh; 
   margin: 0;
   padding: 0;
 }
@@ -12,37 +12,37 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; 
   color: #fdffae;
   display: flex;
   flex-direction: column;
 }
 
-#navbar {
+#navbar { 
   width: 100%;
   z-index: 1050;
 }
 
 /* contenedor principal */
 main.container-fluid {
-  flex: 1;
+  flex: 1; 
   display: flex !important;
-  justify-content: center;
-  align-items: center;
-  padding-top: 40px !important;
+  justify-content: center; 
+  align-items: center;     
+  padding-top: 40px !important; 
   padding-bottom: 40px !important;
   box-sizing: border-box;
   z-index: 100;
-  color: #fdffae;
+  color: #fff ;
 }
 
 /* banner negro */
 .retro-banner {
-  background-color: rgba(0, 0, 0, 0.75) !important;
-  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
-  width: 100% !important;
-  max-height: 75vh !important;
-  overflow-y: auto !important;
+  background-color: rgba(0, 0, 0, 0.75) !important; 
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);      
+  width: 100% !important;  
+  max-height: 75vh !important; 
+  overflow-y: auto !important; 
   border-radius: 12px;
 }
 
@@ -54,7 +54,7 @@ main.container-fluid {
   background: rgba(0, 0, 0, 0.3);
 }
 .retro-banner::-webkit-scrollbar-thumb {
-  background-color: #39ff14;
+  background-color: #39ff14; 
   border-radius: 4px;
 }
 .invalid-feedback {
@@ -83,12 +83,12 @@ main.container-fluid {
   padding: 0.5rem 0.75rem;
   border-radius: 15px;
   border: 2px solid #000000;
-  background-color: #fdfeea !important;
+  background-color: #fdffae !important;
   color: #000000 !important;
 }
 
 .form-control:focus {
-  background-color: #fdfeea !important;
+  background-color: #fdffae !important;
   color: #000000 !important;
   border-color: #1be628 !important;
   box-shadow: 0 0 0 0.25rem rgba(27, 230, 40, 0.25);
@@ -97,9 +97,7 @@ main.container-fluid {
 /* telefono */
 .iti__country-list,
 .iti__country-list * {
-  font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
-    sans-serif !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
   text-transform: none !important;
   letter-spacing: normal !important;
 }
@@ -176,7 +174,7 @@ main.container-fluid {
 }
 
 .form-check-input {
-  background-color: #fdfeea !important;
+  background-color: #fdffae !important;
   border: 2px solid #000000 !important;
   border-radius: 4px !important;
   width: 1.1rem !important;
@@ -237,13 +235,13 @@ main.container-fluid {
 @media (max-width: 576px) {
   body {
     /* Si tienes la imagen de cel la pones aquí, si no, cover se adapta */
-    background-image: url("../../../assets/register/BackgroundRZ.png");
-    background-size: cover;
+    background-image: url("../../../assets/register/BackgroundRZ.png"); 
+    background-size: cover; 
     background-position: center;
   }
 }
 #footer-container {
-  margin-top: auto;
+  margin-top: auto; 
   width: 100%;
   z-index: 110;
 }

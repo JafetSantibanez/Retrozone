@@ -1,4 +1,4 @@
-File /home/yampy/Retrozone/src/pages/home/home.html
+File /home/yampy/Retrozone/index.html
 
 
 Warnings :
@@ -27,22 +27,22 @@ Warnings :
 27 : the definition is not identified
 28 : the definition is not identified
 29 : the definition is not identified
-31 : the definition is not identified
+30 : the definition is not identified
 32 : the definition is not identified
-34 : the definition is not identified
+33 : the definition is not identified
 35 : the definition is not identified
 36 : the definition is not identified
 37 : the definition is not identified
 38 : the definition is not identified
 39 : the definition is not identified
-41 : the definition is not identified
+40 : the definition is not identified
 42 : the definition is not identified
 43 : the definition is not identified
 44 : the definition is not identified
 45 : the definition is not identified
 46 : the definition is not identified
 47 : the definition is not identified
-49 : the definition is not identified
+48 : the definition is not identified
 50 : the definition is not identified
 51 : the definition is not identified
 52 : the definition is not identified
@@ -55,11 +55,18 @@ Warnings :
 59 : the definition is not identified
 60 : the definition is not identified
 61 : the definition is not identified
-62 : the definition is not identified
 63 : the definition is not identified
 64 : the definition is not identified
 65 : the definition is not identified
 66 : the definition is not identified
 67 : the definition is not identified
+68 : the definition is not identified
+69 : the definition is not identified
+70 : the definition is not identified
+71 : the definition is not identified
+72 : the definition is not identified
+73 : the definition is not identified
+74 : the definition is not identified
+75 : the definition is not identified
 
-Your trace has 0 errors and 59 warnings.
+Your trace has 0 errors and 66 warnings.

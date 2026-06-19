@@ -18,55 +18,222 @@ h3 {
   margin-top: 15px;
   letter-spacing: 2px;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+.contenedor-botones-contacto {
+    display: flex;
+    flex-direction: row;
+    /* Ajusta el gap a 10px o 15px para que estén más unidos */
+    gap: 15px; 
+    
+    /* Esto los alinea a la izquierda de su contenedor */
+    justify-content: flex-start; 
+    
+    align-items: center;
+    
+    /* Ajusta este margen para subirlos o bajarlos respecto al texto */
+    margin-top: 10px; 
+    
+    /* Aseguramos que no tengan margen izquierdo extra */
+    margin-left: 0;
+    width: 100%;
+}
 /*-------------------VISITANOS-------------------*/
-
-.gif-overlay {
-  position: absolute;
-  top: 320px;
-  left: 680px;
-  width: 60px;   /* ajusta el tamaño */
-  height: 150px;
-  background-image: url(/src/assets/Contact/tumblr_mszobq8kHk1rfjowdo1_1280.gif);
-  background-size: cover;
-  pointer-events: none;  /* el gif no bloquea clicks */
-  z-index: 10;
-}
-/* 1. ANIMACIÓN: Define cómo aparece el mapa */
-@keyframes fadeInScreen {
-  0% { opacity: 0; transform: scale(0.9); } /* Empieza invisible y pequeño */
-  100% { opacity: 1; transform: scale(1); }  /* Termina visible y en tamaño normal */
-}
-
-/* 2. CONTENEDOR CONSOLA: Pone la imagen de fondo */
-.console-container {
-  background-image: url('#'); /* Poner aquí el link de tu consola */
-  background-size: contain red;   /* Asegura que la imagen no se corte */
+ .btn-boton-personalizado {
+  /* Imagen de fondo */
+  background-image: url('/src/assets/Contact/BotonRetroneon.png');
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 300px;
-  position: relative;            /* Necesario para que el mapa se posicione dentro */
+  background-color: transparent;
+  width: 180px;  /* Aumentado de 260px a 320px para más espacio horizontal */
+  height: 50px;
+  
+  
+  /* Centrado del texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Estilos de texto */
+  color: #39FF14; 
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.8rem; /* Un poco más pequeño para que quepa bien */
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  
+  /* Transición suave */
+  transition: all 0.3s ease;
 }
 
-/* 3. PANTALLA MAPA: Aquí está la animación y el ajuste de posición */
-.map-screen {
-  position: absolute;            /* Lo saca del flujo normal para moverlo a mano */
-  top: 50px;                     /* Distancia desde arriba (ajusta hasta que encaje) */
-  left: 0px;                   /* Distancia desde la izquierda (ajusta hasta que encaje) */
-  width: 100%;                  /* Ancho de la pantalla del dibujo */
-  height: 100%;                 /* Alto de la pantalla del dibujo */
-  overflow: hidden;              /* Corta lo que se salga del recuadro */
+/* Efecto Hover Neón */
+.btn-boton-personalizado:hover {
+  /* El brillo neón que sigue la forma de tus píxeles */
+  filter: drop-shadow(0 0 0px #39FF14) drop-shadow(0 0 5px #39FF14);
   
-  /* Aquí aplicamos la animación: dura 2 segundos, efecto suave y se queda al final */
-  animation: fadeInScreen 2s ease-out forwards; 
+  /* Ligero efecto de escala */
+  transform: scale(1.05);
 }
+
+/* Efecto al hacer clic (opcional: el botón se hunde) */
+.btn-boton-personalizado:active {
+  transform: scale(0.98);
+  filter: brightness(0.8);
+}
+/*-------------------------------------------------------------------*/
+
+/*TEXTO NEON AMARILLO*/
+.arcade-title {
+  /* Fuente directa */
+  font-family: 'Press Start 2P', cursive;
+  
+  /* Tamaño y color */
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  color: #f1f3a4; /* Sustituido --amarillito */
+  
+  margin: 0;
+  text-align: left;
+  
+  /* Efecto Glow Neón */
+  text-shadow:
+      0 0 10px #dadc81,
+      0 0 30px rgba(255, 255, 150, 0.4),
+      4px 4px 0px #333;
+}
+
+/* 1. ANIMACIÓN: Efecto de encendido */
+@keyframes fadeInScreen {
+  0% { opacity: 0; transform: scale(0.95); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* 2. CONTENEDOR DEL MAPA (Estilo retro) */
+.map-container {
+  padding: 0px;
+  background: #9cb1bf;
+  border-radius: 1px;
+  overflow: hidden;
+  /* Aplicamos la animación al mapa */
+  animation: fadeInScreen 2s ease-out forwards;
+  border: 2px solid #39ff14; 
+  border-radius: 15px; overflow: hidden
+  
+}
+
+/* Ajuste de la imagen de la consola */
+.img-fluid {
+transition: filter 0.1s ease;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* 3. BOTONES SOCIALES (Estilo Píldora) */
+.social-links .btn-outline-success {
+  border-radius: 50px !important;
+  padding: 10px 25px;
+  border: 2px solid #39FF14 !important;
+  color: #39FF14 !important;
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.social-links .btn-outline-success:hover {
+  background-color: #39FF14 !important;
+  color: #121535 !important;
+  box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
+}
+
+/* 4. TEXTO DE INFORMACIÓN */
+.contact-info h3 {
+  color: #00ff1e;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.contact-info p {
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+.hero-text {
+	font-family: var(--letraPri);
+	font-size: 50px;
+	color: var(--amarillito);
+	margin: 0;
+	text-shadow:
+		0 0 10px var(--amarillito),
+		0 0 30px rgba(255, 255, 150, 0.4),
+		4px 4px 0px #333;
+	text-align: center;
+    font-family: 'Press Start 2P'
+}
+/*--------------------------IMAGEN HERO ------------------------*/
+.hero-section {
+  /* Combinamos el gradiente con la imagen */
+  background-image: 
+    linear-gradient(to bottom, transparent 60%, #121535 100%), 
+    url('/src/assets/Contact/hero3.png');
+  
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 0 -100px;
+  padding-top: 0px;
+  overflow: hidden;
+  
+  
+  /* Asegúrate de que el color de fondo de la sección 
+     coincida con el color final del gradiente (#121535) */
+  background-color: #121535;
+}
+
+/* Efecto de Inner Shadow (Viñeta) */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Gradiente desde abajo-izquierda hacia arriba-derecha */
+  background: radial-gradient(circle at 10% 80%, rgba(19, 19, 56, 0.9) 0%, rgba(19, 19, 56, 0.4) 0%, transparent 90%);
+  
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Asegura que tu contenido esté sobre la sombra */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+
 
 /*-------------------FORMULARIO-------------------*/
+
 /* Contenedor */
 .contactanos-container{
     max-width: 900px;
     margin: 50px auto;
     padding: 20px;
 }
+
+
+
 
 /* Título */
 .contact-title{

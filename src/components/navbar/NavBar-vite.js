@@ -1,59 +1,52 @@
-// Importa el HTML del Navbar
+//importa el HTML
 import navHtml from "./NavBar.html?raw";
 
-// Importa estilos globales
+//importa el css
 import "../../styles/global.css";
 
-/**
- * Devuelve el HTML del Navbar
- */
 export function renderNavBar() {
-	return navHtml;
+  const navbarContainer = document.getElementById("navbar");
+  if (!navbarContainer) return;
+
+  navbarContainer.innerHTML = navHtml;
+
+  // Aquí llamamos a la función que verifica el login
+  actualizarBotonAuth();
+  configurarMenuHamburguesa();
 }
 
-/**
- * Inserta el Navbar en el contenedor #navbar
- */
-function inicializarNavbar() {
-	const navbarContainer = document.getElementById("navbar");
+//iniciar sesion
+function actualizarBotonAuth() {
+  const dropdownToggle = document.querySelector(".boton-sesion-toggle");
+  const dropdownMenu = document.getElementById("menu-sesion-desplegable");
 
-	if (!navbarContainer) {
-		console.warn("No se encontró el contenedor #navbar");
-		return;
-	}
+  const usuarioLogueado =
+    localStorage.getItem("usuarioLogueado") ||
+    sessionStorage.getItem("usuarioLogueado");
 
-	navbarContainer.innerHTML = navHtml;
-
-	configurarMenuHamburguesa();
+  if (usuarioLogueado) {
+    dropdownToggle.textContent = "Mi Cuenta";
+    dropdownMenu.innerHTML = `
+            <li><a class="dropdown-item text-white" href="/src/pages/profile/profile.html">Ver Perfil</a></li>
+            <li><button class="dropdown-item text-white" onclick="cerrarSesion()" style="background:none; border:none; width:100%; text-align:left;">Cerrar Sesión</button></li>
+        `;
+  } else {
+    dropdownToggle.textContent = "Usuario";
+    dropdownMenu.innerHTML = `
+            <li><a class="dropdown-item text-white" href="/src/pages/auth/login/login.html">Iniciar Sesión</a></li>
+            <li><a class="dropdown-item text-white" href="/src/pages/auth/register/register.html">Registrarse</a></li>
+        `;
+  }
 }
+//cierre de sesion
+window.cerrarSesion = function () {
+  localStorage.removeItem("usuarioLogueado");
+  sessionStorage.removeItem("usuarioLogueado");
+  // Al recargar, la Navbar volverá a ejecutar la lógica y mostrará "Iniciar Sesión"
+  window.location.href = "/index.html";
+};
+function configurarMenuHamburguesa() {}
 
-/**
- * Configura el botón hamburguesa
- */
-function configurarMenuHamburguesa() {
-	const botonMenu = document.getElementById("boton-menu");
-	const menuDesplegable = document.getElementById("menu-desplegable");
-
-	if (!botonMenu || !menuDesplegable) {
-		console.warn("No se encontraron elementos del menú hamburguesa");
-		return;
-	}
-
-	botonMenu.addEventListener("click", () => {
-		menuDesplegable.classList.toggle("mostrar-menu-retro");
-
-		// Efecto visual del botón
-		botonMenu.style.transform = "scale(0.95)";
-
-		setTimeout(() => {
-			botonMenu.style.transform = "scale(1)";
-		}, 100);
-	});
-}
-
-/**
- * Espera a que cargue el DOM
- */
 document.addEventListener("DOMContentLoaded", () => {
-	inicializarNavbar();
+  renderNavBar();
 });

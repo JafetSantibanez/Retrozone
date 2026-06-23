@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+:root {
+	/*colores principales */
+	--azulFond: #121535;
+	--rojoRosa: #c21a4b;
+	--verde: #00ff1e;
+	--amarillito: #ffffbc;
+	--gris: #1c2b24;
+	/* Fuente principal */
+	--letraPri: "Press Start 2P", cursive;
+}
+
+/* ===================================================== */
+/* CONTENEDOR PRINCIPAL DEL HERO                         */
+/* ===================================================== */
+
+.hero-retro {
+	position: relative; /* Referencia para posicionar estrellas y nubes */
+	width: 100%; /* Ocupa todo el ancho disponible */
+	height: 550px; /* Altura del Hero */
+	background-color: var(--azulFond); /* Fondo azul oscuro retro */
+	overflow: hidden; /* Oculta elementos fuera del contenedor */
+}
+
+/* ===================================================== */
+/* FONDO DE ESTRELLAS                                    */
+/* ===================================================== */
+
+.stars {
+	position: absolute; /* Se posiciona sobre el Hero */
+	inset: 0; /* Ocupa todo el contenedor */
+
+	/* Estrellas generadas con gradientes */
+	background-image:
+		radial-gradient(2px 2px at 50px 50px, white, transparent),
+		radial-gradient(2px 2px at 180px 120px, white, transparent),
+		radial-gradient(1px 2px at 270px 14px, white, transparent),
+		radial-gradient(4px 2px at 350px 250px, rgb(135, 225, 255), transparent),
+		radial-gradient(1px 1px at 350px 1200px, white, transparent),
+		radial-gradient(2px 2px at 500px 180px, white, transparent),
+		radial-gradient(1px 1px at 700px 100px, white, transparent),
+		radial-gradient(6px 6px at 632px 200px, rgb(135, 225, 255), transparent),
+		radial-gradient(2px 2px at 900px 220px, white, transparent),
+		radial-gradient(1px 2px at 950px 100px, white, transparent),
+		radial-gradient(1px 1px at 1100px 70px, white, transparent),
+		radial-gradient(2px 2px at 1200px 10px, white, transparent),
+		radial-gradient(2px 2px at 1300px 150px, white, transparent);
+
+	background-repeat: repeat; /* Repite el patrón */
+	background-size: 1400px 400px; /* Área de distribución */
+	opacity: 0.9; /* Transparencia */
+	animation: moveStars 9s linear infinite; /* Movimiento vertical */
+}
+
+/* Animación del fondo de estrellas */
+@keyframes moveStars {
+	from {
+		transform: translateY(0);
+	}
+	to {
+		transform: translateY(80px);
+	}
+}
+
+/* ===================================================== */
+/* NUBES                                                 */
+/* ===================================================== */
+
+.cloud {
+	position: absolute; /* Permite mover cada nube */
+	width: 300px; /* Tamaño de la nube */
+	opacity: 0.95; /* Ligera transparencia */
+	image-rendering: pixelated; /* Conserva el estilo pixel art */
+}
+
+/* Nube izquierda superior */
+.cloud1 {
+	top: 10px;
+	left: -150px;
+	animation: moveCloud1 100s linear infinite;
+}
+
+/* Nube superior derecha */
+.cloud2 {
+	top: 5px;
+	left: 800px;
+	animation: moveCloud2 100s linear infinite;
+}
+
+/* Nube inferior */
+.cloud3 {
+	top: 220px;
+	left: -400px;
+	animation: moveCloud3 100s linear infinite;
+}
+
+/* Movimiento horizontal de las nubes */
+@keyframes moveCloud1 {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(1600px);
+	}
+}
+
+@keyframes moveCloud2 {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(1700px);
+	}
+}
+
+@keyframes moveCloud3 {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(1650px);
+	}
+}
+
+/* ===================================================== */
+/* CONTENIDO PRINCIPAL                                   */
+/* ===================================================== */
+
+.hero-content {
+	position: relative; /* Mantiene el contenido encima */
+	z-index: 10; /* Prioridad sobre estrellas y nubes */
+	text-align: center; /* Centra el texto */
+	padding-top: 120px; /* Separación superior */
+	color: white; /* Color del texto */
+}
+
+/* ===================================================== */
+/* ESTRELLAS PARPADEANTES                                */
+/* ===================================================== */
+
+.twinkle {
+	position: absolute;
+	width: 2px;
+	height: 2px;
+	background: white;
+
+	/* Efecto de brillo */
+	animation: twinkle 3s infinite;
+}
+
+/* Posición individual de cada estrella */
+.star1 {
+	top: 80px;
+	left: 200px;
+	animation-delay: 0s;
+}
+
+.star2 {
+	top: 150px;
+	left: 500px;
+	animation-delay: 1s;
+}
+
+.star3 {
+	top: 250px;
+	left: 900px;
+	animation-delay: 0.5s;
+}
+
+.star4 {
+	top: 10px;
+	left: 1250px;
+	animation-delay: 1.5s;
+}
+
+/* Animación de parpadeo */
+@keyframes twinkle {
+	0%,
+	100% {
+		opacity: 0;
+		transform: scale(1);
+	}
+
+	50% {
+		opacity: 1;
+		transform: scale(3);
+	}
+}
+
+/* ===================================================== */
+/* ESTRELLA CON MOVIMIENTO EN FORMA DE INFINITO          */
+/* ===================================================== */
+
+.infinity-star {
+	position: relative;
+	width: 4px;
+	height: 4px;
+	top: 10px;
+	left: 1250px;
+	background: rgb(3, 110, 167);
+	border-radius: 50%;
+
+	animation: infinityMove 8s linear infinite;
+}
+
+/* Trayectoria similar al símbolo ∞ */
+@keyframes infinityMove {
+	0%,
+	50%,
+	100% {
+		transform: translate(0px, 0px);
+	}
+
+	25% {
+		transform: translate(60px, 0px);
+	}
+
+	75% {
+		transform: translate(-60px, 0px);
+	}
+}
+
+/* ===================================================== */
+/* ESTRELLA FUGAZ                                        */
+/* ===================================================== */
+
+.shooting-star {
+	position: absolute;
+	top: 100px;
+	left: -100px;
+
+	width: 8px;
+	height: 2px;
+	background: white;
+
+	box-shadow: 0 0 10px white; /* Resplandor */
+
+	animation: shooting 8s linear infinite;
+}
+
+/* Movimiento diagonal de la estrella fugaz */
+@keyframes shooting {
+	0% {
+		transform: translate(0, 0);
+		opacity: 0;
+	}
+
+	10%,
+	80% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(1200px, 300px);
+		opacity: 0;
+	}
+}
+
+.pasto {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	width: 100%;
+	height: 90%;
+
+	z-index: 4;
+}
+
+.hero-content {
+	position: relative;
+	z-index: 10;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	height: 100%;
+}
+
+.retrozone-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	gap: 0;
+
+	position: absolute;
+	bottom: 130px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.logoRe {
+	width: clamp(70px, 8vw, 140px);
+	height: auto;
+
+	position: relative;
+	z-index: 4;
+}
+
+.tiPri {
+	font-family: var(--letraPri);
+	color: var(--amarillito);
+
+	margin: 0;
+
+	font-size: clamp(1.8rem, 4vw, 4rem);
+
+	position: relative;
+
+	margin-left: -8px;
+}
+
+.tiPri:hover {
+	font-size: 40px;
+	font-weight: bold;
+	background: linear-gradient(
+		90deg,
+		#ff0000,
+		#ff9900,
+		#ffff00,
+		#00ff00,
+		#00ffff,
+		#0000ff,
+		#ff00ff,
+		#ff0000
+	);
+
+	background-size: 300% 100%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	transition: 0.5s;
+	animation: moverColores 2s linear infinite;
+}
+@keyframes moverColores {
+	0% {
+		background-position: 0%;
+	}
+	100% {
+		background-position: 300%;
+	}
+}
+.subtitulo {
+	margin-top: 20px;
+
+	font-family: var(--letraPri);
+	color: white;
+
+	font-size: clamp(0.7rem, 1.5vw, 1rem);
+}
+
+.hero-content {
+	position: relative;
+	z-index: 10;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	height: 100%;
+}
+.retrozone-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0;
+
+	position: absolute;
+
+	top: 40%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+}
+.logoRe {
+	width: clamp(70px, 8vw, 140px);
+	height: auto;
+
+	position: relative;
+	z-index: 4;
+}
+
+.tiPri {
+	font-family: var(--letraPri);
+	color: var(--amarillito);
+
+	margin: 0;
+
+	font-size: clamp(1.8rem, 4vw, 4rem);
+
+	position: relative;
+
+	margin-left: -1px;
+}
+
+.subtitulo {
+	margin-top: 20px;
+
+	font-family: var(--letraPri);
+	color: white;
+
+	font-size: clamp(0.7rem, 1.5vw, 1rem);
+}
+
+@media (max-width: 992px) {
+	.retrozone-logo {
+		bottom: 120px;
+	}
+
+	.logoRe {
+		width: 90px;
+	}
+
+	.tiPri {
+		font-size: 2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.retrozone-logo {
+		bottom: 100px;
+	}
+
+	.logoRe {
+		width: 70px;
+	}
+
+	.tiPri {
+		font-size: 1.5rem;
+	}
+
+	.subtitulo {
+		font-size: 0.7rem;
+		text-align: center;
+		padding: 0 20px;
+	}
+}
+/* Contenedor de moneda + texto */
+.insert-coin {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* ========================= */
+/* MONEDA                    */
+/* ========================= */
+
+.moneda {
+	/* Cambia este valor para hacer la moneda más grande o más pequeña */
+	width: 40px;
+
+	/* Mantiene la proporción de la imagen */
+	height: auto;
+
+	/* Espacio entre la moneda y el texto */
+	margin-bottom: 10px;
+
+	/* Animación de giro */
+	animation: girarMoneda 2s linear infinite;
+}
+
+/* ========================= */
+/* ANIMACIÓN DE GIRO         */
+/* ========================= */
+
+@keyframes girarMoneda {
+	from {
+		transform: rotateY(0deg);
+	}
+
+	to {
+		transform: rotateY(360deg);
+	}
+}
+
+/* ========================= */
+/* TEXTO INSERT COIN         */
+/* ========================= */
+
+.subtitulo {
+	font-family: var(--letraPri);
+	color: var(--amarillito);
+
+	/* Cambia el tamaño del texto */
+	font-size: 1rem;
+
+	margin: 0;
+}
+
+.insertCoin {
+	font-family: var(--letraPri);
+	font-size: clamp(0.5rem, 1.5vw, 0.85rem);
+	color: var(--amarillito);
+	letter-spacing: 2px;
+	margin: 0;
+	animation: blink 1.1s step-start infinite; /* Parpadeo estilo arcade */
+}
+@keyframes blink {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}
+.categoTitle {
+	background-color: var(--azulFond);
+}
+.categoria {
+	background-color: var(--azulFond);
+	width: auto;
+	display: flex;
+	justify-content: center; /* Centra las tarjetas */
+	gap: 15px; /* Espacio entre tarjetas */
+	flex-wrap: wrap; /* Baja a otra fila si no caben */
+	margin-top: 0px;
+}
+.titulo-categoria {
+	font-family: "Orbitron", sans-serif;
+	font-size: 20px;
+	color: var(--verde);
+	text-align: center;
+	margin-bottom: 20 px;
+
+	text-shadow:
+		0 0 5px #ffffbc,
+		0 0 10px #286d5a,
+		0 0 20px #ffd700;
+}
+
+.categoria-container {
+	background-color: var(--azulFond);
+	padding: 20px 0;
+}
+
+.card {
+	border-radius: 10px;
+	transition: 0.3s;
+}
+
+.card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 0 15px #ffffbc;
+}
+.card {
+	width: 10rem;
+}
+
+.card-img-top {
+	height: 130px;
+	object-fit: contain;
+	padding: 5px;
+	background-color: rgb(15, 4, 79);
+}
+
+.card-body {
+	padding: 8px 5px !important;
+	text-align: center;
+	color: white !important;
+	background-color: var(--azulFond);
+}
+
+.card-text {
+	margin: 0 !important;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 1.2;
+}

@@ -1,0 +1,249 @@
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Press Start 2P", monospace;
+  background-color: #131338;
+  background-image: url("../../../assets/register/BgRetroZone.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fdffae;
+  display: flex;
+  flex-direction: column;
+}
+
+#navbar {
+  width: 100%;
+  z-index: 1050;
+}
+
+/* contenedor principal */
+main.container-fluid {
+  flex: 1;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+  box-sizing: border-box;
+  z-index: 100;
+  color: #fdffae;
+}
+
+/* banner negro */
+.retro-banner {
+  background-color: rgba(0, 0, 0, 0.75) !important;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.8);
+  width: 100% !important;
+  max-height: 75vh !important;
+  overflow-y: auto !important;
+  border-radius: 12px;
+}
+
+/* scrollbar */
+.retro-banner::-webkit-scrollbar {
+  width: 8px;
+}
+.retro-banner::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+.retro-banner::-webkit-scrollbar-thumb {
+  background-color: #39ff14;
+  border-radius: 4px;
+}
+.invalid-feedback {
+  font-size: 0.65rem !important;
+}
+
+#usernameFeedback {
+  font-size: 0.65rem;
+  line-height: 1.5;
+  white-space: normal;
+  color: #dc3545 !important;
+  font-family: "Press Start 2P", monospace;
+}
+
+/* inputs */
+.form-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100% !important;
+  font-size: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 15px;
+  border: 2px solid #000000;
+  background-color: #fdfeea !important;
+  color: #000000 !important;
+}
+
+.form-control:focus {
+  background-color: #fdfeea !important;
+  color: #000000 !important;
+  border-color: #1be628 !important;
+  box-shadow: 0 0 0 0.25rem rgba(27, 230, 40, 0.25);
+}
+
+/* telefono */
+.iti__country-list,
+.iti__country-list * {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+}
+
+.iti__country-name {
+  font-size: 0.85rem !important;
+  color: #000000 !important;
+}
+
+.iti__dial-code {
+  font-size: 0.85rem !important;
+  color: #666666 !important;
+}
+
+.iti {
+  display: block !important;
+  width: 100% !important;
+}
+
+.iti input {
+  width: 100% !important;
+}
+
+/* contraseña */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 45px;
+  top: 11px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #6c757d;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  transition: color 0.1s ease;
+}
+
+.password-container .form-control.is-invalid ~ .password-toggle-icon {
+  color: #dc3545;
+}
+
+.password-container .invalid-feedback {
+  display: none;
+  margin-top: 0.5rem;
+  font-size: 0.65rem;
+  line-height: 1.5;
+  white-space: normal;
+  color: #dc3545 !important;
+  font-family: "Press Start 2P", monospace;
+}
+
+.password-container .form-control.is-invalid ~ .invalid-feedback {
+  display: block !important;
+}
+
+.password-container input::-ms-reveal,
+.password-container input::-ms-clear {
+  display: none !important;
+}
+
+/* checkbox */
+.form-check {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  padding-left: 0 !important;
+}
+
+.form-check-input {
+  background-color: #fdfeea !important;
+  border: 2px solid #000000 !important;
+  border-radius: 4px !important;
+  width: 1.1rem !important;
+  height: 1.1rem !important;
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #d31d56 !important;
+  border-color: #39ff14 !important;
+}
+
+.form-check-label {
+  color: #fdffae !important;
+  font-size: 0.6rem;
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+
+/*submit */
+.btn-retro {
+  background-color: #d31d56 !important;
+  border: #39ff14 2px solid !important;
+  width: 100%;
+  padding: 0.75rem 0;
+  border-radius: 20px;
+  transition: transform 0.1s ease;
+  font-size: 0.8rem !important;
+  font-family: "Press Start 2P", monospace;
+  text-transform: uppercase;
+}
+
+.btn-retro:hover {
+  background-color: #b01443 !important;
+  transform: scale(1.02);
+}
+
+.col-12.text-center p.mt-3 {
+  font-size: 0.6rem !important;
+  color: #fdffae !important;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+.text-success {
+  font-size: 0.6rem !important;
+  color: #39ff14 !important;
+}
+
+.text-success:hover {
+  color: #26b60e !important;
+  text-decoration: underline !important;
+}
+
+/* media queries */
+@media (max-width: 576px) {
+  body {
+    /* Si tienes la imagen de cel la pones aquí, si no, cover se adapta */
+    background-image: url("../../../assets/register/BackgroundRZ.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
+#footer-container {
+  margin-top: auto;
+  width: 100%;
+  z-index: 110;
+}

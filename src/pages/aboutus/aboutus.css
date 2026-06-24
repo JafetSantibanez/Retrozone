@@ -13,113 +13,126 @@ body {
 	padding-top: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* HERO */
-.hero {
+
+.hero-section {
+  background-image:
+    linear-gradient(rgba(18, 21, 53, 0.45), rgba(18, 21, 53, 0.85)),
+    url("../../assets/equipoRetrazone.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  padding: 80px 60px;
+  background-color: #121535;
+  border-bottom: 4px solid #00ff1e;
+  padding-bottom: 10px;
+}
+
+
+/* Efecto de Inner Shadow (Viñeta) */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Gradiente desde abajo-izquierda hacia arriba-derecha */
+  background: radial-gradient(circle at 10% 80%, rgba(19, 19, 56, 0.9) 0%, rgba(19, 19, 56, 0.4) 0%, transparent 90%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-content{
 	position: relative;
-	min-height: 340px;
-	padding: 50px 25px 40px;
-	background: #121535;
-	overflow: hidden;
-	border-bottom: 20px solid #e91e63;
-}
-
-.hero h1 {
-	text-align: center;
-	color: #fff36d;
-	font-size: 50px;
-	text-shadow: 4px 4px #111;
-}
-
-.hero h1 span {
-	border: 3px dashed white;
-	padding: 5px;
-	margin-right: 5px;
-}
-
-.subtitle {
-	text-align: center;
-	color: white;
-	font-size: 40px;
-}
-
-.about-intro {
-	width: 45%;
-	margin-top: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+    z-index: 2;
+	max-width: 650px;
 }
 
 .about-label {
 	color: #ff2b9d;
 	font-family: "Press Start 2P", cursive;
-	font-size: 1.5rem;
+	font-size: 2.8rem;
 	letter-spacing: 2px;
 	margin: 0 0 45px 0;
+	margin-bottom: 90px;
 	line-height: 1;
 	font-weight: normal;
 }
 
-.about-intro h2 {
-	color: #00ff1e;
-	font-size: 1.8rem;
-	line-height: 1.2;
-	text-align: left;
-	margin: 0 0 25px 0;
-	text-align: left;
+.hero-content h2 {
+  color: #00ff1e;
+  font-size: 2rem;
+  line-height: 1.1;
 }
 
-.about-intro p {
-	font-size: 0.95rem;
-	line-height: 1.5;
-	text-align: left;
-	max-width: 350px;
-	margin-bottom: 70px;
+.hero-content p {
+  max-width: 615px;
+  font-size: 1rem;
+  margin-top: 90px;
+  margin-bottom: 90px;
 }
 
-.btn-retro {
-	position: absolute;
-	top: 185px;
-	left: 43%;
-	background: white;
-	color: #2b2bff;
-	border: none;
-	border-radius: 20px;
-	padding: 8px 25px;
-	font-size: 8px;
+.contenedor-botones-contacto {
+    display: flex;
+    flex-direction: row;
+	flex-wrap: nowrap;
+    /* Ajusta el gap a 10px o 15px para que estén más unidos */
+    gap: 12px; 
+    /* Esto los alinea a la izquierda de su contenedor */
+    justify-content: flex-start; 
+    align-items: center;
+    /* Ajusta este margen para subirlos o bajarlos respecto al texto */
+    margin-top: 40px; 
+    /* Aseguramos que no tengan margen izquierdo extra */
+    margin-left: 0;
+	margin-bottom: 60px;
+    width: 100%;
 }
 
-.hearts {
-	position: absolute;
-	top: 250px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 300px;
-	height: auto;
-	object-fit: contain;
+ .btn-boton-personalizado {
+  /* Imagen de fondo */
+  background-image: url('/src/assets/Contact/BotonRetroneon.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 150px;  /* Aumentado de 260px a 320px para más espacio horizontal */
+  height: 50px;
+  /* Centrado del texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Estilos de texto */
+  color: #39FF14; 
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.60rem; /* Un poco más pequeño para que quepa bien */
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  padding: 10px 10px;
+  /* Transición suave */
+  transition: all 0.3s ease;
 }
 
-.cloud {
-	position: absolute;
-	font-size: 35px;
+/* Efecto Hover Neón */
+.btn-boton-personalizado:hover {
+  /* El brillo neón que sigue la forma de tus píxeles */
+  filter: drop-shadow(0 0 0px #39FF14) drop-shadow(0 0 5px #39FF14);
+  /* Ligero efecto de escala */
+  transform: scale(1.05);
 }
 
-.cloud1 {
-	top: 70px;
-	left: 20px;
-}
-
-.cloud2 {
-	top: 60px;
-	right: 50px;
-}
-
-.ground {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	border-bottom: 8px dotted #00ff1e;
+/* Efecto al hacer clic (opcional: el botón se hunde) */
+.btn-boton-personalizado:active {
+  transform: scale(0.98);
+  filter: brightness(0.8);
 }
 
 /* SECCIONES */
@@ -135,6 +148,15 @@ main {
 .conocenos {
 	padding: 50px 80px;
 	border-bottom: 4px solid #00ff1e;
+	min-height: 85vh;
+}
+
+.historia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	padding-top: 40px;
+    padding-bottom: 80px;
 }
 
 h3 {
@@ -185,16 +207,17 @@ h3 {
 }
 
 /* MISION Y VISION */
-.card-retro {
-	border: 3px solid #00ff1e;
-	border-radius: 10px;
-	padding: 25px 35px;
-	min-height: 310px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 35px;
-	text-align: center;
+
+.mision-vision {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mision-vision .row {
+	width: 100%;
 }
 
 .icon-retro {
@@ -204,20 +227,60 @@ h3 {
 	filter: drop-shadow(0 0 10px #ff2b9d);
 }
 
-.card-retro div {
-	flex: 1;
+.flip-card {
+  height: 400px;
+  perspective: 1000px;
+  width: 100%;
 }
 
-.card-retro h4 {
-	color: #00ff1e;
-	font-size: 1.4rem;
-	margin-bottom: 20px;
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
 }
 
-.card-retro p {
-	line-height: 1.6;
-	font-size: 0.85rem;
-	text-align: center;
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #00ff1e;
+  border-radius: 10px;
+  background: #121535;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 0 18px rgba(0, 255, 30, 0.35);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front h4,
+.flip-card-back h4 {
+  color: #00ff1e;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.2rem;
+}
+
+.flip-card-back p {
+  color: white;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 /* VALORES */

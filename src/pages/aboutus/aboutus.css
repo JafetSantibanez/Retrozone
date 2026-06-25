@@ -22,7 +22,7 @@ html {
 .hero-section {
   background-image:
     linear-gradient(rgba(18, 21, 53, 0.45), rgba(18, 21, 53, 0.85)),
-    url("../../assets/equipoRetrazone.png");
+    url("../../assets/about_us/equipoRetrazone.png");
   background-size: cover;
   background-position: center;
   min-height: 80vh;
@@ -146,25 +146,11 @@ main {
 .mision-vision,
 .valores,
 .conocenos {
-	padding: 50px 80px;
+	padding: 90px 70px;
 	border-bottom: 4px solid #00ff1e;
 	min-height: 85vh;
-}
-
-.historia{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-	padding-top: 40px;
-    padding-bottom: 80px;
-}
-
-h3 {
-	color: #00ff1e;
-	text-align: center;
-	font-size: 1.4rem;
-	margin-bottom: 30px;
-	letter-spacing: 3px;
+	padding-top: 90px;
+    padding-bottom: 90px;
 }
 
 .historia h3,
@@ -174,6 +160,7 @@ h3 {
 	align-items: center;
 	gap: 20px;
 	white-space: nowrap;
+	margin-bottom: 70px;
 }
 
 .historia h3::before,
@@ -188,6 +175,31 @@ h3 {
 	background: #e91e63;
 }
 
+h3 {
+	color: #00ff1e;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 30px;
+	letter-spacing: 3px;
+}
+
+/* HISTORIA */
+
+@keyframes saltoArcade {
+    0%{
+        transform: translateY(0);
+    }
+    30%{
+        transform: translateY(-15px);
+    }
+    55%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
 .arcade-img {
 	width: 100%;
 	max-width: 450px;
@@ -196,6 +208,26 @@ h3 {
 	object-fit: cover;
 	border: 3px solid #ff2b9d;
 	box-shadow: 0 0 20px #ff2b9d;
+	transition: all .35s ease;
+    cursor: pointer;
+}
+
+.arcade-img:hover{
+    animation: saltoArcade .7s ease;
+    transform: 
+		scale(1.04)
+		rotate(-2deg);
+    box-shadow:
+        0 0 20px #ff2b9d,
+        0 0 45px #ff2b9d,
+        0 0 70px #ff2b9d;
+    filter: brightness(1.15);
+}
+
+.historia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .historia p {
@@ -209,8 +241,8 @@ h3 {
 /* MISION Y VISION */
 
 .mision-vision {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 105px;
+    padding-bottom: 105px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -221,16 +253,17 @@ h3 {
 }
 
 .icon-retro {
-	width: 160px;
+	width: 250px;
 	flex-shrink: 0;
 	margin: 0;
 	filter: drop-shadow(0 0 10px #ff2b9d);
 }
 
 .flip-card {
-  height: 400px;
-  perspective: 1000px;
+  height: 420px;
+  perspective: 1200px;
   width: 100%;
+  transition: translateY(-10px) scale(1.02);
 }
 
 .flip-card-inner {
@@ -239,6 +272,10 @@ h3 {
   height: 100%;
   transition: transform 0.7s;
   transform-style: preserve-3d;
+}
+
+.flip-card:hover {
+  transform: translateY(-10px) scale(1.02);
 }
 
 .flip-card:hover .flip-card-inner {
@@ -261,7 +298,18 @@ h3 {
   gap: 25px;
   padding: 30px;
   text-align: center;
-  box-shadow: 0 0 18px rgba(0, 255, 30, 0.35);
+  box-shadow: 
+  	0 0 15px rgba(0, 255, 30, 0.35),
+  	inset 0 0 20px rgba(0, 255, 30, 0.08);
+  transition: box-shadow 0.35s ease;
+}
+
+.flip-card:hover .flip-card-front,
+.flip-card:hover .flip-card-back {
+  box-shadow:
+    0 0 25px #00ff1e,
+    0 0 45px rgba(0, 255, 30, 0.6),
+    inset 0 0 25px rgba(255, 43, 157, 0.18);
 }
 
 .flip-card-back {
@@ -272,7 +320,7 @@ h3 {
 .flip-card-back h4 {
   color: #00ff1e;
   font-family: "Press Start 2P", cursive;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .flip-card-back p {
@@ -284,40 +332,83 @@ h3 {
 }
 
 /* VALORES */
+@keyframes salto {
+    0%{
+        transform: translateY(0);
+    }
+    35%{
+        transform: translateY(-15px);
+    }
+    60%{
+        transform: translateY(4px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
 .valores-grid {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	gap: 0;
-	border-radius: 10px;
-	border-top: 3px solid #e91e63;
-	border-bottom: 3px solid #e91e63;
-	border-left: 2px solid #e91e63;
-	border-right: 2px solid #e91e63;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  border: none;
 }
 
 .valor {
-	text-align: center;
-	padding: 15px;
-	border-right: 2px solid #e91e63;
+  min-height: 430px;
+  padding: 25px 28px 25px;
+  border: 2px solid #ff2b9d;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(10, 15, 45, 0.45);
+  box-shadow: 0 0 15px rgba(255, 43, 157, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.35s ease;
 }
 
-.valor:last-child {
-	border-right: none;
+.valor:hover{
+    transform: translateY(-12px);
+    box-shadow: 0 0 30px #ff2b9d;
 }
 
 .valor-icon {
-	font-size: 45px;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 25px;
+
+}
+
+.valor:hover .valor-icon{
+    transform: translateY(-12px) scale(1.12);
+    filter: drop-shadow(0 0 15px #ff2b9d)
+            drop-shadow(0 0 25px #ff2b9d);
+	animation: salto .6s ease;
+    filter: drop-shadow(0 0 15px #ff2b9d)
+            drop-shadow(0 0 30px #ff2b9d);
 }
 
 .valor h5 {
-	color: #00ff1e;
-	font-size: 1rem;
-	margin: 15px 0;
+  color: #00ff1e;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.valor h5::after {
+  content: "";
+  display: block;
+  width: 85px;
+  height: 3px;
+  background: #ff2b9d;
+  margin: 22px auto 0;
 }
 
 .valor p {
-	line-height: 1.6;
-	font-size: 0.85rem;
+  font-size: 0.85rem;
+  line-height: 1.9;
+  margin: 0;
 }
 
 /* FUENTE RETRO */
@@ -468,20 +559,43 @@ h5,
 	color: #009b72 !important;
 }
 
-.git {
-	width: 28px;
-	height: 28px;
-	margin-top: 10px;
-	transition: 0.3s;
+@keyframes saltoGithub {
+    0%{
+        transform: translateY(0) rotate(0deg);
+    }
+    30%{
+        transform: translateY(-15px) rotate(-10deg);
+    }
+    60%{
+        transform: translateY(4px) rotate(8deg);
+    }
+    100%{
+        transform: translateY(0) rotate(0deg);
+    }
 }
 
-.git:hover {
-	transform: scale(1.15);
-}
-
-.github-link {
+.github-link{
+    text-decoration: none;
 	display: inline-block;
 }
+
+.github-link i{
+    font-size: 5rem;
+    color: #F5E6C8;   /* beige */
+    transition: all .3s ease;
+}
+
+.github-link:hover i{
+    animation: saltoGithub .6s ease;
+    color: #F5E6C8;
+
+    filter:
+        drop-shadow(0 0 8px #f5f5f5)
+        drop-shadow(0 0 20px #f5f5f5);
+
+    transform: scale(1.15);
+}
+
 
 /* RESPONSIVE TABLET */
 @media (max-width: 992px) {

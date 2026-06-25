@@ -61,6 +61,7 @@ html {
 }
 
 .about-label {
+<<<<<<< HEAD
   color: #ff2b9d;
   font-family: "Press Start 2P", cursive;
   font-size: 2.8rem;
@@ -72,7 +73,24 @@ html {
   text-shadow:
       0 0 10px #ff2b9d,
       0 0 30px rgba(233, 63, 114, 0.4), 4px 4px 0px #333;
+=======
+    color: #ff2b9d;
+    font-family: "Press Start 2P", cursive;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    margin: 0 0 45px 0;
+    margin-bottom: 90px;
+    line-height: 1;
+    font-weight: normal;
+
+    /* Efecto Glow Neón adaptado a rosa */
+    text-shadow:
+        0 0 10px #ff2b9d,
+        0 0 30px rgba(255, 43, 157, 0.4),
+        4px 4px 0px #333;
+>>>>>>> 6ccb335 (Style: le puse como glow neon al titulo about us en about us)
 }
+
 
 .hero-content h2 {
   color: #f1f3a4;

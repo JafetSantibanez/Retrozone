@@ -3,331 +3,314 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
 :root {
-	/*colores principales */
-	--azulFond: #121535;
-	--rojoRosa: #c21a4b;
-	--verde: #00ff1e;
-	--amarillito: #ffffbc;
-	--gris: #1c2b24;
-	/* Fuente principal */
-	--letraPri: "Press Start 2P", cursive;
+  /*colores principales */
+  --azulFond: #121535;
+  --rojoRosa: #c21a4b;
+  --verde: #00ff1e;
+  --amarillito: #ffffbc;
+  --gris: #1c2b24;
+  /* Fuente principal */
+  --letraPri: "Press Start 2P", cursive;
 }
 
-/* Configuración general de la barra */
-.mi-navbar-retro {
-	background-color: #1be628 !important;
-	font-family: "Press Start 2P", monospace;
-	font-size: 12px;
-	padding: 10px 20px;
-	display: flex;
-	align-items: center;
+/* INICIO DE NAVBAR */
+.navbar-retrozone {
+  background-color: var(--verde) !important;
+  font-family: var(--letraPri), monospace;
+  font-size: 12px;
+  padding: 5px 10px;
 }
 
-/* Esta sección corresponde al botón, incluyendo la imagen */
+.logo-pixel-img {
+  width: 64px;
+  height: 64px;
+  image-rendering: pixelated;
+  object-fit: contain;
+}
+#boton-carrito {
+  display: inline-block !important;
+  transition: transform 0.05s ease;
+}
+
+.boton-pixel:active,
+.logo-container:active,
+.contenedor-buscador-retro .btn:active:active {
+  transform: translateY(3px) !important;
+}
 .boton-pixel {
-	color: #1be628 !important;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	width: 140px;
-	height: 60px;
-	background-image: url("../assets/botonRetro.png") !important;
-	background-size: 100% 100%;
-
-	/*Para que el borde se aprecie al pasar por el botón, complemento con sombra negra*/
-	border: transparent;
-	border-radius: 20px;
-
-	/* Sombra externa en color negro*/
-	box-shadow: 3px 3px 0px #1be628;
-	text-decoration: none;
-	text-align: center;
-}
-/* esto hace que los botones esten con la sombra negra*/
-.boton-pixel:active {
-	transform: translate(1px, 1px);
-	box-shadow: 2px 2px 0px #161616;
-}
-/* Efecto Hover (Cuando pasas el mouse) */
-.boton-pixel:hover {
-	background-color: #25331c !important;
-	color: #1be628 !important;
-	/* Invierte las sombras para que parezca que se hunde */
-	box-shadow: 3px 3px 0px #161616;
-
-	border-color: #ededa9;
-	cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 50px;
+  background-image: url("/src/assets/navbar/Boton.png") !important;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: var(--verde) !important;
+  text-decoration: none;
+  text-align: center;
 }
 
-/* Ajuste de botones */
-.enlaces-retro {
-	display: flex;
-	align-items: center;
-	gap: 25px;
-	margin-left: 40px !important; /* Ajusta este número (más grande = más lejos del logo) */
-	margin-right: auto !important; /* Esto empuja al carrito y buscador todo a la derecha */
-
-	/*Bordes */
-	border-radius: 20px;
-	text-decoration: none;
-	text-align: center;
+.boton-home {
+  font-size: 12px;
+  margin-right: 15px;
 }
 
-/* buscador y carrito de nadvar*/
-.derecha-navbar {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-
-	margin-left: auto;
+.boton-categorias {
+  font-size: 9px;
+  margin-right: 0px;
+}
+/* Corregir el fondo del menú desplegable de categorías */
+.dropdown-menu {
+  background-color: var(--azulFond) !important;
+  border: 2px solid var(--blanco) !important;
+  border-radius: 0px !important;
+  padding: 5px 0 !important;
+  font-size: 10px;
 }
 
-/* Carrito */
-.carrito-retro {
-	width: 70px;
-	height: 70px;
-	background-image: url("../assets/carritoRetro.png");
-	background-size: 70px;
-	background-repeat: no-repeat;
-	background-position: center;
-	/*border: 4px solid #000000;
-  border-radius: 10px;*/
-	background-color: transparent;
-	/* box-shadow: 3px 3px 0px #161616; */
-	flex-shrink: 0;
-	margin-left: 10px !important; /* Lo separa del botón de 'Perfil' */
-	margin-right: 0px !important;
+/* Efecto hover para las opciones de adentro del menú */
+.dropdown-item:hover {
+  background-color: var(--rojoRosa) !important;
+  color: var(--blanco) !important;
 }
 
-.carrito-retro:active {
-	transform: translate(1px, 1px);
-	box-shadow: 2px 2px 0px #161616;
-	border-color: #ededa9;
-	cursor: pointer;
+.contenedor-buscador-retro .input-group {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
 }
 
-/*  Ajustes específicos para el buscador */
-.buscador-retro {
-	border-radius: 20px;
+.contenedor-buscador-retro .form-control {
+  background-color: var(--amarillito) !important;
+  font-family: "Press Start 2P", monospace;
+  font-size: 10px;
+  border: 2px solid #000000;
+  border-radius: 20px !important;
+  height: 50px;
 }
 
-/* 4. Logo retro (El cuadro de la izquierda) */
-.logo-pixel {
-	width: 60px; /* Ancho del cuadro */
-	height: 60px;
-	background-image: url("../assets/logoRetro.jpeg");
-	background-size: contain; /* Escala la imagen para que quepa entera */
-	background-repeat: no-repeat; /* Evita que la imagen se duplique en mosaico */
-	background-position: center;
-	image-rendering: pixelated;
-	flex-shrink: 0;
-	border-color: #ededa9;
-	cursor: pointer;
+.contenedor-buscador-retro .btn {
+  background-image: url("/src/assets/navbar/Boton.png") !important;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: var(--verde) !important;
+  font-family: "Press Start 2P", monospace;
+  font-size: 12px;
+  text-decoration: none;
+  text-align: center;
+  height: 50px;
+  padding: 0 15px;
+  white-space: nowrap;
 }
 
-/* Esto va a obliga al grupo de 4 botones a separarse del logo */
-.enlaces-retro {
-	display: flex;
-	align-items: center;
-	gap: 15px;
-	display: flex;
-	align-items: center;
-	gap: 15px;
+.uniones-retro {
+  display: flex !important;
+  align-items: center !important;
+}
+.boton-sesion-toggle {
+  font-size: 9px !important;
+  margin-right: 0px;
+  margin-left: 15px;
 }
 
-/*Correspondiente al menu de hamburguesa*/
-.boton-hamburguesa-retro {
-	border: none;
-	background: transparent;
-	display: none;
-	flex-direction: column;
-	gap: 6px;
-	padding: 5px;
-	cursor: pointer;
+#boton-carrito {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  background-image: url("/src/assets/navbar/cart.png") !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
 }
 
-.linea-retro {
-	display: block;
-	width: 35px;
-	height: 5px;
-	background-color: #000000;
-	box-shadow: 2px 2px 0px #161616;
-	transition: all 0.2s ease; /* Para que las líneas se muevan suave si quieres */
+.carrito-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: var(--rojoRosa);
+  color: var(--blanco);
+  font-family: var(--letraPri), monospace;
+  font-size: 8px;
+  min-width: 20px;
+  height: 20px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  z-index: 10;
+}
+/* btn hamburguesa */
+.navbar-toggler {
+  border: 2px solid var(--azulFond) !important;
+  background-color: var(--verde) !important;
+  border-radius: 4px !important;
+  padding: 6px 10px !important;
+}
+.navbar-toggler:active {
+  transform: translateY(3px) !important;
+}
+/* Cambia el color exacto de las líneas internas de la hamburguesa */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23121535' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+/* PARA CELULAR */
+@media (max-width: 991px) {
+  .contenedor-buscador-retro {
+    width: 100% !important;
+    margin: 15px 0 5px 0 !important;
+    display: flex !important;
+  }
+
+  .contenedor-buscador-retro .input-group {
+    width: 100% !important;
+  }
+
+  .contenedor-buscador-retro .btn {
+    margin-left: 10px !important;
+  }
 }
 
-/* NOTIFICACIÓN ROJA DEL CARRITO (Estilo Retro) */
-.badge-retro {
-	position: absolute;
-	top: -5px;
-	right: -5px;
-	background-color: #ff0000; /* Rojo brillante */
-	color: #ffffff;
-	font-family: "Press Start 2P", monospace;
-	font-size: 10px;
-	padding: 2px 6px;
-	border: 2px solid #000000;
-	box-shadow: 1px 1px 0px #161616;
+/* PARA ESCRITORIO */
+@media (min-width: 992px) {
+  .container-fluid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+  }
+
+  .contenedor-buscador-retro {
+    width: 390px !important;
+    display: flex !important;
+  }
+
+  .contenedor-buscador-retro .btn {
+    margin-left: 30px !important;
+  }
+
+  #menu-desplegable,
+  .navbar-nav {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+
+  #boton-sesion {
+    margin-right: 15px !important;
+  }
 }
 
-/* Clase que inyectá JS para mostrar el menú con estilo */
-.mostrar-menu-retro {
-	display: flex !important;
-}
-
-/* Media para el responsive */
-@media (max-width: 991.98px) {
-	.boton-hamburguesa-retro {
-		display: inline-flex; /* Aparece solo en pantallas chicas */
-	}
-
-	#menu-desplegable {
-		width: 100%;
-		display: none; /* JS controla esto, pero aseguramos que rompa fila */
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		padding-top: 15px;
-		padding-bottom: 25px;
-	}
-
-	#menu-desplegable.mostrar-menu-retro {
-		display: flex !important;
-	}
-
-	.enlaces-retro {
-		flex-direction: column !important;
-		align-items: center !important;
-		gap: 15px !important;
-		margin-left: 0 !important;
-		margin-top: 20px;
-		padding-bottom: 20px;
-	}
-
-	.boton-pixel {
-		width: 85% !important;
-		max-width: 260px;
-	}
-	.input-busqueda {
-		width: 70px;
-	}
-
-	.boton-pixel.buscador-retro {
-		width: 100px !important;
-		height: 50px;
-		font-size: 10px;
-	}
-}
 /*AQUI EMPIEZA FOOTER */
-
-
-/* El escudo protector: SOLO aplica la fuente pixel a lo que esté dentro del footer */
-.retro-footer-block {
-	font-family: "Press Start 2P", monospace !important;
-	text-transform: uppercase !important;
+/*lETRAS */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+.font-pixel {
+  font-family: "Press Start 2P", monospace;
+  text-transform: uppercase;
+  color: white;
 }
-
 .bg-dark-retro {
-	background-color: #000000 !important;
+  background-color: #000000;
 }
-
 .bg-green-retro {
-	background-color: #1be628 !important;
+  background-color: #1be628;
 }
-
 /*Bordes pixelados con patrones*/
-.retro-footer-block .pixel-border-top {
-	height: 20px;
-	margin-top: -8px;
-	background: repeating-linear-gradient(
-		90deg,
-		#1be628 0px,
-		#1be628 50px,
-		rgb(48, 47, 47) 50px,
-		rgb(48, 47, 47) 51px
-	);
+.pixel-border-top {
+  height: 10px;
+  margin-top: -8px;
+  background: repeating-linear-gradient(
+    90deg,
+    #1be628 0px,
+    #1be628 50px,
+    rgb(48, 47, 47) 50px,
+    rgb(48, 47, 47) 51px
+  );
 }
-
 /*Títulos Principales*/
-.retro-footer-block .footer-title {
-	font-size: 13px !important;
-	font-weight: bold !important;
-	line-height: 1.4;
+.footer-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0;
+  line-height: 1.4;
 }
-
-/*Enlaces del Footer (Forzamos a que sean blancos heredados de Bootstrap) */
-.retro-footer-block .footer-links a {
-	text-decoration: none !important;
-	font-size: 8px !important;
-	display: block;
-	margin-bottom: 10px;
-	line-height: 1.6;
-	transition: color 0.2s ease-in-out;
-	word-break: break-word;
+/*Enlaces del Footer*/
+.footer-links a {
+  text-decoration: none;
+  font-size: 11px;
+  display: block;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  transition: color 0.2s ease-in-out;
+  word-break: break-word;
 }
-
-/* Color de los enlaces al pasar el mouse */
-.retro-footer-block .footer-links a:hover {
-	color: #1be628 !important;
+/* Color de los enlaces en estado normal */
+.font-pixel .footer-links a:hover {
+  color: #1be628 !important;
 }
-
 /*Iconos de Redes Sociales*/
-.retro-footer-block .social-icons a {
-	font-size: 1.2rem !important;
-	margin-right: 12px;
-	transition:
-		transform 0.2s,
-		color 0.2s;
-	display: inline-block;
+.social-icons a {
+  color: white;
+  font-size: 1.2rem;
+  margin-right: 12px;
+  transition:
+    transform 0.2s,
+    color 0.2s;
+  display: inline-block;
 }
-
-.retro-footer-block .social-icons a:hover {
-	color: #1be628 !important;
-	transform: scale(1.2);
+.social-icons a:hover {
+  color: #1be628;
+  transform: scale(1.2);
 }
-
 /*Interactividad y Accesibilidad Móvil*/
-.retro-footer-block button[data-bs-toggle="collapse"] {
-	outline: none;
-	box-shadow: none;
+button[data-bs-toggle="collapse"] {
+  outline: none;
+  box-shadow: none;
 }
-
-.retro-footer-block .arrow-icon {
-	font-size: 1rem;
-	transition:
-		transform 0.3s ease,
-		color 0.3s ease;
+.arrow-icon {
+  font-size: 1rem;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
 }
-
-.retro-footer-block button[aria-expanded="true"] .arrow-icon {
-	transform: rotate(180deg);
-	color: #1be628;
+/* Rotación y cambio de color de la flecha al abrir menú */
+button[aria-expanded="true"] .arrow-icon {
+  transform: rotate(180deg);
+  color: #1be628;
 }
-
 /*Barra de Copyright*/
-.retro-footer-block .copyright-text {
-	font-size: 8px !important;
-	line-height: 2;
-	background: repeating-linear-gradient(
-		90deg,
-		#1be628 0px,
-		#1be628 50px,
-		rgb(48, 47, 47) 50px,
-		rgb(48, 47, 47) 51px
-	) !important;
+.copyright-text {
+  display: block !important;
+  clear: both !important;
+  width: 100% !important;
+  font-size: 10px;
+  padding-top: 12px !important;   
+  padding-bottom: 12px !important;
+  line-height: 1.2;
+  background: repeating-linear-gradient(
+    90deg,
+    #1be628 0px,
+    #1be628 50px,
+    rgb(48, 47, 47) 50px,
+    rgb(48, 47, 47) 51px
+  );
 }
-
 /*Media Queries (Responsividad)*/
 @media (min-width: 768px) {
-	.retro-footer-block .collapse.d-md-block {
-		display: block !important;
-		height: auto !important;
-		visibility: visible !important;
-	}
-	.retro-footer-block .border-md-0 {
-		border-bottom: 0 !important;
-	}
-	.retro-footer-block .footer-title {
-		margin-bottom: 15px !important;
-	}
+  .collapse.d-md-block {
+    display: block !important;
+    height: auto !important;
+    visibility: visible !important;
+  }
+  .border-md-0 {
+    border-bottom: 0 !important;
+  }
+  .footer-title {
+    margin-bottom: 15px;
+  }
 }
 /* AQUI TERMINA FOOTER */

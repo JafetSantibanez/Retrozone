@@ -7,6 +7,14 @@
       "nombreCompleto": "kiwi estrada",
       "telefono": "+528118884165",
       "id": "EcSbvPGepZw"
+    },
+    {
+      "email": "angygb1000@hotmail.com",
+      "password": "aNGY1998",
+      "username": "Gyagn08",
+      "nombreCompleto": "Angy Garcia",
+      "telefono": "+525540635775",
+      "id": "-HD-wnHve4o"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

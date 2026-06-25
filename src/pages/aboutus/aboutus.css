@@ -560,6 +560,9 @@ h5,
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 37af34a (Se añadieron imagenes en about us)
 @keyframes saltoGithub {
     0%{
         transform: translateY(0) rotate(0deg);
@@ -573,6 +576,7 @@ h5,
     100%{
         transform: translateY(0) rotate(0deg);
     }
+<<<<<<< HEAD
 }
 
 .github-link{
@@ -604,17 +608,37 @@ h5,
 	height: 28px;
 	margin-top: 10px;
 	transition: 0.3s;
+=======
+>>>>>>> 37af34a (Se añadieron imagenes en about us)
 }
 
-.git:hover {
-	transform: scale(1.15);
-}
-
-.github-link {
+.github-link{
+    text-decoration: none;
 	display: inline-block;
 }
 
+<<<<<<< HEAD
 >>>>>>> df6454b (Se agrego el github)
+=======
+.github-link i{
+    font-size: 5rem;
+    color: #F5E6C8;   /* beige */
+    transition: all .3s ease;
+}
+
+.github-link:hover i{
+    animation: saltoGithub .6s ease;
+    color: #F5E6C8;
+
+    filter:
+        drop-shadow(0 0 8px #f5f5f5)
+        drop-shadow(0 0 20px #f5f5f5);
+
+    transform: scale(1.15);
+}
+
+
+>>>>>>> 37af34a (Se añadieron imagenes en about us)
 /* RESPONSIVE TABLET */
 @media (max-width: 992px) {
 	body {

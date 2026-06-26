@@ -13,113 +13,146 @@ body {
 	padding-top: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* HERO */
-.hero {
+
+.hero-section {
+  background-image:
+linear-gradient(to bottom, transparent 15%, #121535 100%), 
+    url("../../assets/about_us/equipoRetrazone.png");
+
+background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 0 -100px;
+  padding-top: 0px;
+  overflow: hidden;
+  
+  
+  /* Asegúrate de que el color de fondo de la sección 
+     coincida con el color final del gradiente (#121535) */
+  background-color: #121535;
+}
+
+/* Efecto de Inner Shadow (Viñeta) */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Gradiente desde abajo-izquierda hacia arriba-derecha */
+  background: radial-gradient(circle at 10% 80%, rgba(19, 19, 56, 0.9) 15%, rgba(19, 19, 56, 0.4) 30%, transparent 90%);
+  
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Asegura que tu contenido esté sobre la sombra */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content{
 	position: relative;
-	min-height: 340px;
-	padding: 50px 25px 40px;
-	background: #121535;
-	overflow: hidden;
-	border-bottom: 20px solid #e91e63;
-}
-
-.hero h1 {
-	text-align: center;
-	color: #fff36d;
-	font-size: 50px;
-	text-shadow: 4px 4px #111;
-}
-
-.hero h1 span {
-	border: 3px dashed white;
-	padding: 5px;
-	margin-right: 5px;
-}
-
-.subtitle {
-	text-align: center;
-	color: white;
-	font-size: 40px;
-}
-
-.about-intro {
-	width: 45%;
-	margin-top: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+    z-index: 2;
+	max-width: 650px;
 }
 
 .about-label {
-	color: #ff2b9d;
-	font-family: "Press Start 2P", cursive;
-	font-size: 1.5rem;
-	letter-spacing: 2px;
-	margin: 0 0 45px 0;
-	line-height: 1;
-	font-weight: normal;
+    color: #ff2b9d;
+    font-family: "Press Start 2P", cursive;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    margin: 0 0 45px 0;
+    margin-bottom: 90px;
+    line-height: 1;
+    font-weight: normal;
+
+    /* Efecto Glow Neón adaptado a rosa */
+    text-shadow:
+        0 0 10px #ff2b9d,
+        0 0 30px rgba(255, 43, 157, 0.4),
+        4px 4px 0px #333;
 }
 
-.about-intro h2 {
-	color: #00ff1e;
-	font-size: 1.8rem;
-	line-height: 1.2;
-	text-align: left;
-	margin: 0 0 25px 0;
-	text-align: left;
+
+.hero-content h2 {
+  color: #00ff1e;
+  font-size: 2rem;
+  line-height: 1.1;
 }
 
-.about-intro p {
-	font-size: 0.95rem;
-	line-height: 1.5;
-	text-align: left;
-	max-width: 350px;
-	margin-bottom: 70px;
+.hero-content p {
+  max-width: 615px;
+  font-size: 1rem;
+  margin-top: 90px;
+  margin-bottom: 90px;
 }
 
-.btn-retro {
-	position: absolute;
-	top: 185px;
-	left: 43%;
-	background: white;
-	color: #2b2bff;
-	border: none;
-	border-radius: 20px;
-	padding: 8px 25px;
-	font-size: 8px;
+.contenedor-botones-contacto {
+    display: flex;
+    flex-direction: row;
+	flex-wrap: nowrap;
+    /* Ajusta el gap a 10px o 15px para que estén más unidos */
+    gap: 12px; 
+    /* Esto los alinea a la izquierda de su contenedor */
+    justify-content: flex-start; 
+    align-items: center;
+    /* Ajusta este margen para subirlos o bajarlos respecto al texto */
+    margin-top: 40px; 
+    /* Aseguramos que no tengan margen izquierdo extra */
+    margin-left: 0;
+	margin-bottom: 60px;
+    width: 100%;
 }
 
-.hearts {
-	position: absolute;
-	top: 250px;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 300px;
-	height: auto;
-	object-fit: contain;
+ .btn-boton-personalizado {
+  /* Imagen de fondo */
+  background-image: url('/src/assets/Contact/BotonRetroneon.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 150px;  /* Aumentado de 260px a 320px para más espacio horizontal */
+  height: 50px;
+  /* Centrado del texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Estilos de texto */
+  color: #39FF14; 
+  font-family: 'Press Start 2P', cursive;
+  font-size: 0.60rem; /* Un poco más pequeño para que quepa bien */
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  padding: 10px 10px;
+  /* Transición suave */
+  transition: all 0.3s ease;
 }
 
-.cloud {
-	position: absolute;
-	font-size: 35px;
+/* Efecto Hover Neón */
+.btn-boton-personalizado:hover {
+  /* El brillo neón que sigue la forma de tus píxeles */
+  filter: drop-shadow(0 0 0px #39FF14) drop-shadow(0 0 5px #39FF14);
+  /* Ligero efecto de escala */
+  transform: scale(1.05);
 }
 
-.cloud1 {
-	top: 70px;
-	left: 20px;
-}
-
-.cloud2 {
-	top: 60px;
-	right: 50px;
-}
-
-.ground {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	border-bottom: 8px dotted #00ff1e;
+/* Efecto al hacer clic (opcional: el botón se hunde) */
+.btn-boton-personalizado:active {
+  transform: scale(0.98);
+  filter: brightness(0.8);
 }
 
 /* SECCIONES */
@@ -133,16 +166,11 @@ main {
 .mision-vision,
 .valores,
 .conocenos {
-	padding: 50px 80px;
+	padding: 90px 70px;
 	border-bottom: 4px solid #00ff1e;
-}
-
-h3 {
-	color: #00ff1e;
-	text-align: center;
-	font-size: 1.4rem;
-	margin-bottom: 30px;
-	letter-spacing: 3px;
+	min-height: 85vh;
+	padding-top: 90px;
+    padding-bottom: 90px;
 }
 
 .historia h3,
@@ -152,6 +180,7 @@ h3 {
 	align-items: center;
 	gap: 20px;
 	white-space: nowrap;
+	margin-bottom: 70px;
 }
 
 .historia h3::before,
@@ -166,6 +195,31 @@ h3 {
 	background: #e91e63;
 }
 
+h3 {
+	color: #00ff1e;
+	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 30px;
+	letter-spacing: 3px;
+}
+
+/* HISTORIA */
+
+@keyframes saltoArcade {
+    0%{
+        transform: translateY(0);
+    }
+    30%{
+        transform: translateY(-15px);
+    }
+    55%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
 .arcade-img {
 	width: 100%;
 	max-width: 450px;
@@ -174,6 +228,25 @@ h3 {
 	object-fit: cover;
 	border: 3px solid #ff2b9d;
 	box-shadow: 0 0 20px #ff2b9d;
+	transition: all .35s ease;
+    cursor: pointer;
+}
+
+.arcade-img:hover{
+    animation: saltoArcade .7s ease;
+    transform: 
+		scale(1.04)
+		rotate(-2deg);
+    box-shadow:
+        0 0 20px #ff2b9d,
+        0 0 45px #ff2b9d,
+        0 0 70px #ff2b9d;
+}
+
+.historia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .historia p {
@@ -185,76 +258,176 @@ h3 {
 }
 
 /* MISION Y VISION */
-.card-retro {
-	border: 3px solid #00ff1e;
-	border-radius: 10px;
-	padding: 25px 35px;
-	min-height: 310px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 35px;
-	text-align: center;
+
+.mision-vision {
+    padding-top: 105px;
+    padding-bottom: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mision-vision .row {
+	width: 100%;
 }
 
 .icon-retro {
-	width: 160px;
+	width: 250px;
 	flex-shrink: 0;
 	margin: 0;
 	filter: drop-shadow(0 0 10px #ff2b9d);
 }
 
-.card-retro div {
-	flex: 1;
+.flip-card {
+  height: 420px;
+  perspective: 1200px;
+  width: 100%;
+  transition: translateY(-10px) scale(1.02);
 }
 
-.card-retro h4 {
-	color: #00ff1e;
-	font-size: 1.4rem;
-	margin-bottom: 20px;
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
 }
 
-.card-retro p {
-	line-height: 1.6;
-	font-size: 0.85rem;
-	text-align: center;
+.flip-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #00ff1e;
+  border-radius: 10px;
+  background: #121535;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 
+  	0 0 15px rgba(0, 255, 30, 0.35),
+  	inset 0 0 20px rgba(0, 255, 30, 0.08);
+  transition: box-shadow 0.35s ease;
+}
+
+.flip-card:hover .flip-card-front,
+.flip-card:hover .flip-card-back {
+  box-shadow:
+    0 0 25px #00ff1e,
+    0 0 45px rgba(0, 255, 30, 0.6),
+    inset 0 0 25px rgba(255, 43, 157, 0.18);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front h4,
+.flip-card-back h4 {
+  color: #00ff1e;
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5rem;
+}
+
+.flip-card-back p {
+  color: white;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
 /* VALORES */
+@keyframes salto {
+    0%{
+        transform: translateY(0);
+    }
+    35%{
+        transform: translateY(-15px);
+    }
+    60%{
+        transform: translateY(4px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
 .valores-grid {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	gap: 0;
-	border-radius: 10px;
-	border-top: 3px solid #e91e63;
-	border-bottom: 3px solid #e91e63;
-	border-left: 2px solid #e91e63;
-	border-right: 2px solid #e91e63;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  border: none;
 }
 
 .valor {
-	text-align: center;
-	padding: 15px;
-	border-right: 2px solid #e91e63;
+  min-height: 430px;
+  padding: 25px 28px 25px;
+  border: 2px solid #ff2b9d;
+  border-radius: 10px;
+  text-align: center;
+  background: rgba(10, 15, 45, 0.45);
+  box-shadow: 0 0 15px rgba(255, 43, 157, 0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.35s ease;
 }
 
-.valor:last-child {
-	border-right: none;
+.valor:hover{
+    transform: translateY(-12px);
+    box-shadow: 0 0 30px #ff2b9d;
 }
 
 .valor-icon {
-	font-size: 45px;
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 25px;
+
+}
+
+.valor:hover .valor-icon{
+    transform: translateY(-12px) scale(1.12);
+    filter: drop-shadow(0 0 15px #ff2b9d)
+            drop-shadow(0 0 25px #ff2b9d);
+	animation: salto .6s ease;
+    filter: drop-shadow(0 0 15px #ff2b9d)
+            drop-shadow(0 0 30px #ff2b9d);
 }
 
 .valor h5 {
-	color: #00ff1e;
-	font-size: 1rem;
-	margin: 15px 0;
+  color: #00ff1e;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.valor h5::after {
+  content: "";
+  display: block;
+  width: 85px;
+  height: 3px;
+  background: #ff2b9d;
+  margin: 22px auto 0;
 }
 
 .valor p {
-	line-height: 1.6;
-	font-size: 0.85rem;
+  font-size: 0.85rem;
+  line-height: 1.9;
+  margin: 0;
 }
 
 /* FUENTE RETRO */
@@ -404,6 +577,44 @@ h5,
 .social a.text-muted:hover {
 	color: #009b72 !important;
 }
+
+@keyframes saltoGithub {
+    0%{
+        transform: translateY(0) rotate(0deg);
+    }
+    30%{
+        transform: translateY(-15px) rotate(-10deg);
+    }
+    60%{
+        transform: translateY(4px) rotate(8deg);
+    }
+    100%{
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.github-link{
+    text-decoration: none;
+	display: inline-block;
+}
+
+.github-link i{
+    font-size: 5rem;
+    color: #F5E6C8;   /* beige */
+    transition: all .3s ease;
+}
+
+.github-link:hover i{
+    animation: saltoGithub .6s ease;
+    color: #F5E6C8;
+
+    filter:
+        drop-shadow(0 0 8px #f5f5f5)
+        drop-shadow(0 0 20px #f5f5f5);
+
+    transform: scale(1.15);
+}
+
 
 /* RESPONSIVE TABLET */
 @media (max-width: 992px) {

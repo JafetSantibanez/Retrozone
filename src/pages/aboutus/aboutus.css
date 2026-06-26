@@ -21,18 +21,31 @@ html {
 
 .hero-section {
   background-image:
-    linear-gradient(rgba(18, 21, 53, 0.45), rgba(18, 21, 53, 0.85)),
+linear-gradient(to bottom, transparent 15%, #121535 100%), 
     url("../../assets/about_us/equipoRetrazone.png");
-  background-size: cover;
+
+background-size: cover;
   background-position: center;
   min-height: 80vh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+<<<<<<< HEAD
   padding: 80px 60px 10px;
   background-color: #121535;
   border-bottom: 4px solid #00ff1e;
   position: relative;
+=======
+  position: relative;
+  padding: 0 -100px;
+  padding-top: 0px;
+  overflow: hidden;
+  
+  
+  /* Asegúrate de que el color de fondo de la sección 
+     coincida con el color final del gradiente (#121535) */
+  background-color: #121535;
+>>>>>>> 2ac06a5 (Style: contact abour us mod de hero)
 }
 
 /* Efecto de Inner Shadow (Viñeta) */
@@ -43,21 +56,40 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
+  
   /* Gradiente desde abajo-izquierda hacia arriba-derecha */
+<<<<<<< HEAD
   background: radial-gradient(
     circle at 10% 80%,
     rgba(19, 19, 56, 0.9) 0%,
     rgba(19, 19, 56, 0.4) 0%,
     transparent 90%
   );
+=======
+  background: radial-gradient(circle at 10% 80%, rgba(19, 19, 56, 0.9) 15%, rgba(19, 19, 56, 0.4) 30%, transparent 90%);
+  
+>>>>>>> 2ac06a5 (Style: contact abour us mod de hero)
   pointer-events: none;
   z-index: 1;
 }
 
+<<<<<<< HEAD
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 650px;
+=======
+/* Asegura que tu contenido esté sobre la sombra */
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content{
+	position: relative;
+    z-index: 2;
+	max-width: 650px;
+>>>>>>> 2ac06a5 (Style: contact abour us mod de hero)
 }
 
 .about-label {
@@ -240,6 +272,7 @@ h3 {
   cursor: pointer;
 }
 
+<<<<<<< HEAD
 .arcade-img:hover {
   animation: saltoArcade 0.7s ease;
   transform: scale(1.04) rotate(-2deg);
@@ -248,6 +281,17 @@ h3 {
     0 0 45px #ff2b9d,
     0 0 70px #ff2b9d;
   filter: brightness(1.15);
+=======
+.arcade-img:hover{
+    animation: saltoArcade .7s ease;
+    transform: 
+		scale(1.04)
+		rotate(-2deg);
+    box-shadow:
+        0 0 20px #ff2b9d,
+        0 0 45px #ff2b9d,
+        0 0 70px #ff2b9d;
+>>>>>>> 2ac06a5 (Style: contact abour us mod de hero)
 }
 
 .historia {

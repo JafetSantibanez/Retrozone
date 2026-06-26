@@ -1,0 +1,234 @@
+HTML:
+
+		<!-- ============================================================ -->
+		<!-- HERO — ARCADE CABINET                                      -->
+		<!-- Estilos en home.css bajo "HERO ARCADE CABINET"            -->
+		<!-- ============================================================ -->
+		<section class="arcade-hero">
+
+			<!-- Overlay de scanlines (efecto pantalla CRT) -->
+			<div class="arcade-scanlines"></div>
+
+			<!-- Marcador Hi-Score esquina superior izquierda -->
+			<div class="arcade-hiscore">
+				<span class="arcade-hiscore-label">HI-SCORE</span>
+				<span class="arcade-hiscore-value">99999</span>
+			</div>
+
+			<!-- Contenido central -->
+			<div class="arcade-content">
+
+				<!-- Logo + título -->
+				<div class="arcade-logo-row">
+					<img
+						src="../../assets/logoRetro.jpeg"
+						class="arcade-logo-img"
+						alt="Logo Retrozone" />
+					<h1 class="arcade-title">ETROZONE</h1>
+				</div>
+
+				<!-- Texto parpadeante -->
+				<p class="arcade-insert-coin">► INSERT COIN TO PLAY ◄</p>
+
+				<!-- Subtítulo -->
+				<p class="arcade-subtitle">REVIVE LA NOSTALGIA</p>
+
+				<!-- Botón CTA -->
+				<button class="arcade-press-start">▶ &nbsp; PRESS START</button>
+
+			</div>
+
+		</section>
+		<!-- ============================================================ -->
+		<!-- FIN HERO ARCADE CABINET                                      -->
+		<!-- ============================================================ -->
+
+CSS:
+
+
+
+/* ================================================================ */
+/*  HERO — ARCADE CABINET                                           */
+/*  Todo lo relacionado al hero está aquí.                          */
+/*  Para editar colores, tamaños o animaciones, busca los          */
+/*  comentarios internos con el nombre de cada elemento.            */
+/* ================================================================ */
+
+/* --- Contenedor principal del hero --- */
+.arcade-hero {
+	position: relative;
+	width: 100%;
+	height: 100vh;           /* Ocupa toda la pantalla */
+	min-height: 500px;
+	background-color: #000; /* Fondo negro, como pantalla de arcade apagada */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+/* --- Overlay CRT: líneas horizontales simulando una pantalla antigua --- */
+/* Para desactivar el efecto, comenta este bloque */
+.arcade-scanlines {
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+	pointer-events: none;     /* No bloquea clics */
+	background: repeating-linear-gradient(
+		to bottom,
+		transparent 0px,
+		transparent 3px,
+		rgba(0, 0, 0, 0.18) 3px,
+		rgba(0, 0, 0, 0.18) 4px
+	);
+}
+
+/* --- Marcador Hi-Score (esquina superior izquierda) --- */
+.arcade-hiscore {
+	position: absolute;
+	top: 24px;
+	left: 32px;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	line-height: 1.6;
+}
+
+/* Etiqueta "HI-SCORE" */
+.arcade-hiscore-label {
+	font-family: var(--letraPri);
+	font-size: 0.55rem;
+	color: #ffffff;
+	letter-spacing: 2px;
+}
+
+/* Número del puntaje — cambia el valor también en el HTML */
+.arcade-hiscore-value {
+	font-family: var(--letraPri);
+	font-size: 1rem;
+	color: var(--verde);           /* Verde neón */
+	text-shadow: 0 0 8px var(--verde);
+}
+
+/* --- Contenido central (logo + textos + botón) --- */
+.arcade-content {
+	position: relative;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 28px;
+	text-align: center;
+	padding: 20px;
+}
+
+/* --- Fila con logo imagen + título ETROZONE --- */
+.arcade-logo-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+}
+
+/* Imagen cuadrada del logo (la R enmarcada) */
+.arcade-logo-img {
+	width: clamp(60px, 8vw, 110px);
+	height: auto;
+	image-rendering: pixelated;
+	border: 2px solid var(--amarillito);
+}
+
+/* Título grande "ETROZONE" */
+.arcade-title {
+	font-family: var(--letraPri);
+	font-size: clamp(2rem, 6vw, 5rem);
+	color: var(--amarillito);
+	margin: 0;
+	/* Glow neón: cambia el color en text-shadow para otro tono */
+	text-shadow:
+		0 0 10px var(--amarillito),
+		0 0 30px rgba(255, 255, 150, 0.4),
+		4px 4px 0px #333;
+}
+
+/* --- Texto parpadeante "INSERT COIN TO PLAY" --- */
+/* Para cambiar la velocidad de parpadeo, edita la duración en animation */
+.arcade-insert-coin {
+	font-family: var(--letraPri);
+	font-size: clamp(0.5rem, 1.5vw, 0.85rem);
+	color: var(--verde);
+	letter-spacing: 2px;
+	margin: 0;
+	animation: blink 1.1s step-start infinite; /* Parpadeo estilo arcade */
+}
+
+@keyframes blink {
+	0%, 100% { opacity: 1; }
+	50%       { opacity: 0; }
+}
+
+/* --- Subtítulo "REVIVE LA NOSTALGIA" --- */
+.arcade-subtitle {
+	font-family: var(--letraPri);
+	font-size: clamp(0.45rem, 1.2vw, 0.7rem);
+	color: rgba(255, 255, 255, 0.6);
+	letter-spacing: 4px;
+	margin: 0;
+}
+
+/* --- Botón "PRESS START" --- */
+/* Para cambiar color, tamaño o borde, edita este bloque */
+.arcade-press-start {
+	font-family: var(--letraPri);
+	font-size: clamp(0.5rem, 1.5vw, 0.8rem);
+	color: #000;
+	background-color: var(--verde);
+	border: none;
+	padding: 14px 30px;
+	letter-spacing: 2px;
+	cursor: pointer;
+	/* Borde pixelado mediante box-shadow (sin border-radius) */
+	box-shadow:
+		4px 0   0 0 #000,
+		-4px 0  0 0 #000,
+		0  4px  0 0 #000,
+		0 -4px  0 0 #000,
+		0 0 0 4px #000;
+	transition: background-color 0.15s, color 0.15s, transform 0.1s;
+}
+
+.arcade-press-start:hover {
+	background-color: var(--amarillito);
+	color: #000;
+}
+
+.arcade-press-start:active {
+	transform: translate(2px, 2px);
+	box-shadow:
+		2px 0   0 0 #000,
+		-2px 0  0 0 #000,
+		0  2px  0 0 #000,
+		0 -2px  0 0 #000,
+		0 0 0 2px #000;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+	.arcade-hiscore {
+		top: 14px;
+		left: 16px;
+	}
+
+	.arcade-hiscore-value {
+		font-size: 0.8rem;
+	}
+
+	.arcade-content {
+		gap: 20px;
+	}
+}
+
+/* ================================================================ */
+/*  FIN HERO ARCADE CABINET                                         */
+/* ================================================================ */

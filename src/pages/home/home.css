@@ -2,11 +2,21 @@
 
 :root {
 	--azulFond: #121535;
+	--azulOscu: rgb(2, 2, 31);
 	--rojoRosa: #c21a4b;
 	--verde: #00ff1e;
 	--amarillito: #ffffbc;
 	--gris: #1c2b24;
 	--letraPri: "Press Start 2P", cursive;
+}
+html,
+body {
+	background-color: var(
+		--azulOscu
+	) !important; /* Color oscuro profundo de base */
+	color: #ffffff;
+	margin: 0;
+	padding: 0;
 }
 
 /* ========================= */
@@ -32,21 +42,21 @@
 		radial-gradient(2px 2px at 50px 50px, white, transparent),
 		radial-gradient(2px 2px at 180px 120px, white, transparent),
 		radial-gradient(1px 2px at 270px 14px, white, transparent),
-		radial-gradient(4px 2px at 350px 250px, rgb(135, 225, 255), transparent),
+		radial-gradient(2px 2px at 350px 250px, white, transparent),
 		radial-gradient(1px 1px at 350px 1200px, white, transparent),
 		radial-gradient(2px 2px at 500px 180px, white, transparent),
 		radial-gradient(1px 1px at 700px 100px, white, transparent),
-		radial-gradient(6px 6px at 632px 200px, rgb(135, 225, 255), transparent),
+		radial-gradient(2px 2px at 632px 200px, rgb(135, 225, 255), transparent),
 		radial-gradient(2px 2px at 900px 220px, white, transparent),
 		radial-gradient(1px 2px at 950px 100px, white, transparent),
 		radial-gradient(1px 1px at 1100px 70px, white, transparent),
 		radial-gradient(2px 2px at 1200px 10px, white, transparent),
-		radial-gradient(2px 2px at 1300px 150px, white, transparent);
+		radial-gradient(2px 2px at 1250px 150px, white, transparent);
 
 	background-repeat: repeat;
-	background-size: 1400px 400px;
+	background-size: 1300px 600px;
 	opacity: 0.9;
-	animation: moveStars 9s linear infinite;
+	animation: moveStars 15s linear infinite;
 }
 
 @keyframes moveStars {
@@ -54,10 +64,145 @@
 		transform: translateY(0);
 	}
 	to {
-		transform: translateY(80px);
+		transform: translateY(100px);
 	}
 }
 
+/* --- CONFIGURACIÓN BASE PARA LAS ESTRELLAS INDIVIDUALES --- */
+.twinkle,
+.shooting-star,
+.infinity-star {
+	position: absolute;
+	background: white;
+	border-radius: 50%;
+}
+
+/* --- 1. ESTRELLAS QUE TINTINEAN (TWINKLE) --- */
+.twinkle {
+	width: 3px;
+	height: 3px;
+	box-shadow:
+		0 0 10px white,
+		0 0 20px rgba(255, 255, 255, 0.8);
+	animation: twinkleAnim 3s infinite ease-in-out;
+}
+
+/* Posiciones y retrasos personalizados para que no parpadeen al mismo tiempo */
+.star1 {
+	top: 20%;
+	left: 15%;
+	animation-delay: 0s;
+}
+.star2 {
+	top: 40%;
+	left: 75%;
+	animation-delay: 0.7s;
+	width: 4px;
+	height: 4px;
+}
+.star3 {
+	top: 75%;
+	left: 30%;
+	animation-delay: 1.5s;
+}
+.star4 {
+	top: 15%;
+	left: 60%;
+	animation-delay: 2.2s;
+	width: 2px;
+	height: 2px;
+}
+
+@keyframes twinkleAnim {
+	0%,
+	100% {
+		opacity: 0.2;
+		transform: scale(0.8);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1.3);
+	}
+}
+
+/* --- 2. ESTRELLA EN FORMA DE INFINITO --- */
+.infinity-star {
+	width: 6px;
+	height: 6px;
+	top: 50%;
+	left: 50%;
+	/* El truco del infinito: desfasar las ondas en X e Y usando funciones de tiempo separadas */
+	animation:
+		infinityX 6s infinite ease-in-out,
+		infinityY 3s infinite ease-in-out;
+	box-shadow:
+		0 0 15px #00f3ff,
+		0 0 30px #00f3ff;
+	background: #e0f7fa;
+}
+
+/* Una oscilación completa de lado a lado */
+@keyframes infinityX {
+	0%,
+	100% {
+		transform: translateX(-150px);
+	}
+	50% {
+		transform: translateX(150px);
+	}
+}
+
+/* El doble de rápido arriba y abajo para cruzar el centro formando la lemniscata (∞) */
+@keyframes infinityY {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(-60px);
+	}
+	75% {
+		transform: translateY(60px);
+	}
+}
+
+/* --- 3. METEORITO / ESTRELLA FUGAZ (SHOOTING STAR) --- */
+.shooting-star {
+	top: -10px;
+	right: 10%;
+	width: 6px;
+	height: 6px;
+	background: linear-gradient(-45deg, white, rgba(255, 255, 255, 0));
+	/* Usamos box-shadow estirado para simular la cola brillante del meteorito */
+	box-shadow:
+		0 0 0 4px rgba(255, 255, 255, 0.1),
+		-10px 10px 20px rgba(255, 255, 255, 0.5),
+		-50px 50px 40px rgba(255, 255, 255, 0);
+	transform: rotate(-45deg);
+	animation: shootingAnim 15s infinite linear;
+	animation-delay: 2s; /* Espera un poco antes de pasar por primera vez */
+}
+
+@keyframes shootingAnim {
+	0% {
+		transform: translateX(0) translateY(0) rotate(-45deg) scale(0);
+		opacity: 0;
+	}
+	1% {
+		opacity: 1;
+		transform: translateX(-200) translateY(0) rotate(-45deg) scale(1);
+	}
+	10% {
+		/* Se desplaza rápido en diagonal hacia abajo a la izquierda */
+		transform: translateX(-600px) translateY(600px) rotate(-45deg) scale(1);
+		opacity: 0;
+	}
+	100% {
+		/* El resto del tiempo de la animación se queda invisible antes de reaparecer */
+		transform: translateX(-300px) translateY(300px) rotate(-45deg) scale(0);
+		opacity: 0;
+	}
+}
 /* ========================= */
 /* NUBES */
 /* ========================= */
@@ -80,7 +225,7 @@
 	animation: moveCloud2 100s linear infinite;
 }
 .cloud3 {
-	top: 220px;
+	top: 295px;
 	left: -400px;
 	animation: moveCloud3 100s linear infinite;
 }
@@ -274,7 +419,7 @@
 }
 
 .categoria-container {
-	background-color: var(--azulFond);
+	background-color: var(--azulOscu);
 	padding: 20px 0;
 }
 
@@ -335,7 +480,7 @@
 
 .galeria-retro {
 	padding: 50px 0;
-	background: #000;
+	background: var(--azulOscu);
 }
 
 .mySwiper2 {
@@ -436,4 +581,207 @@
 
 .btn-carrito:active {
 	transform: scale(0.97) scaleX(0.92) scaleY(0.85);
+}
+.oferta {
+	background-color: rgb(2, 2, 31);
+	padding-bottom: 30px;
+}
+
+.retro-btn {
+	padding: 12px 28px;
+	background: #6c2cff;
+	color: white;
+	border: 2px solid cyan;
+	font-family: "Press Start 2P";
+}
+
+/**
+css contador
+*/
+#flipdown {
+	display: flex;
+	justify-content: center;
+	margin: 25px auto;
+	transform: scale(0.6);
+	transform-origin: center center;
+	width: fit-content;
+}
+/* color de cuadros de numero*/
+
+.oferta-box {
+	background-image: url("../../assets/oferta.png");
+	background-size: 100% 100%; /* o cover */ /* Llena todo el recuadro */
+	background-position: center; /* Centra la imagen */
+	background-repeat: no-repeat;
+	border: 2px solid cyan;
+	border-radius: 15px;
+	padding: 20px;
+
+	width: 620px; /* 🔥 tamaño del recuadro */
+	height: 470px;
+	margin: auto;
+	box-shadow: 0 0 20px cyan;
+	text-align: center;
+}
+.oferta-box2 {
+	background-image: url("../../assets/proximamente.png");
+	background-size: 100% 100%; /* o cover */ /* Llena todo el recuadro */
+	background-position: center; /* Centra la imagen */
+	background-repeat: no-repeat;
+	border: 2px solid cyan;
+	border-radius: 15px;
+	padding: 20px;
+	width: 620px; /* 🔥 tamaño del recuadro */
+	height: 470px;
+	margin: auto;
+	box-shadow: 0 0 20px cyan;
+	text-align: center;
+}
+
+.flipdown .rotor {
+	background: #0a0a1f;
+	color: #00fff7;
+	box-shadow: 0 0 10px #00fff7;
+}
+
+.flipdown .rotor-group {
+	background: #111133;
+	border: 1px solid cyan;
+	border-radius: 8px;
+}
+.oferta-box h2,
+.oferta-box h1,
+.oferta-box h4 {
+	margin: 5px 0;
+	color: white;
+}
+.tiOferta2 {
+	font-family: "Orbitron", sans-serif;
+	font-size: 30px;
+	color: var(--verde);
+	text-align: center;
+	text-shadow:
+		0 0 5px #ffffbc,
+		0 0 10px #286d5a,
+		0 0 20px #ffd700;
+}
+.prox {
+	text-align: left;
+	color: var(--amarillito);
+}
+
+.tiOferta {
+	font-family: "Orbitron", sans-serif;
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	text-shadow:
+		0 0 5px #ffffbc,
+		0 0 10px #286d5a,
+		0 0 20px #ffd700;
+}
+
+.porque h1 {
+	background-color: var(--azulOscu);
+}
+
+.porque {
+	background-color: var(--azulOscu);
+	padding: 3px;
+	padding-bottom: 10px;
+}
+.por1 {
+	background-color: var(--verde);
+}
+.por2 {
+	color: white;
+}
+
+/* Usuarios*/
+
+/* ==========================================================================
+   CSS PARA EL NUEVO CARRUSEL (Aislado)
+   ========================================================================== */
+
+/* 1. Contenedor principal del carrusel (Controla tamaño general y márgenes) */
+.swiper-nuevo {
+	width: 100%;
+	height: 300px; /* Cambia la altura según lo que vayas a meter dentro */
+	margin: 40px 0; /* Espaciado arriba y abajo del carrusel */
+	background: #18f447; /* Fondo detrás de las tarjetas (opcional) */
+	border-radius: 12px; /* Bordes redondeados para el contenedor */
+	padding: 10px 0;
+}
+
+/* 2. Estilo de cada tarjeta / diapositiva (Slide) */
+.swiper-nuevo .swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #22222a; /* Color de fondo de cada tarjeta */
+	color: #480606; /* Color del texto */
+	font-family: "Orbitron", sans-serif; /* Puedes usar tus fuentes retro */
+
+	/* Centrado interno del contenido */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* Bordes y sombras de estética retro */
+	border: 2px solid #3f3f4e;
+	border-radius: 8px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+	transition:
+		transform 0.3s ease,
+		border-color 0.3s ease;
+}
+
+/* Efecto Hover (Cuando pasas el mouse por encima de una tarjeta) */
+.swiper-nuevo .swiper-slide:hover {
+	transform: scale(1.02); /* Se agranda un poquito */
+	border-color: #ce0303; /* Cambia el borde a un color neón/retro */
+	cursor: pointer;
+}
+
+/* 3. Flechas de Navegación (Personaliza los colores de los botones) */
+.swiper-nuevo-next,
+.swiper-nuevo-prev {
+	color: #44ff00 !important; /* Color de las flechas (ej. Rosa Neón) */
+	background: rgba(0, 0, 0, 0.6); /* Fondo circular opaco para que resalten */
+	width: 45px !important;
+	height: 45px !important;
+	border-radius: 50%;
+	border: 1px solid #ff0055;
+}
+
+/* Tamaño de las flechas por dentro */
+.swiper-nuevo-next::after,
+.swiper-nuevo-prev::after {
+	font-size: 18px !important;
+	font-weight: bold;
+}
+
+/* Efecto hover en las flechas */
+.swiper-nuevo-next:hover,
+.swiper-nuevo-prev:hover {
+	background: #30f575;
+	color: #000000 !important;
+	box-shadow: 0 0 10px #ff0055;
+}
+
+/* 4. Comportamiento en móviles (Pantallas menores a 760px de ancho) */
+@media (max-width: 760px) {
+	.swiper-nuevo {
+		height: 450px; /* Al ponerse vertical, suele necesitar más altura total */
+	}
+
+	/* Modifica la posición o rotación de las flechas en móviles si el diseño cambia */
+	.swiper-nuevo-next {
+		right: 20px;
+		transform: rotate(90deg);
+	}
+
+	.swiper-nuevo-prev {
+		left: 20px;
+		transform: rotate(90deg);
+	}
 }

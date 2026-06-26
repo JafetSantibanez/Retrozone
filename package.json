@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "vite": "^8.0.12"
+  },
+  "dependencies": {
+    "flipdown": "^0.3.2"
   }
 }

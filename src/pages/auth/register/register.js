@@ -166,10 +166,40 @@ function enviarDatosAlBackend(datosUsuario) {
    
     
 }
+    function enviarDatosAlBackend(datosUsuario) {
+      const url = "http://localhost:3000/users";
+      const usuarioFormatoJSON = {
+        email: datosUsuario.email,
+        password: datosUsuario.password,
+        username: datosUsuario.username,
+        nombreCompleto: datosUsuario.nombreCompleto,
+        telefono: datosUsuario.telefono,
+      };
+      fetch(url, {
+        method: "POST", // Indicamos que vamos a guardar/crear datos
+        headers: {
+          "Content-Type": "application/json", // Le avisamos al servidor que le mandamos un JSON
+        },
+        body: JSON.stringify(usuarioFormatoJSON), // Convertimos el objeto de JS a texto plano JSON
+      })
+        .then((response) => {
+          if (response.ok) {
+            // alert(`¡Cuenta creada con éxito! ${usuarioFormatoJSON.username}.`);
+            //Aquí puedes redireccionar al login si quieres:
+            window.location.href = "/src/pages/auth/login/login.html";
+          } else {
+            alert("Hubo un error al registrar el usuario en el servidor.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error en la conexión con el servidor:", error);
+          alert(
+            "No se pudo conectar con el servidor. ¿Está encendido el json-server?",
+          );
+        });
+    }
   }
-
   //Apoyo validar username
-
   function validarNombreUsuario() {
     if (!inputUsername) return false;
 

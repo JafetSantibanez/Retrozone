@@ -1,3 +1,5 @@
+import { addItem, updateBadge } from "../../utils/cart-store.js";
+
 // ── Estado de filtros ──────────────────────────────────────────────────────────
 const filtros = { busqueda: "", plataforma: "", categoria: "", estado: "", orden: "" };
 let productos = [];
@@ -31,12 +33,17 @@ function stockLabel(stock) {
 }
 
 // ── Render de una tarjeta ──────────────────────────────────────────────────────
-function tarjetaHTML(p) {
+function tarjetaHTML(p, total) {
   const tieneDescuento = p.descuento > 0;
   const imgSrc = `/src/assets/games/${p.imagen}`;
+  const col = total === 1
+    ? "col-12 col-sm-10 col-md-7 col-lg-5 col-xl-4 mx-auto"
+    : total === 2
+    ? "col-12 col-sm-6 col-lg-5 col-xl-4"
+    : "col-12 col-sm-6 col-lg-4 col-xl-3";
 
   return `
-    <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+    <div class="${col}">
       <article class="product-card h-100">
 
         <div class="product-img-wrap">
@@ -114,7 +121,7 @@ function renderGrid() {
   }
 
   vacio.classList.add("d-none");
-  grid.innerHTML = lista.map(tarjetaHTML).join("");
+  grid.innerHTML = lista.map(p => tarjetaHTML(p, lista.length)).join("");
 }
 
 // ── Tags de filtros activos ────────────────────────────────────────────────────
@@ -163,6 +170,29 @@ async function init() {
     return;
   }
 
+  // ── Pre-aplicar filtros desde URL params (?plataforma=NES&categoria=RPG etc.) ──
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("plataforma")) {
+    filtros.plataforma = params.get("plataforma");
+    document.getElementById("filtroPlatforma").value = filtros.plataforma;
+  }
+  if (params.get("categoria")) {
+    filtros.categoria = params.get("categoria");
+    document.getElementById("filtroCategoria").value = filtros.categoria;
+  }
+  if (params.get("estado")) {
+    filtros.estado = params.get("estado");
+    document.getElementById("filtroEstado").value = filtros.estado;
+  }
+  if (params.get("q")) {
+    filtros.busqueda = params.get("q");
+    document.getElementById("busqueda").value = filtros.busqueda;
+  }
+  if (params.get("orden")) {
+    filtros.orden = params.get("orden");
+    document.getElementById("filtroOrden").value = filtros.orden;
+  }
+
   // Filtros
   document.getElementById("busqueda").addEventListener("input", (e) => {
     filtros.busqueda = e.target.value.trim();
@@ -197,15 +227,26 @@ async function init() {
     actualizar();
   });
 
-  // Agregar al carrito (placeholder)
+  // Agregar al carrito
   document.getElementById("gridProductos").addEventListener("click", (e) => {
     const btn = e.target.closest(".btn-agregar");
     if (!btn) return;
     const producto = productos.find((p) => p.id === Number(btn.dataset.id));
-    console.log("Agregar al carrito:", producto);
-    // TODO: integrar con el módulo de carrito
+    if (!producto) return;
+
+    addItem(producto);
+
+    // Feedback visual: el botón confirma brevemente
+    const textoOriginal = btn.innerHTML;
+    btn.innerHTML = "✓ AGREGADO";
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = textoOriginal;
+      btn.disabled = false;
+    }, 900);
   });
 
+  updateBadge();
   actualizar();
 }
 

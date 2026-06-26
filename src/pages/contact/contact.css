@@ -8,6 +8,7 @@ body {
   font-family: "Orbitron", sans-serif;
   font-size: 15px;
   padding-top: 0;
+
 }
 h3 {
 
@@ -84,6 +85,23 @@ html {
 }
 /*-------------------------------------------------------------------*/
 
+/*TEXTO NEON ROSA*/
+.about-label {
+    color: #ff2b9d;
+    font-family: "Press Start 2P", cursive;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin: 0 0 45px 0;
+    margin-bottom: 90px;
+    line-height: 1;
+    font-weight: normal;
+
+    /* Efecto Glow Neón adaptado a rosa */
+    text-shadow:
+        0 0 10px #ff2b9d,
+        0 0 30px rgba(255, 43, 157, 0.4),
+        4px 4px 0px #333;
+}
 /*TEXTO NEON AMARILLO*/
 .arcade-title {
   /* Fuente directa */
@@ -111,16 +129,30 @@ html {
 
 /* 2. CONTENEDOR DEL MAPA (Estilo retro) */
 .map-container {
-  padding: 0px;
-  background: #9cb1bf;
-  border-radius: 1px;
-  overflow: hidden;
-  /* Aplicamos la animación al mapa */
-  animation: fadeInScreen 2s ease-out forwards;
-  border: 2px solid #39ff14; 
-  border-radius: 15px; overflow: hidden
+	width: 100%;
+	max-width: 450px;
+	border-radius: 10px;
+	height: 305px;
+	object-fit: cover;
+	border: 3px solid #ff2b9d;
+	box-shadow: 0 0 20px #ff2b9d;
+	transition: all .35s ease;
+    cursor: pointer;
+}
+
+.map-container:hover{
+    animation: saltoArcade .7s ease;
+    transform: 
+		scale(1.04)
+		rotate(-2deg);
+    box-shadow:
+        0 0 20px #ff2b9d,
+        0 0 45px #ff2b9d,
+        0 0 70px #ff2b9d;
   
 }
+  
+
 
 /* Ajuste de la imagen de la consola */
 .img-fluid {
@@ -179,7 +211,7 @@ transition: filter 0.1s ease;
 .hero-section {
   /* Combinamos el gradiente con la imagen */
   background-image: 
-    linear-gradient(to bottom, transparent 60%, #121535 100%), 
+    linear-gradient(to bottom, transparent 2%, #121535 100%), 
     url('/src/assets/Contact/hero3.png');
   
   background-size: cover;
@@ -209,7 +241,7 @@ transition: filter 0.1s ease;
   height: 100%;
   
   /* Gradiente desde abajo-izquierda hacia arriba-derecha */
-  background: radial-gradient(circle at 10% 80%, rgba(19, 19, 56, 0.9) 0%, rgba(19, 19, 56, 0.4) 0%, transparent 90%);
+  
   
   pointer-events: none;
   z-index: 1;
@@ -314,3 +346,80 @@ transition: filter 0.1s ease;
     }
 
 }
+
+.arcade-img {
+	width: 100%;
+	max-width: 450px;
+	border-radius: 10px;
+	height: auto;
+	object-fit: cover;
+	border: 3px solid #ff2b9d;
+	box-shadow: 0 0 20px #ff2b9d;
+	transition: all .35s ease;
+    cursor: pointer;
+}
+
+.arcade-img:hover{
+    animation: saltoArcade .7s ease;
+    transform: 
+		scale(1.04)
+		rotate(-2deg);
+    box-shadow:
+        0 0 20px #ff2b9d,
+        0 0 45px #ff2b9d,
+        0 0 70px #ff2b9d;
+    filter: brightness(1.15);
+}
+
+
+.retro-heading {
+  display: flex;
+  align-items: center; /* Alinea verticalmente el texto y las líneas */
+  text-align: center;
+  color: #00ff1e; /* Color verde neón */
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.5rem;
+  margin: 70px 0;
+  gap: 20px; /* Espacio entre el texto y las líneas */
+}
+
+/* Creamos las líneas usando pseudo-elementos */
+.retro-heading::before,
+.retro-heading::after {
+  content: "";
+  flex: 1; /* Esto hace que la línea ocupe todo el espacio sobrante */
+  height: 3px; /* Grosor de la línea */
+  background: #ff2b9d; /* Color rosa neón */
+}
+
+
+
+
+/*--------------------LOGOS------------------*/
+.social-links-retro {
+    display: flex;
+    gap: 25px;
+    margin-top: 30px;
+    justify-content: flex-start; /* Alineado a la izquierda */
+}
+
+.social-link-verde {
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link-verde i {
+    font-size: 3rem;
+    color: #00ff1e; /* Verde fosfo de tu diseño */
+    transition: all 0.3s ease;
+    /* Efecto de brillo constante */
+    filter: drop-shadow(0 0 5px #00ff1e);
+}
+
+.social-link-verde:hover i {
+    animation: saltoSocial 0.6s ease;
+    filter: drop-shadow(0 0 10px #00ff1e) drop-shadow(0 0 20px #00ff1e);
+    transform: scale(1.2);
+}
+
+

@@ -1,0 +1,124 @@
+body {
+  font-family: "Press Start 2P", monospace;
+  background-color: #131338;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #fdffae;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* contenedor principal */
+main.container-fluid {
+  flex: 1;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+  box-sizing: border-box;
+  z-index: 100;
+  color: #fdffae;
+}
+
+/* inputs */
+.form-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.form-control {
+  width: 100% !important;
+  font-size: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 15px;
+  border: 2px solid #000000;
+  background-color: #fdfeea !important;
+  color: #000000 !important;
+}
+
+.form-control:focus {
+  background-color: #fdfeea !important;
+  color: #000000 !important;
+  border-color: #1be628 !important;
+  box-shadow: 0 0 0 0.25rem rgba(27, 230, 40, 0.25);
+}
+
+/* contraseña */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 45px;
+  top: 11px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #6c757d;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  transition: color 0.1s ease;
+}
+
+.password-container input::-ms-reveal,
+.password-container input::-ms-clear {
+  display: none !important;
+}
+
+/*submit */
+.btn-retro {
+  background-color: #d31d56 !important;
+  width: 100%;
+  padding: 0.75rem 0;
+  border-radius: 20px;
+  transition: transform 0.1s ease;
+  font-size: 0.8rem !important;
+  font-family: "Press Start 2P", monospace;
+  text-transform: uppercase;
+}
+
+.btn-retro:hover {
+  background-color: #b01443 !important;
+  transform: scale(1.02);
+}
+
+.col-12.text-center p.mt-3 {
+  font-size: 0.6rem !important;
+  color: #fdffae !important;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+.text-success {
+  font-size: 0.6rem !important;
+  color: #39ff14 !important;
+}
+
+.text-success:hover {
+  color: #26b60e !important;
+  text-decoration: underline !important;
+}
+
+/* media queries */
+@media (max-width: 576px) {
+  body {
+    background-image: url("../../../assets/register/BgRetroZone.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
+#footer-container {
+  margin-top: auto;
+  width: 100%;
+  z-index: 110;
+}

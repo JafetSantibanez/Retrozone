@@ -47,22 +47,6 @@ document.addEventListener("DOMContentLoaded", () => {
       inputConfirm.focus();
     });
   }
-
-  //Base de datos simulada
-  const usuariosRegistrados = [
-    {
-      id: 1,
-      email: "retro@zone.com",
-      password: "Password123",
-      username: "GamerRetro90",
-    },
-    {
-      id: 2,
-      email: "angy@retro.com",
-      password: "SecurePassword1",
-      username: "AngyGarcia",
-    },
-  ];
   const inputUsername = document.getElementById("username");
   const feedbackUsername = document.getElementById("usernameFeedback");
 
@@ -199,13 +183,9 @@ document.addEventListener("DOMContentLoaded", () => {
             "No se pudo conectar con el servidor. ¿Está encendido el json-server?",
           );
         });
-
-      //console.log("Listo para enviar al backend:", datosUsuario);
     }
   }
-
   //Apoyo validar username
-
   function validarNombreUsuario() {
     if (!inputUsername) return false;
 

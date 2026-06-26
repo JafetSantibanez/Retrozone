@@ -1,44 +1,123 @@
-<!--De acuerdo a documentación, quitamos el cuerpo de HTML ya que, la función al jalar el html puro, encuentra un error si lo dejaba completo-->
-<nav class="navbar navbar-expand-lg mi-navbar-retro">
-	<div class="container-fluid">
-		<a class="logo-pixel" href="/src/pages/home/home.html"></a>
-		<!--Picarle al logo te manda a index.html-->
+<nav
+  class="navbar navbar-expand-lg navbar-dark navbar-retrozone"
+  style="background-color: #00ff1e"
+>
+  <div
+    class="container-fluid d-flex flex-column flex-lg-row align-items-stretch align-items-lg-center"
+  >
+    <div
+      class="d-flex justify-content-between align-items-center w-100 d-lg-none fila-superior-retro"
+    >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu-desplegable"
+        aria-controls="menu-desplegable"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-		<div class="derecha-navbar d-flex align-items-center order-lg-last">
-			<a href="#" class="carrito-retro" aria-label="Ver carrito"></a>
-			<form
-				class="d-none d-lg-flex d-flex gap-2 formulario-busqueda-retro"
-				role="search">
-				<input
-					class="form-control buscador-retro input-busqueda"
-					type="search"
-					placeholder="Buscar" />
-				<button class="btn boton-pixel buscador-retro" type="submit">
-					Buscar
-				</button>
-			</form>
-			<!--Esta parte corresponde a el responsive al menú de hamburguesa-->
-			<button
-				id="boton-menu"
-				class="boton-hamburguesa-retro"
-				aria-label="Abrir menú">
-				<span class="linea-retro"></span>
-				<span class="linea-retro"></span>
-				<span class="linea-retro"></span>
-			</button>
-		</div>
-		<!--Corresponde a los botones de navegación, su ID nos ayuda con el responsive-->
-		<div id="menu-desplegable" class="collapse navbar-collapse">
-			<div class="navbar-nav enlaces-retro">
-				<a class="nav-link boton-pixel" href="/src/pages/home/home.html"
-					>Home</a
-				>
-				<a class="nav-link boton-pixel" href="#">Juegos </a>
-				<a class="nav-link boton-pixel" href="/src/pages/contact/contact.html">Contacto</a>
-				<a class="nav-link boton-pixel" href="/src/pages/aboutus/aboutus.html"
-					>About us</a
-				>
-			</div>
-		</div>
-	</div>
+      <a class="navbar-brand logo-container m-0" href="/index.html">
+        <img
+          src="/src/assets/navbar/homeLogo.jpeg"
+          alt="RetroZone"
+          class="logo-pixel-img"
+        />
+      </a>
+
+      <div class="uniones-retro m-0 d-lg-none">
+        <a class="nav-link" href="..." id="boton-carrito">
+          <span class="carrito-badge">0</span>
+        </a>
+      </div>
+    </div>
+
+    <a
+      class="navbar-brand logo-container d-none d-lg-block m-0"
+      href="/index.html"
+    >
+      <img
+        src="/src/assets/navbar/homeLogo.jpeg"
+        alt="RetroZone"
+        class="logo-pixel-img"
+      />
+    </a>
+    <div id="menu-desplegable" class="collapse navbar-collapse flex-grow-0">
+      <div
+        class="navbar-nav enlaces-retro py-3 py-lg-0 d-flex flex-column flex-lg-row align-items-start align-items-lg-center gap-3 gap-lg-0"
+      >
+        <a class="nav-link boton-pixel boton-home" href="/index.html">Inicio</a>
+
+        <div class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle boton-pixel boton-categorias"
+            href="#"
+            id="navbarDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Secciones
+          </a>
+          <ul
+            class="dropdown-menu"
+            aria-labelledby="navbarDropdown"
+            style="background-color: #1be628"
+          >
+            <li><a class="dropdown-item text-white" href="#">Consolas</a></li>
+            <li><a class="dropdown-item text-white" href="#">Juegos</a></li>
+            <li><a class="dropdown-item text-white" href="#">Accesorios</a></li>
+            <li>
+              <a class="dropdown-item text-white" href="#">Coleccionables</a>
+            </li>
+            <li>
+              <a
+                class="dropdown-item text-white"
+                href="/src/pages/aboutus/aboutus.html"
+                >About us</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item text-white"
+                href="/src/pages/contact/contact.html"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav-item dropdown" id="auth-dropdown">
+          <a
+            class="nav-link dropdown-toggle boton-pixel boton-sesion-toggle"
+            id="navbarDropdownSesion"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Sesión
+          </a>
+          <ul
+            class="dropdown-menu"
+            aria-labelledby="navbarDropdownSesion"
+            style="background-color: #1be628"
+            id="menu-sesion-desplegable"
+          ></ul>
+        </div>
+
+        <div class="uniones-retro d-none d-lg-flex ms-lg-3">
+          <a
+            class="nav-link"
+            href="/src/pages/shopping-cart/cart.html"
+            id="boton-carrito"
+          >
+            <span class="carrito-badge">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>

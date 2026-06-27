@@ -53,9 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 </button>
                 <div id="collapseProducts" class="collapse d-md-block">
                   <ul class="list-unstyled footer-links ms-2 ms-md-0 mt-2 mt-md-0">
-                    <li><a href="categorias.html" class="text-decoration-none text-white-50">Estado</a></li>
-                    <li><a href="juegos.html" class="text-decoration-none text-white-50">Genero</a></li>
-                    <li><a href="consolas.html" class="text-decoration-none text-white-50">Consolas</a></li>
+                    <li><a href="/src/pages/catalog/catalog.html?estado=Nuevo" class="text-decoration-none text-white-50">Estado</a></li>
+                    <li><a href="/src/pages/catalog/catalog.html?categoria=RPG" class="text-decoration-none text-white-50">Genero</a></li>
+                    <li><a href="/src/pages/catalog/catalog.html?plataforma=SNES" class="text-decoration-none text-white-50">Consolas</a></li>
                   </ul>
                 </div>
               </div>
@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 </button>
                 <div id="collapseCuenta" class="collapse d-md-block">
                   <ul class="list-unstyled footer-links ms-2 ms-md-0 mt-2 mt-md-0">
-                    <li><a href="perfil.html" class="text-decoration-none text-white-50">Perfil</a></li>
-                    <li><a href="carrito.html" class="text-decoration-none text-white-50">Carrito</a></li>
+                    <li><a href="/src/pages/profile/profile.html" class="text-decoration-none text-white-50">Perfil</a></li>
+                    <li><a href="/src/pages/shopping-cart/cart.html" class="text-decoration-none text-white-50">Carrito</a></li>
                   </ul>
                 </div>
               </div>

@@ -1,0 +1,246 @@
+/* Importando para tener el tipo de letra */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+:root {
+  /*colores principales */
+  --azulFond: #121535;
+  --rojoRosa: #c21a4b;
+  --verde: #00ff1e;
+  --amarillito: #ffffbc;
+  --gris: #1c2b24;
+  --blanco: #fdfeea;
+  --letraPri: "Press Start 2P", cursive; /* Fuente principal */
+}
+
+body {
+  font-family: var(--letraPri);
+  background-color: var(--azulFond);
+  color: var(--amarillito);
+}
+/*Tabla pedidos*/
+.table-responsive {
+  border: 4px solid var(--rojoRosa) !important;
+  border-radius: 12px !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch;
+  background-color: var(--azulFond) !important;
+  display: block;
+  width: 100%;
+}
+
+.table {
+  width: 100% !important;
+  min-width: 600px;
+  background-color: var(--azulFond) !important;
+  border-collapse: collapse !important;
+  margin-bottom: 0 !important;
+}
+.table td,
+.table th {
+  background-color: var(--azulFond) !important;
+  color: var(--blanco) !important;
+  border: 4px solid var(--rojoRosa) !important;
+}
+
+.table thead th {
+  border-top: none !important;
+}
+.table tbody tr:last-child td {
+  border-bottom: none !important;
+}
+.table td:first-child,
+.table th:first-child {
+  border-left: none !important;
+}
+.table td:last-child,
+.table th:last-child {
+  border-right: none !important;
+}
+
+/* Contenedor Cuenta */
+#account-content {
+  background: var(--gris);
+  padding: 3rem;
+  border: 3px solid var(--verde);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 255, 30, 0.25);
+  color: var(--amarillito);
+}
+
+/* Sidebar */
+.list-group-item {
+  background-color: var(--azulFond) !important;
+  color: var(--amarillito) !important;
+  border: 1px solid var(--verde) !important;
+  font-size: 0.7rem;
+}
+
+.list-group-item.active {
+  background-color: #d31d56 !important;
+  border-color: #39ff14 !important;
+}
+
+/* Inputs*/
+.form-group label,
+.form-label {
+  display: block !important;
+  font-size: 0.7rem !important;
+  text-transform: uppercase !important;
+  margin-bottom: 0.5rem !important;
+  color: var(--blanco) !important;
+  font-family: "Press Start 2P", monospace !important;
+}
+
+.form-control {
+  background-color: var(--azulFond) !important;
+  color: var(--blanco) !important;
+  border: 3px solid var(--rojoRosa) !important;
+  border-radius: 15px !important;
+  font-family: var(--letraPri);
+  font-size: 0.75rem;
+}
+
+/*Hover*/
+.form-control:focus,
+.iti input.form-control:focus {
+  border-color: var(--verde) !important;
+  box-shadow: 0 0 10px rgba(0, 255, 30, 0.5) !important;
+  outline: none;
+}
+
+/* Placeholder*/
+.form-control::placeholder {
+  color: rgba(253, 255, 174, 0.5) !important;
+}
+
+/*Telefono*/
+.iti {
+  display: block !important;
+  width: 100% !important;
+  margin-top: 0.5rem;
+}
+
+.iti input,
+.iti input[type="tel"] {
+  width: 100% !important;
+  height: 34px !important;
+  padding-left: 55px !important;
+  border-radius: 15px !important;
+  background-color: var(--azulFond) !important;
+  color: var(--blanco) !important;
+  border: 3px solid var(--rojoRosa) !important;
+  font-family: "Press Start 2P", monospace !important;
+  font-size: 0.7rem !important;
+  margin: 0 !important;
+}
+
+.iti.is-invalid + .invalid-feedback {
+  display: block !important;
+  margin-top: 5px !important;
+  font-size: 0.5rem !important;
+}
+.iti__search-input,
+.iti--separate-dial-code .iti__selected-dial-code {
+  color: var(--blanco) !important;
+}
+.invalid-feedback {
+  display: block !important;
+  margin-top: 5px !important;
+  font-size: 0.5rem !important;
+}
+
+/* password*/
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  right: 30px;
+  top: 43%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--blanco);
+  font-size: 1rem;
+  z-index: 10;
+}
+
+.password-container input {
+  padding-right: 40px !important;
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+  display: none !important;
+}
+
+input::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+
+.d-none {
+  display: none !important;
+}
+
+/* Botones */
+.btn-primary {
+  background-color: var(--rojoRosa) !important;
+  border: var(--verde) 3px solid !important;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.7rem !important;
+  border-radius: 20px;
+}
+
+/* Tabla de Pedidos */
+.table {
+  color: var(--amarillito) !important;
+  font-size: 0.7rem;
+}
+.table-light {
+  background-color: var(--azulFond) !important;
+  color: var(--amarillito) !important;
+}
+/* Estilo para los recuadros de direcciones */
+.direccion-item {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border: 3px solid var(--verde); /* Borde normal */
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--blanco);
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.direccion-item.seleccionada {
+  border-color: var(--rojoRosa);
+  background-color: rgba(194, 26, 75, 0.1);
+}
+.btn-borrar-personalizado {
+  color: #dc3545;
+  border: 1px solid #dc3545;
+  background-color: transparent;
+}
+
+.btn-borrar-personalizado:hover {
+  background-color: #dc3545;
+}
+#footer-container {
+  margin-top: auto;
+  width: 100%;
+  z-index: 110;
+}
+.invalid-feedback {
+  display: none !important;
+}
+
+.is-invalid ~ .invalid-feedback {
+  display: block !important;
+}

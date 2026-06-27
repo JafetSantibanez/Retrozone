@@ -1,3 +1,45 @@
-.error-container {
-  background-image: url(/src/assets/Retrozone-img.jpeg);
+#navbar {
+  width: 100%;
+  z-index: 1050;
+}
+body {
+  background-image: url("/src/assets/register/BgRetroZone.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* contenedor principal */
+main.container-fluid {
+  flex: 1;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+  box-sizing: border-box;
+  z-index: 100;
+  color: #fdffae;
+}
+.img-error {
+  max-width: 100%;
+  height: auto;
+  width: 280px;
+  margin-top: 20px;
+}
+#footer-container {
+  margin-top: auto;
+  width: 100%;
+  z-index: 110;
 }

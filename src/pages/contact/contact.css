@@ -8,10 +8,9 @@ body {
   font-family: "Orbitron", sans-serif;
   font-size: 15px;
   padding-top: 0;
-
 }
-h3 {
 
+h3 {
   color: #00ff1e;
   font-family: "Press Start 2P", cursive;
   text-align: left;
@@ -23,24 +22,23 @@ h3 {
 html {
   scroll-behavior: smooth;
 }
+
 .contenedor-botones-contacto {
     display: flex;
     flex-direction: row;
     /* Ajusta el gap a 10px o 15px para que estén más unidos */
     gap: 15px; 
-    
     /* Esto los alinea a la izquierda de su contenedor */
     justify-content: flex-start; 
-    
     align-items: center;
-    
     /* Ajusta este margen para subirlos o bajarlos respecto al texto */
-    margin-top: 10px; 
-    
+    margin-top: 20px; 
     /* Aseguramos que no tengan margen izquierdo extra */
     margin-left: 0;
     width: 100%;
+    padding-left: 50px;
 }
+
 /*-------------------VISITANOS-------------------*/
  .btn-boton-personalizado {
   /* Imagen de fondo */
@@ -50,13 +48,10 @@ html {
   background-color: transparent;
   width: 180px;  /* Aumentado de 260px a 320px para más espacio horizontal */
   height: 50px;
-  
-  
   /* Centrado del texto */
   display: flex;
   align-items: center;
   justify-content: center;
-  
   /* Estilos de texto */
   color: #39FF14; 
   font-family: 'Press Start 2P', cursive;
@@ -64,7 +59,6 @@ html {
   text-transform: uppercase;
   border: none;
   cursor: pointer;
-  
   /* Transición suave */
   transition: all 0.3s ease;
 }
@@ -73,7 +67,6 @@ html {
 .btn-boton-personalizado:hover {
   /* El brillo neón que sigue la forma de tus píxeles */
   filter: drop-shadow(0 0 0px #39FF14) drop-shadow(0 0 5px #39FF14);
-  
   /* Ligero efecto de escala */
   transform: scale(1.05);
 }
@@ -83,37 +76,36 @@ html {
   transform: scale(0.98);
   filter: brightness(0.8);
 }
-/*-------------------------------------------------------------------*/
 
 /*TEXTO NEON ROSA*/
 .about-label {
     color: #ff2b9d;
     font-family: "Press Start 2P", cursive;
-    font-size: 1.5rem;
+    font-size: 2.8rem;
     letter-spacing: 2px;
-    margin: 0 0 45px 0;
-    margin-bottom: 90px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    padding-left: 50px;
     line-height: 1;
     font-weight: normal;
-
     /* Efecto Glow Neón adaptado a rosa */
     text-shadow:
         0 0 10px #ff2b9d,
         0 0 30px rgba(255, 43, 157, 0.4),
         4px 4px 0px #333;
 }
+
 /*TEXTO NEON AMARILLO*/
 .arcade-title {
   /* Fuente directa */
   font-family: 'Press Start 2P', cursive;
-  
   /* Tamaño y color */
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
   color: #f1f3a4; /* Sustituido --amarillito */
-  
-  margin: 0;
   text-align: left;
-  
+  margin-bottom: 70px;
+  padding-left: 45px;
+  line-height: 1.5;
   /* Efecto Glow Neón */
   text-shadow:
       0 0 10px #dadc81,
@@ -121,13 +113,16 @@ html {
       4px 4px 0px #333;
 }
 
-/* 1. ANIMACIÓN: Efecto de encendido */
-@keyframes fadeInScreen {
-  0% { opacity: 0; transform: scale(0.95); }
-  100% { opacity: 1; transform: scale(1); }
+.hero-description{
+    max-width: 650px;
+    color: white;
+    font-size: 1rem;
+    padding-left: 50px;
+    line-height: 1.9;     /* separación entre renglones */
+    margin-bottom: 50px;  /* separación con los botones */
 }
 
-/* 2. CONTENEDOR DEL MAPA (Estilo retro) */
+/* 1. CONTENEDOR DEL MAPA (Estilo retro) */
 .map-container {
 	width: 100%;
 	max-width: 450px;
@@ -149,11 +144,8 @@ html {
         0 0 20px #ff2b9d,
         0 0 45px #ff2b9d,
         0 0 70px #ff2b9d;
-  
 }
   
-
-
 /* Ajuste de la imagen de la consola */
 .img-fluid {
 transition: filter 0.1s ease;
@@ -162,58 +154,33 @@ transition: filter 0.1s ease;
   margin: 0 auto;
 }
 
-/* 3. BOTONES SOCIALES (Estilo Píldora) */
-.social-links .btn-outline-success {
-  border-radius: 50px !important;
-  padding: 10px 25px;
-  border: 2px solid #39FF14 !important;
-  color: #39FF14 !important;
-  font-family: 'Orbitron', sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-  transition: 0.3s;
+/* 2. TEXTO DE INFORMACIÓN */
+
+.contact-info{
+    padding-left: 60px;
 }
 
-.social-links .btn-outline-success:hover {
-  background-color: #39FF14 !important;
-  color: #121535 !important;
-  box-shadow: 0 0 15px rgba(57, 255, 20, 0.5);
-}
-
-/* 4. TEXTO DE INFORMACIÓN */
 .contact-info h3 {
   color: #00ff1e;
   font-family: "Press Start 2P", cursive;
-  font-size: 0.8rem;
-  margin-top: 20px;
-  margin-bottom: 5px;
+  font-size: 1.2rem;
+  margin-top: 50px;
+  margin-bottom: 50px;
   letter-spacing: 1px;
 }
 
 .contact-info p {
-  margin-bottom: 5px;
-  font-size: 0.9rem;
+  margin-bottom: 50px;
+  font-size: 1rem;
   color: #ffffff;
 }
-.hero-text {
-	font-family: var(--letraPri);
-	font-size: 50px;
-	color: var(--amarillito);
-	margin: 0;
-	text-shadow:
-		0 0 10px var(--amarillito),
-		0 0 30px rgba(255, 255, 150, 0.4),
-		4px 4px 0px #333;
-	text-align: center;
-    font-family: 'Press Start 2P'
-}
+
 /*--------------------------IMAGEN HERO ------------------------*/
 .hero-section {
   /* Combinamos el gradiente con la imagen */
   background-image: 
     linear-gradient(to bottom, transparent 2%, #121535 100%), 
     url('/src/assets/Contact/hero3.png');
-  
   background-size: cover;
   background-position: center;
   min-height: 80vh;
@@ -221,11 +188,11 @@ transition: filter 0.1s ease;
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  padding: 0 -100px;
+  padding: 80px 60px;
   padding-top: 0px;
+  padding-bottom: 0px;
   overflow: hidden;
-  
-  
+  background-color: #121535;
   /* Asegúrate de que el color de fondo de la sección 
      coincida con el color final del gradiente (#121535) */
   background-color: #121535;
@@ -239,10 +206,7 @@ transition: filter 0.1s ease;
   left: 0;
   width: 100%;
   height: 100%;
-  
   /* Gradiente desde abajo-izquierda hacia arriba-derecha */
-  
-  
   pointer-events: none;
   z-index: 1;
 }
@@ -251,21 +215,34 @@ transition: filter 0.1s ease;
 .hero-section .container {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-
 
 
 /*-------------------FORMULARIO-------------------*/
 
 /* Contenedor */
 .contactanos-container{
-    max-width: 900px;
+  width:100%
+    max-width: 600px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 0 10px;
 }
 
+.contactanos-container form{
+    width: 70%;
+    margin: 0 auto;
+}
 
+.form-floating{
+    margin-bottom: 22px;
+}
 
+.form-control{
+    max-width: 100%;
+}
 
 /* Título */
 .contact-title{
@@ -284,13 +261,10 @@ transition: filter 0.1s ease;
     color: #16184B !important;
 }
 
-
 /* Focus */
 .form-control:focus{
     background-color: #F3F3E6 !important;
-
     border-color: #39FF14 !important;
-
     box-shadow: 0 0 10px rgba(57,255,20,.5) !important;
 }
 
@@ -314,63 +288,20 @@ transition: filter 0.1s ease;
 .btn-primary{
     background-color: #39FF14 !important;
     border: none !important;
-
     color: #16184B !important;
     font-weight: bold;
-
     border-radius: 25px !important;
-
     padding: 12px;
-
     transition: .3s;
+  
 }
 
 /* Hover */
 .btn-primary:hover{
     background-color: #4BFF29 !important;
-
     transform: translateY(-2px);
-
     box-shadow: 0 0 15px rgba(57,255,20,.7);
 }
-
-/* Responsive */
-@media (max-width: 768px){
-
-    .contactanos-container{
-        padding: 15px;
-    }
-
-    .contact-title{
-        font-size: 1.4rem;
-    }
-
-}
-
-.arcade-img {
-	width: 100%;
-	max-width: 450px;
-	border-radius: 10px;
-	height: auto;
-	object-fit: cover;
-	border: 3px solid #ff2b9d;
-	box-shadow: 0 0 20px #ff2b9d;
-	transition: all .35s ease;
-    cursor: pointer;
-}
-
-.arcade-img:hover{
-    animation: saltoArcade .7s ease;
-    transform: 
-		scale(1.04)
-		rotate(-2deg);
-    box-shadow:
-        0 0 20px #ff2b9d,
-        0 0 45px #ff2b9d,
-        0 0 70px #ff2b9d;
-    filter: brightness(1.15);
-}
-
 
 .retro-heading {
   display: flex;
@@ -379,7 +310,7 @@ transition: filter 0.1s ease;
   color: #00ff1e; /* Color verde neón */
   font-family: "Press Start 2P", cursive;
   font-size: 1.5rem;
-  margin: 70px 0;
+  margin: 100px 0;
   gap: 20px; /* Espacio entre el texto y las líneas */
 }
 
@@ -391,9 +322,6 @@ transition: filter 0.1s ease;
   height: 3px; /* Grosor de la línea */
   background: #ff2b9d; /* Color rosa neón */
 }
-
-
-
 
 /*--------------------LOGOS------------------*/
 .social-links-retro {
@@ -421,5 +349,82 @@ transition: filter 0.1s ease;
     filter: drop-shadow(0 0 10px #00ff1e) drop-shadow(0 0 20px #00ff1e);
     transform: scale(1.2);
 }
+
+/* Responsive */
+@media (max-width: 768px){
+    .contactanos-container{
+        padding: 15px;
+    }
+
+    .contact-title{
+        font-size: 1.4rem;
+    }
+
+    .hero-section {
+    min-height: auto;
+    padding: 60px 25px;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-section .container {
+    text-align: center !important;
+  }
+
+  .about-label {
+    font-size: 1.1rem;
+    margin-bottom: 35px;
+  }
+
+  .arcade-title {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .hero-section p {
+    margin: 30px auto;
+    font-size: 0.85rem;
+  }
+
+  .contenedor-botones-contacto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .retro-heading {
+    font-size: 0.85rem;
+    gap: 10px;
+  }
+
+  .retro-heading::before,
+  .retro-heading::after {
+    min-width: 40px;
+  }
+
+  .visit-section {
+    text-align: center;
+  }
+
+  .contact-info h3 {
+    text-align: center;
+  }
+
+  .social-links-retro {
+    justify-content: center;
+  }
+
+  .map-container {
+    max-width: 100%;
+    height: 280px;
+    margin: 30px auto 0;
+  }
+
+  .contactanos-container {
+    margin: 30px auto;
+    padding: 15px;
+  }
+}
+
+
 
 

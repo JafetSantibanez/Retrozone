@@ -8,6 +8,7 @@
 	--amarillito: #ffffbc;
 	--gris: #1c2b24;
 	--letraPri: "Press Start 2P", cursive;
+	--rosa: #ff2b9d;
 }
 html,
 body {
@@ -38,6 +39,7 @@ body {
 .stars {
 	position: absolute;
 	inset: 0;
+	pointer-events: none;
 	background-image:
 		radial-gradient(2px 2px at 50px 50px, white, transparent),
 		radial-gradient(2px 2px at 180px 120px, white, transparent),
@@ -446,7 +448,7 @@ body {
 
 .card:hover {
 	transform: translateY(-5px);
-	box-shadow: 0 0 15px #ffffbc;
+	box-shadow: 0 0 15px var(--verde);
 }
 
 .card-img-top {
@@ -459,7 +461,7 @@ body {
 .card-body {
 	padding: 8px 5px !important;
 	text-align: center;
-	color: white !important;
+	color: var(--amarillito) !important;
 	background-color: var(--azulFond);
 }
 
@@ -528,22 +530,22 @@ body {
 
 .producto-info {
 	position: absolute;
-	bottom: 15px;
-	left: 40px;
-	width: 220px;
-	padding: 15 px;
+	bottom: 1px;
+	left: 760px;
+	width: 250px;
+	padding: 1 px;
 	background: rgba(13, 34, 36, 0.75);
 	backdrop-filter: blur(5px);
 	border-radius: 12px;
-	color: rgb(31, 181, 192);
+	color: #ff2b9d;
 }
 
 .precio {
 	display: block;
 	color: var(--amarillito);
-	font-size: 1.3rem;
+	font-size: 1rem;
 	font-weight: bold;
-	margin-bottom: 12px;
+	margin-bottom: 1px;
 }
 
 /* ========================= */
@@ -613,14 +615,14 @@ css contador
 	background-size: 100% 100%; /* o cover */ /* Llena todo el recuadro */
 	background-position: center; /* Centra la imagen */
 	background-repeat: no-repeat;
-	border: 2px solid cyan;
+	border: 2px solid var(--verde);
 	border-radius: 15px;
 	padding: 20px;
 
 	width: 620px; /* 🔥 tamaño del recuadro */
 	height: 470px;
 	margin: auto;
-	box-shadow: 0 0 20px cyan;
+	box-shadow: 0 0 20px rgb(64, 232, 58);
 	text-align: center;
 }
 .oferta-box2 {
@@ -628,13 +630,13 @@ css contador
 	background-size: 100% 100%; /* o cover */ /* Llena todo el recuadro */
 	background-position: center; /* Centra la imagen */
 	background-repeat: no-repeat;
-	border: 2px solid cyan;
+	border: 2px solid rgb(255, 0, 149);
 	border-radius: 15px;
 	padding: 20px;
 	width: 620px; /* 🔥 tamaño del recuadro */
 	height: 470px;
 	margin: auto;
-	box-shadow: 0 0 20px cyan;
+	box-shadow: 0 0 20px rgb(224, 78, 183);
 	text-align: center;
 }
 
@@ -697,6 +699,9 @@ css contador
 	color: white;
 }
 
+.por3 {
+	background-color: var(--rosa);
+}
 /* Usuarios*/
 
 /* ==========================================================================
@@ -717,8 +722,8 @@ css contador
 .swiper-nuevo .swiper-slide {
 	text-align: center;
 	font-size: 18px;
-	background: #22222a; /* Color de fondo de cada tarjeta */
-	color: #480606; /* Color del texto */
+	background: #2bb8a8; /* Color de fondo de cada tarjeta */
+	color: #064812; /* Color del texto */
 	font-family: "Orbitron", sans-serif; /* Puedes usar tus fuentes retro */
 
 	/* Centrado interno del contenido */
@@ -727,7 +732,7 @@ css contador
 	align-items: center;
 
 	/* Bordes y sombras de estética retro */
-	border: 2px solid #3f3f4e;
+	border: 2px solid var(--verde);
 	border-radius: 8px;
 	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 	transition:
@@ -738,7 +743,7 @@ css contador
 /* Efecto Hover (Cuando pasas el mouse por encima de una tarjeta) */
 .swiper-nuevo .swiper-slide:hover {
 	transform: scale(1.02); /* Se agranda un poquito */
-	border-color: #ce0303; /* Cambia el borde a un color neón/retro */
+	border-color: #f33eb4; /* Cambia el borde a un color neón/retro */
 	cursor: pointer;
 }
 

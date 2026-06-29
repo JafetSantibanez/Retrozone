@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RetroZone - Mi Cuenta</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+      rel="stylesheet"
+    />
+    <link href="/src/pages/profile/profile.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <main class="container py-5">
+      <div class="row">
+        <aside class="col-12 col-md-3 mb-4">
+          <div class="list-group">
+            <button
+              type="button"
+              class="list-group-item list-group-item-action active"
+              data-section="pedidos"
+            >
+              <i class="bi bi-box-seam me-2"></i>Mis pedidos
+            </button>
+            <button
+              type="button"
+              class="list-group-item list-group-item-action"
+              data-section="perfil"
+            >
+              <i class="bi bi-person-fill me-2"></i>Datos personales
+            </button>
+            <button
+              type="button"
+              class="list-group-item list-group-item-action"
+              data-section="seguridad"
+            >
+              <i class="bi bi-shield-lock-fill me-2"></i>Seguridad
+            </button>
+            <button
+              type="button"
+              class="list-group-item list-group-item-action"
+              data-section="direcciones"
+            >
+              <i class="bi bi-house-door-fill me-2"></i>Direcciones
+            </button>
+          </div>
+        </aside>
+
+        <section class="col-12 col-md-9">
+          <div id="account-content" class="card p-4 shadow-sm">
+            <div id="pedidosSection" class="mt-0">
+              <h3 class="mb-4">Mis pedidos</h3>
+              <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                  <thead class="table-light">
+                    <tr>
+                      <th>Pedido #</th>
+                      <th>Fecha</th>
+                      <th>Estado</th>
+                      <th>Total</th>
+                      <th>Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>#RZ-1025</td>
+                      <td>20/06/2026</td>
+                      <td><span class="badge bg-success">Entregado</span></td>
+                      <td>$1,250.00</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-secondary">
+                          Ver
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>#RZ-1030</td>
+                      <td>22/06/2026</td>
+                      <td>
+                        <span class="badge bg-warning text-dark"
+                          >En camino</span
+                        >
+                      </td>
+                      <td>$890.00</td>
+                      <td>
+                        <button class="btn btn-sm btn-outline-secondary">
+                          Ver
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id="section-perfil" class="d-none">
+              <form id="perfilForm" class="needs-validation" novalidate>
+                <h3 class="mb-4">Datos personales</h3>
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label for="fullName" class="form-label"
+                      >Nombre legal</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fullName"
+                      name="fullName"
+                      placeholder="Tu nombre completo"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Ingresa un nombre válido.
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="username" class="form-label"
+                      >Nombre de usuario</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="username"
+                      name="username"
+                      readonly
+                      disabled
+                    />
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="email" class="form-label"
+                      >Correo electrónico</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="correo@ejemplo.com"
+                      required
+                    />
+                    <div class="invalid-feedback">
+                      Ingresa un correo válido.
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 form-group position-relative">
+                    <label>Teléfono</label>
+                    <input type="tel" id="phone" class="form-control" />
+
+                    <div class="invalid-feedback">
+                      El número de teléfono no es válido.
+                    </div>
+                  </div>
+                  <div class="col-12 mt-3">
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      style="background-color: #c21a4b; border-color: #c21a4b"
+                    >
+                      Guardar cambios
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div id="section-seguridad" class="d-none">
+              <form id="seguridadForm" class="needs-validation mt-0" novalidate>
+                <h3 class="mb-4">Seguridad</h3>
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label for="currentPassword" class="form-label"
+                      >Contraseña actual</label
+                    >
+                    <div class="password-container">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="currentPassword"
+                        name="currentPassword"
+                        required
+                      />
+                      <i
+                        class="bi bi-eye-slash password-toggle-icon"
+                        id="toggleCurrentPassword"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="newPassword" class="form-label"
+                      >Nueva contraseña</label
+                    >
+                    <div class="password-container position-relative">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="newPassword"
+                        name="newPassword"
+                        required
+                      />
+                      <i
+                        class="bi bi-eye-slash password-toggle-icon"
+                        id="toggleNewPassword"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <label for="confirmNewPassword" class="form-label"
+                      >Confirma nueva contraseña</label
+                    >
+                    <div class="password-container position-relative">
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="confirmNewPassword"
+                        name="confirmNewPassword"
+                        required
+                      />
+                      <i
+                        class="bi bi-eye-slash password-toggle-icon"
+                        id="toggleConfirmNewPassword"
+                      ></i>
+                    </div>
+                  </div>
+                  <div class="col-12 mt-3">
+                    <button
+                      type="submit"
+                      class="btn btn-primary"
+                      style="background-color: #c21a4b; border-color: #c21a4b"
+                    >
+                      Actualizar contraseña
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div id="section-directions" class="d-none">
+              <form id="direccionesForm" class="needs-validation" novalidate>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Calle y número</label>
+                    <input
+                      name="street"
+                      type="text"
+                      class="form-control"
+                      placeholder="Ej. Av. Reforma 123"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label class="form-label">Ciudad / Municipio</label>
+                    <input
+                      name="city"
+                      type="text"
+                      class="form-control"
+                      placeholder="Ej. Guadalajara"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-4 mb-3">
+                    <label class="form-label">Estado</label>
+                    <input
+                      name="state"
+                      type="text"
+                      class="form-control"
+                      placeholder="Ej. Jalisco"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label class="form-label">País</label>
+                    <input
+                      name="country"
+                      type="text"
+                      class="form-control"
+                      placeholder="Ej. México"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label class="form-label">Código Postal</label>
+                    <input
+                      name="zipCode"
+                      type="text"
+                      class="form-control"
+                      placeholder="Ej. 44100"
+                      required
+                    />
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  Agregar dirección
+                </button>
+              </form>
+              <div id="listaDirecciones" class="mt-4"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script type="module" src="/src/components/navbar/NavBar-vite.js"></script>
+    <script type="module" src="/src/components/footer/Footer.js"></script>
+    <script type="module" src="/src/pages/profile/profile.js"></script>
+  </body>
+</html>

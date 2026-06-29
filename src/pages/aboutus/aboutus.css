@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap");
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	background: #121535;
-	color: white;
-	font-family: "Orbitron", sans-serif;
-	font-size: 15px;
-	padding-top: 0;
+  margin: 0;
+  background: #121535;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  font-size: 15px;
+  padding-top: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* HERO */
@@ -28,13 +28,12 @@ html {
   min-height: 80vh;
   display: flex;
   align-items: center;
-  justify-content: left;
-  padding: 80px 60px;
+  justify-content: flex-start;
+  padding: 80px 60px 10px;
   background-color: #121535;
   border-bottom: 4px solid #00ff1e;
-  padding-bottom: 10px;
+  position: relative;
 }
-
 
 /* Efecto de Inner Shadow (Viñeta) */
 .hero-section::after {
@@ -45,32 +44,45 @@ html {
   width: 100%;
   height: 100%;
   /* Gradiente desde abajo-izquierda hacia arriba-derecha */
-  background: radial-gradient(circle at 10% 80%, rgba(19, 19, 56, 0.9) 0%, rgba(19, 19, 56, 0.4) 0%, transparent 90%);
+  background: radial-gradient(
+    circle at 10% 80%,
+    rgba(19, 19, 56, 0.9) 0%,
+    rgba(19, 19, 56, 0.4) 0%,
+    transparent 90%
+  );
   pointer-events: none;
   z-index: 1;
 }
 
-.hero-content{
-	position: relative;
-    z-index: 2;
-	max-width: 650px;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
 }
 
 .about-label {
-	color: #ff2b9d;
-	font-family: "Press Start 2P", cursive;
-	font-size: 2.8rem;
-	letter-spacing: 2px;
-	margin: 0 0 45px 0;
-	margin-bottom: 90px;
-	line-height: 1;
-	font-weight: normal;
+  color: #ff2b9d;
+  font-family: "Press Start 2P", cursive;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
+  margin: 0 0 45px 0;
+  margin-bottom: 90px;
+  line-height: 1;
+  font-weight: normal;
+  text-shadow:
+    0 0 10px #ff2b9d,
+    0 0 30px rgba(233, 63, 114, 0.4),
+    4px 4px 0px #333;
 }
 
 .hero-content h2 {
-  color: #00ff1e;
-  font-size: 2rem;
+  color: #f1f3a4;
+  font-size: 2.5rem;
   line-height: 1.1;
+  text-shadow:
+    0 0 10px #dadc81,
+    0 0 30px rgba(255, 255, 150, 0.4),
+    4px 4px 0px #333;
 }
 
 .hero-content p {
@@ -81,38 +93,38 @@ html {
 }
 
 .contenedor-botones-contacto {
-    display: flex;
-    flex-direction: row;
-	flex-wrap: nowrap;
-    /* Ajusta el gap a 10px o 15px para que estén más unidos */
-    gap: 12px; 
-    /* Esto los alinea a la izquierda de su contenedor */
-    justify-content: flex-start; 
-    align-items: center;
-    /* Ajusta este margen para subirlos o bajarlos respecto al texto */
-    margin-top: 40px; 
-    /* Aseguramos que no tengan margen izquierdo extra */
-    margin-left: 0;
-	margin-bottom: 60px;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* Ajusta el gap a 10px o 15px para que estén más unidos */
+  gap: 12px;
+  /* Esto los alinea a la izquierda de su contenedor */
+  justify-content: flex-start;
+  align-items: center;
+  /* Ajusta este margen para subirlos o bajarlos respecto al texto */
+  margin-top: 40px;
+  /* Aseguramos que no tengan margen izquierdo extra */
+  margin-left: 0;
+  margin-bottom: 60px;
+  width: 100%;
 }
 
- .btn-boton-personalizado {
+.btn-boton-personalizado {
   /* Imagen de fondo */
-  background-image: url('/src/assets/Contact/BotonRetroneon.png');
+  background-image: url("/src/assets/Contact/BotonRetroneon.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-color: transparent;
-  width: 150px;  /* Aumentado de 260px a 320px para más espacio horizontal */
+  width: 150px; /* Aumentado de 260px a 320px para más espacio horizontal */
   height: 50px;
   /* Centrado del texto */
   display: flex;
   align-items: center;
   justify-content: center;
   /* Estilos de texto */
-  color: #39FF14; 
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.60rem; /* Un poco más pequeño para que quepa bien */
+  color: #39ff14;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.6rem; /* Un poco más pequeño para que quepa bien */
   text-transform: uppercase;
   border: none;
   cursor: pointer;
@@ -124,7 +136,7 @@ html {
 /* Efecto Hover Neón */
 .btn-boton-personalizado:hover {
   /* El brillo neón que sigue la forma de tus píxeles */
-  filter: drop-shadow(0 0 0px #39FF14) drop-shadow(0 0 5px #39FF14);
+  filter: drop-shadow(0 0 0px #39ff14) drop-shadow(0 0 5px #39ff14);
   /* Ligero efecto de escala */
   transform: scale(1.05);
 }
@@ -137,30 +149,28 @@ html {
 
 /* SECCIONES */
 main {
-	background: #121535;
-	padding-bottom: 20px;
-	color: white;
+  background: #121535;
+  padding-bottom: 20px;
+  color: white;
 }
 
 .historia,
 .mision-vision,
 .valores,
 .conocenos {
-	padding: 90px 70px;
-	border-bottom: 4px solid #00ff1e;
-	min-height: 85vh;
-	padding-top: 90px;
-    padding-bottom: 90px;
+  padding: 90px 70px;
+  border-bottom: 4px solid #00ff1e;
+  min-height: 85vh;
 }
 
 .historia h3,
 .valores h3,
 .conocenos h3 {
-	display: flex;
-	align-items: center;
-	gap: 20px;
-	white-space: nowrap;
-	margin-bottom: 70px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap;
+  margin-bottom: 70px;
 }
 
 .historia h3::before,
@@ -169,101 +179,99 @@ main {
 .valores h3::after,
 .conocenos h3::before,
 .conocenos h3::after {
-	content: "";
-	flex: 1;
-	height: 3px;
-	background: #e91e63;
+  content: "";
+  flex: 1;
+  height: 3px;
+  background: #e91e63;
 }
 
 h3 {
-	color: #00ff1e;
-	text-align: center;
-	font-size: 1.5rem;
-	margin-bottom: 30px;
-	letter-spacing: 3px;
+  color: #00ff1e;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
 }
 
 /* HISTORIA */
 
 @keyframes saltoArcade {
-    0%{
-        transform: translateY(0);
-    }
-    30%{
-        transform: translateY(-15px);
-    }
-    55%{
-        transform: translateY(5px);
-    }
-    100%{
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-15px);
+  }
+  55% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .arcade-img {
-	width: 100%;
-	max-width: 450px;
-	border-radius: 10px;
-	height: auto;
-	object-fit: cover;
-	border: 3px solid #ff2b9d;
-	box-shadow: 0 0 20px #ff2b9d;
-	transition: all .35s ease;
-    cursor: pointer;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  height: auto;
+  object-fit: cover;
+  border: 3px solid #ff2b9d;
+  box-shadow: 0 0 20px #ff2b9d;
+  transition: all 0.35s ease;
+  cursor: pointer;
 }
 
-.arcade-img:hover{
-    animation: saltoArcade .7s ease;
-    transform: 
-		scale(1.04)
-		rotate(-2deg);
-    box-shadow:
-        0 0 20px #ff2b9d,
-        0 0 45px #ff2b9d,
-        0 0 70px #ff2b9d;
-    filter: brightness(1.15);
+.arcade-img:hover {
+  animation: saltoArcade 0.7s ease;
+  transform: scale(1.04) rotate(-2deg);
+  box-shadow:
+    0 0 20px #ff2b9d,
+    0 0 45px #ff2b9d,
+    0 0 70px #ff2b9d;
+  filter: brightness(1.15);
 }
 
-.historia{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.historia {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .historia p {
-	font-size: 0.85rem;
-	line-height: 1.8;
-	max-width: 720px;
-	margin: 0 auto 25px;
-	text-align: center;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  max-width: 720px;
+  margin: 0 auto 25px;
+  text-align: center;
 }
 
 /* MISION Y VISION */
 
 .mision-vision {
-    padding-top: 105px;
-    padding-bottom: 105px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  padding-top: 105px;
+  padding-bottom: 105px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .mision-vision .row {
-	width: 100%;
+  width: 100%;
 }
 
 .icon-retro {
-	width: 250px;
-	flex-shrink: 0;
-	margin: 0;
-	filter: drop-shadow(0 0 10px #ff2b9d);
+  width: 250px;
+  flex-shrink: 0;
+  margin: 0;
+  filter: drop-shadow(0 0 10px #ff2b9d);
 }
 
 .flip-card {
-  height: 420px;
+  height: 450px;
   perspective: 1200px;
   width: 100%;
-  transition: translateY(-10px) scale(1.02);
+  transition: transform 0.35s ease;
 }
 
 .flip-card-inner {
@@ -298,9 +306,9 @@ h3 {
   gap: 25px;
   padding: 30px;
   text-align: center;
-  box-shadow: 
-  	0 0 15px rgba(0, 255, 30, 0.35),
-  	inset 0 0 20px rgba(0, 255, 30, 0.08);
+  box-shadow:
+    0 0 15px rgba(0, 255, 30, 0.35),
+    inset 0 0 20px rgba(0, 255, 30, 0.08);
   transition: box-shadow 0.35s ease;
 }
 
@@ -320,12 +328,12 @@ h3 {
 .flip-card-back h4 {
   color: #00ff1e;
   font-family: "Press Start 2P", cursive;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .flip-card-back p {
   color: white;
-  font-size: 0.85rem;
+  font-size: 1rem;
   line-height: 1.6;
   max-width: 520px;
   margin: 0 auto;
@@ -333,30 +341,33 @@ h3 {
 
 /* VALORES */
 @keyframes salto {
-    0%{
-        transform: translateY(0);
-    }
-    35%{
-        transform: translateY(-15px);
-    }
-    60%{
-        transform: translateY(4px);
-    }
-    100%{
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
+  35% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(4px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .valores-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 245px);
   gap: 14px;
   border: none;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .valor {
   min-height: 430px;
-  padding: 25px 28px 25px;
+  padding: 25px 18px;
   border: 2px solid #ff2b9d;
   border-radius: 10px;
   text-align: center;
@@ -368,9 +379,9 @@ h3 {
   transition: all 0.35s ease;
 }
 
-.valor:hover{
-    transform: translateY(-12px);
-    box-shadow: 0 0 30px #ff2b9d;
+.valor:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 0 30px #ff2b9d;
 }
 
 .valor-icon {
@@ -378,16 +389,12 @@ h3 {
   height: 200px;
   object-fit: contain;
   margin-bottom: 25px;
-
 }
 
-.valor:hover .valor-icon{
-    transform: translateY(-12px) scale(1.12);
-    filter: drop-shadow(0 0 15px #ff2b9d)
-            drop-shadow(0 0 25px #ff2b9d);
-	animation: salto .6s ease;
-    filter: drop-shadow(0 0 15px #ff2b9d)
-            drop-shadow(0 0 30px #ff2b9d);
+.valor:hover .valor-icon {
+  transform: translateY(-12px) scale(1.12);
+  animation: salto 0.6s ease;
+  filter: drop-shadow(0 0 15px #ff2b9d) drop-shadow(0 0 25px #ff2b9d);
 }
 
 .valor h5 {
@@ -406,7 +413,7 @@ h3 {
 }
 
 .valor p {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   line-height: 1.9;
   margin: 0;
 }
@@ -416,542 +423,470 @@ h1,
 h2,
 h3,
 h4,
-h5,
-.btn-retro {
-	font-family: "Press Start 2P", cursive;
+h5 {
+  font-family: "Press Start 2P", cursive;
+}
+
+/* CONOCENOS */
+
+.conocenos {
+  padding-bottom: 10px;
+  min-height: auto;
 }
 
 .conocenos .row {
-	row-gap: 35px;
+  row-gap: 18px;
 }
 
 .subtitulo-equipo {
-	color: #ff2b9d;
-	font-size: 1rem;
-	font-family: "Press Start 2P", cursive;
-	text-align: center;
-	margin-bottom: 40px;
+  color: #ff2b9d;
+  font-size: 1.4rem;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  margin-bottom: 60px;
 }
 
 /*-----------CARDS del TEAM --------------*/
 
 .team {
-	position: relative;
-	margin-bottom: 60px;
-	height: 420px;
-	width: 405px;
-	border-radius: 12px;
-	overflow: hidden;
-	background: #142b20;
-	box-shadow: 0 0 15px rgba(0, 255, 30, 0.25);
+  position: relative;
+  margin-bottom: 20px;
+  height: 310px;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #142b20;
+  box-shadow: 0 0 12px rgba(0, 255, 30, 0.25);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.team:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(0, 255, 30, 0.5);
 }
 
 .team-avatar {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .team-avatar img {
-	height: 100%;
-	width: 100%;
-	object-position: center 15%; /* ← cambio de Andriy 2 */
-	object-fit: cover;
-	border-radius: 10px;
-	display: block;
+  height: 100%;
+  width: 100%;
+  object-position: center top;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
 }
 
-.avatar-name {
-	color: #ffffff;
-	font-family: "Press Start 2P", cursive;
-	font-size: 0.8rem;
-	text-decoration: none;
-	line-height: 1.3;
-}
-
-.team-position {
-	color: #00ff1e;
-	font-size: 1rem;
+.team-content-inner {
+  background: rgba(10, 25, 20, 0.7);
+  border-radius: 10px;
+  padding: 8px 12px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
 }
 
 .team .team-content {
-	position: absolute;
-	bottom: 0; /* Cambio Andriy 5 */
-	margin: 0 20px;
-	left: 0;
-	right: 0;
+  position: absolute;
+  bottom: 8px;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.team .team-content-inner {
-	background-color: hsl(164, 21%, 14%);
-	padding: 10px 12px;
-	width: 100%;
-	border-radius: 6px;
-	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
+.team-info h5 {
+  margin-bottom: 2px;
 }
 
-.team .team-content-inner .team-social {
-	margin-left: auto;
+.avatar-name {
+  color: #ffffff;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.95rem;
+  text-decoration: none;
+  line-height: 1.25;
+  margin-bottom: 4px;
 }
 
-.team .team-content-inner .team-social .nav .nav-link {
-	padding-top: 0;
-	padding-bottom: 0;
+.team-position {
+  color: #00ff1e;
+  font-size: 0.8rem;
 }
 
-.team .team-content-inner .team-contact {
-	opacity: 0;
-	position: absolute;
-	bottom: 0px;
-	left: 20px;
-	-webkit-transition: all 0.3s ease-in-out;
-	transition: all 0.3s ease-in-out;
+.team-contact {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 0;
+  padding-bottom: 0;
+  transition: all 0.3s ease;
 }
 
-.team:hover .team-content-inner {
-  background-color: #1c2b24;
-  color: #00ff1e;  /*Cambio de color */
-  padding: 20px 20px 90px;
+.team:hover .team-contact {
+  opacity: 1;
+  max-height: 70px;
+  margin-top: 8px;
+  padding-bottom: 8px;
 }
 
-.team:hover .team-content-inner .team-info .team-position {
-	color: #00ff1e;
+.social-icon {
+  color: #f5e6c8;
+  font-size: 2rem;
+  width: 45px;
+  height: 45px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
-.team:hover .team-content-inner .team-contact {
-	opacity: 1;
-	bottom: 20px;
-}
-
-.team:hover .team-content-inner .team-contact .nav .nav-link {
-	color: #eeff00;
-}
-
-.team:hover .team-content-inner .team-contact .nav .nav-link:hover {
-	color: #ffff00;
-}
-
-.team:hover .team-content-inner .team-social .nav .nav-link {
-	color: #ffffff;
-}
-
-.team:hover .team-content-inner .team-social .nav .nav-link:hover {
-	color: #000000;
-}
-
-.team:hover .team-info .avatar-name {
-	color: #00ff1e;
-}
-
-.team-content-inner .team-info .avatar-name {
-	margin-bottom: 0;
-	font-weight: 600;
-	color: #00ff1e; /* ← Cambio Andriy 3 */
-	text-decoration: none; /* Cambio Andriy 4 */
-}
-
-.team-content-inner .team-info .team-position {
-	color: #00ff1e;
-}
-
-.social a.text-muted:hover {
-	color: #009b72 !important;
+.social-icon:hover {
+  animation: saltoGithub 0.6s ease;
+  color: #00ff1e;
+  filter: drop-shadow(0 0 20px #00ff1e);
+  transform: scale(1.15);
 }
 
 @keyframes saltoGithub {
-    0%{
-        transform: translateY(0) rotate(0deg);
-    }
-    30%{
-        transform: translateY(-15px) rotate(-10deg);
-    }
-    60%{
-        transform: translateY(4px) rotate(8deg);
-    }
-    100%{
-        transform: translateY(0) rotate(0deg);
-    }
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  30% {
+    transform: translateY(-15px) rotate(-10deg);
+  }
+  60% {
+    transform: translateY(4px) rotate(8deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
 }
 
-.github-link{
-    text-decoration: none;
-	display: inline-block;
+.row-git {
+  padding-top: 50px;
+  padding-bottom: 15px;
 }
 
-.github-link i{
-    font-size: 5rem;
-    color: #F5E6C8;   /* beige */
-    transition: all .3s ease;
+.github-link {
+  text-decoration: none;
+  display: inline-block;
 }
 
-.github-link:hover i{
-    animation: saltoGithub .6s ease;
-    color: #F5E6C8;
-
-    filter:
-        drop-shadow(0 0 8px #f5f5f5)
-        drop-shadow(0 0 20px #f5f5f5);
-
-    transform: scale(1.15);
+.github-link i {
+  font-size: 5rem;
+  color: #f5e6c8; /* beige */
+  transition: all 0.3s ease;
 }
 
+.github-link:hover i {
+  animation: saltoGithub 0.6s ease;
+  color: #00ff1e;
+  filter: drop-shadow(0 0 20px #00ff1e);
+  transform: scale(1.15);
+}
 
-/* RESPONSIVE TABLET */
+/* ===========================
+   RESPONSIVE 
+=========================== */
+
+/*---Responsive tablet---*/
+
 @media (max-width: 992px) {
-	body {
-		padding-top: 0;
-		overflow-x: hidden;
-	}
+  body {
+    overflow-x: hidden;
+  }
 
-	.hero {
-		min-height: auto;
-		padding: 35px 30px 55px;
-		text-align: center;
-	}
+  /* HERO */
 
-	.hero h1 {
-		font-size: 35px;
-	}
+  .hero-section {
+    padding: 70px 35px;
+    min-height: auto;
+    text-align: center;
+  }
 
-	.subtitle {
-		font-size: 25px;
-	}
+  .hero-content {
+    max-width: 100%;
+  }
 
-	.about-intro {
-		width: 100%;
-		text-align: center;
-		align-items: center;
-		margin-top: 20px;
-	}
+  .about-label {
+    font-size: 1.7rem;
+    margin-bottom: 40px;
+  }
 
-	.about-label {
-		font-size: 1.2rem;
-		margin-bottom: 18px;
-	}
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
 
-	.about-intro h2 {
-		font-size: 1.2rem;
-		line-height: 1.4;
-		text-align: center;
-		margin-bottom: 18px;
-	}
+  .hero-content p {
+    font-size: 0.95rem;
+    margin: 35px auto;
+    max-width: 650px;
+  }
 
-	.about-intro p {
-		font-size: 0.85rem;
-		max-width: 650px;
-		margin-bottom: 20px;
-		text-align: center;
-	}
+  .contenedor-botones-contacto {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
 
-	.btn-retro {
-		position: static;
-		display: block;
-		margin: 20px auto;
-	}
+  /* SECCIONES */
 
-	.hearts {
-		position: static;
-		transform: none;
-		display: block;
-		margin: 25px auto 0;
-		width: 200px;
-	}
+  .historia,
+  .mision-vision,
+  .valores,
+  .conocenos {
+    padding: 70px 35px;
+  }
 
-	.historia,
-	.mision-vision,
-	.valores,
-	.conocenos {
-		padding: 45px 35px;
-	}
+  h3 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
 
-	.historia h3,
-	.valores h3,
-	.conocenos h3 {
-		font-size: 1.1rem;
-		gap: 15px;
-	}
+  /* HISTORIA */
 
-	.arcade-img {
-		max-width: 420px;
-		margin: 0 auto 30px;
-		display: block;
-	}
+  .historia .row {
+    flex-direction: column;
+    text-align: center;
+  }
 
-	.historia p {
-		max-width: 720px;
-		font-size: 0.85rem;
-		line-height: 1.8;
-		margin: 0 auto 25px;
-	}
+  .arcade-img {
+    max-width: 420px;
+    margin: 0 auto 40px;
+    display: block;
+  }
 
-	.historia .row {
-		align-items: center;
-		flex-direction: column;
-		text-align: center;
-	}
+  .historia p {
+    font-size: 0.9rem;
+    line-height: 1.9;
+  }
 
-	.historia .col-md-5,
-	.historia .col-md-7 {
-		width: 100%;
-	}
+  /* MISIÓN Y VISIÓN */
 
-	.historia img {
-		margin-bottom: 25px;
-	}
+  .flip-card {
+    height: 430px;
+  }
 
-	.card-retro {
-		flex-direction: column;
-		justify-content: flex-start;
-		min-height: 410px;
-		padding: 25px 22px;
-		gap: 22px;
-		text-align: center;
-	}
+  .icon-retro {
+    width: 170px;
+  }
 
-	.icon-retro {
-		width: 130px;
-	}
+  .flip-card-front h4,
+  .flip-card-back h4 {
+    font-size: 1rem;
+  }
 
-	.card-retro h4 {
-		font-size: 1rem;
-	}
+  /* VALORES */
 
-	.card-retro p {
-		font-size: 0.78rem;
-	}
+  .valores-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 
-	.valores-grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
+  .valor {
+    min-height: auto;
+    padding: 30px 20px;
+  }
 
-	.valor {
-		border-bottom: 2px solid #e91e63;
-	}
+  .valor-icon {
+    width: 170px;
+    height: 170px;
+  }
 
-	.valor:nth-child(2),
-	.valor:nth-child(4) {
-		border-right: none;
-	}
+  /* CONÓCENOS */
 
-	.valor:last-child {
-		grid-column: 1 / -1;
-		border-bottom: none;
-	}
+  .subtitulo-equipo {
+    font-size: 0.9rem;
+  }
 
-	.team {
-		height: 300px;
-	}
+  .team {
+    max-width: 320px;
+    height: 300px;
+    margin: 0 auto 25px;
+  }
 
-	.team-content-inner {
-		padding: 15px;
-	}
+  .avatar-name {
+    font-size: 0.82rem;
+  }
 
-	.avatar-name {
-		font-size: 0.7rem;
-		line-height: 1.4;
-	}
+  .team-position {
+    font-size: 0.7rem;
+  }
 
-	.team-position {
-		font-size: 0.65rem;
-	}
+  .team .team-content {
+    width: 82%;
+  }
 
-	.conocenos .col-lg-4 {
-		margin-bottom: 25px;
-	}
+  .social-icon {
+    font-size: 1.8rem;
+  }
 
-	.subtitulo-equipo {
-		font-size: 0.85rem;
-	}
-} /* CIERRA EL MEDIA QUERY DE TABLET */
+  /* GITHUB */
 
-/* RESPONSIVE CELULAR */
+  .github-link i {
+    font-size: 4rem;
+  }
+}
+
+/*---Responsive celular---*/
 
 @media (max-width: 576px) {
-	.team {
-		height: 330px;
-	}
+  body {
+    overflow-x: hidden;
+  }
 
-	.team .team-content {
-		margin: 0 15px;
-	}
+  /* HERO */
 
-	body {
-		padding-top: 0;
-		overflow-x: hidden;
-	}
+  .hero-section {
+    padding: 50px 20px;
+    min-height: auto;
+    text-align: center;
+    justify-content: center;
+  }
 
-	.hero {
-		min-height: auto;
-		padding: 35px 18px 60px;
-		text-align: center;
-	}
+  .hero-content {
+    max-width: 100%;
+  }
 
-	.hero h1 {
-		font-size: 1.5rem;
-	}
+  .about-label {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
 
-	.subtitle {
-		font-size: 1rem;
-	}
+  .hero-content h2 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
 
-	.about-intro {
-		width: 100%;
-		align-items: center;
-		text-align: center;
-	}
+  .hero-content p {
+    font-size: 0.85rem;
+    margin: 30px auto;
+  }
 
-	.about-label,
-	.about-intro h2,
-	.about-intro p {
-		text-align: center;
-	}
+  .contenedor-botones-contacto {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
 
-	.about-intro h2 {
-		font-size: 1rem;
-	}
+  /* SECCIONES */
 
-	.about-intro p {
-		max-width: 100%;
-		font-size: 0.75rem;
-		margin-bottom: 25px;
-	}
+  .historia,
+  .mision-vision,
+  .valores,
+  .conocenos {
+    padding: 50px 20px;
+  }
 
-	.btn-retro,
-	.hearts {
-		position: static;
-		transform: none;
-		display: block;
-		margin: 20px auto;
-	}
+  h3 {
+    font-size: 1rem;
+    text-align: center;
+  }
 
-	.hearts {
-		width: 180px;
-	}
+  /* HISTORIA */
 
-	.historia,
-	.mision-vision,
-	.valores,
-	.conocenos {
-		padding: 30px 15px;
-	}
+  .historia .row {
+    text-align: center;
+  }
 
-	.historia p {
-		font-size: 0.75rem;
-	}
+  .arcade-img {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
 
-	.historia .row {
-		gap: 25px;
-	}
+  .historia p {
+    font-size: 0.85rem;
+    line-height: 1.8;
+  }
 
-	.arcade-img {
-		max-width: 100%;
-	}
+  /* MISIÓN Y VISIÓN */
 
-	.card-retro {
-		flex-direction: column;
-		min-height: auto;
-		padding: 25px 18px;
-		gap: 20px;
-	}
+  .flip-card {
+    height: 420px;
+    margin-bottom: 20px;
+  }
 
-	.icon-retro {
-		width: 120px;
-	}
+  .icon-retro {
+    width: 130px;
+  }
 
-	.card-retro h4 {
-		color: #00ff1e;
-		font-size: 0.85rem;
-	}
+  .flip-card-front h4,
+  .flip-card-back h4 {
+    font-size: 0.9rem;
+  }
 
-	.card-retro p {
-		font-size: 0.75rem;
-		text-align: center;
-	}
+  .flip-card-back p {
+    font-size: 0.75rem;
+  }
 
-	.valores-grid {
-		grid-template-columns: 1fr;
-	}
+  /* VALORES */
 
-	.valor h5 {
-		color: #00ff1e;
-		font-size: 0.85rem;
-	}
+  .valores-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 
-	.valor p {
-		font-size: 0.75rem;
-	}
+  .valor {
+    min-height: auto;
+    padding: 30px 20px;
+  }
 
-	.valor {
-		border-right: none;
-		border-bottom: 2px solid #e91e63;
-	}
+  .valor-icon {
+    width: 150px;
+    height: 150px;
+  }
 
-	.valor:last-child {
-		border-bottom: none;
-	}
+  .valor h5 {
+    font-size: 0.9rem;
+  }
 
-	.team {
-		height: 320px;
-		max-width: 320px;
-		margin: 0 auto 25px;
-	}
+  .valor p {
+    font-size: 0.8rem;
+    line-height: 1.7;
+  }
 
-	.team-avatar {
-		aspect-ratio: 1 / 1;
-		overflow: hidden;
-	}
+  /* CONÓCENOS */
 
-	.team-avatar img {
-		width: 70%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center top;
-		transform: translateY(-10px);
-	}
+  .subtitulo-equipo {
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+  }
 
-	.historia h3,
-	.valores h3,
-	.conocenos h3 {
-		white-space: normal;
-		font-size: 0.85rem;
-		line-height: 1.4;
-		gap: 12px;
-		text-align: center;
-		width: 100%;
-		align-items: center;
-		justify-content: center;
-		display: flex;
-	}
+  .team {
+    max-width: 320px;
+    height: 300px;
+    margin: 0 auto 25px;
+  }
 
-	.historia h3::before,
-	.historia h3::after,
-	.valores h3::before,
-	.valores h3::after,
-	.conocenos h3::before,
-	.conocenos h3::after {
-		content: "";
-		flex: none;
-		width: 150px;
-		height: 3px;
-		background: #e91e63;
-	}
+  .avatar-name {
+    font-size: 0.8rem;
+  }
 
-	.avatar-name {
-		font-size: 0.8rem;
-	}
+  .team-position {
+    font-size: 0.65rem;
+  }
 
-	.team-position {
-		font-size: 0.75rem;
-	}
+  .team .team-content {
+    width: 80%;
+  }
 
-	.team-content {
-		left: 10px;
-		right: 10px;
-		bottom: 10px;
-	}
+  .social-icon {
+    font-size: 1.7rem;
+  }
 
-	.team-content-inner {
-		padding: 10px;
-	}
+  /* GITHUB */
+
+  .github-link i {
+    font-size: 3.5rem;
+  }
 }

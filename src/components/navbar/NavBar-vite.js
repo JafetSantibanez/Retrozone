@@ -1,7 +1,10 @@
-//importa el HTML
+// Importa el HTML
 import navHtml from "./NavBar.html?raw";
 
-//importa el css
+// Importa utilidades
+import { updateBadge } from "../../utils/cart-store.js";
+
+// Importa el CSS
 import "../../styles/global.css";
 
 export function renderNavBar() {
@@ -10,12 +13,19 @@ export function renderNavBar() {
 
 	navbarContainer.innerHTML = navHtml;
 
-	// Aquí llamamos a la función que verifica el login
+	// Actualiza el botón de sesión
 	actualizarBotonAuth();
+
+	// Configura menú hamburguesa
 	configurarMenuHamburguesa();
+
+	// Actualiza el contador del carrito
+	if (typeof updateBadge === "function") {
+		updateBadge();
+	}
 }
 
-//iniciar sesion
+// Iniciar sesión
 function actualizarBotonAuth() {
 	const dropdownToggle = document.querySelector(".boton-sesion-toggle");
 	const dropdownMenu = document.getElementById("menu-sesion-desplegable");
@@ -23,6 +33,8 @@ function actualizarBotonAuth() {
 	const usuarioLogueado =
 		localStorage.getItem("usuarioLogueado") ||
 		sessionStorage.getItem("usuarioLogueado");
+
+	if (!dropdownToggle || !dropdownMenu) return;
 
 	if (usuarioLogueado) {
 		dropdownToggle.textContent = "Mi Cuenta";
@@ -38,15 +50,17 @@ function actualizarBotonAuth() {
         `;
 	}
 }
-//cierre de sesion
+
+// Cierre de sesión
 window.cerrarSesion = function () {
 	localStorage.removeItem("usuarioLogueado");
 	sessionStorage.removeItem("usuarioLogueado");
-	// Al recargar, la Navbar volverá a ejecutar la lógica y mostrará "Iniciar Sesión"
 	window.location.href = "/index.html";
 };
+
 function configurarMenuHamburguesa() {}
 
+// Renderizar cuando cargue el DOM
 document.addEventListener("DOMContentLoaded", () => {
 	renderNavBar();
 });

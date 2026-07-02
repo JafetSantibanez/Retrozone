@@ -165,7 +165,15 @@
 								<p>Para la consola Atari 2600.</p>
 								<p>⭐⭐⭐⭐⭐</p>
 								<span class="precio">$899 MXN</span>
-								<button class="btn-carrito">Agregar al carrito</button>
+								<button
+									class="btn-carrito"
+									data-id="50"
+									data-nombre="Juego Pac-Man"
+									data-plataforma="Nintendo"
+									data-precio="899"
+									data-imagen="Pacman Namco GIF - Pacman Namco Ghosts - Descobrir e Compartilhar GIFs.gif">
+									Agregar al carrito
+								</button>
 							</div>
 						</div>
 						<div class="swiper-slide producto-slide">
@@ -175,7 +183,16 @@
 								<p>Consola clásica de 8 bits.</p>
 								<p>⭐⭐⭐⭐⭐</p>
 								<span class="precio">$2,199 MXN</span>
-								<button class="btn-carrito">Agregar al carrito</button>
+								<!-- GameBoy -->
+								<button
+									class="btn-carrito"
+									data-id="51"
+									data-nombre="GameBoy"
+									data-plataforma="Nintendo"
+									data-precio="2199"
+									data-imagen="gameboy.png">
+									Agregar al carrito
+								</button>
 							</div>
 						</div>
 						<div class="swiper-slide producto-slide">
@@ -185,7 +202,16 @@
 								<p>Consola Sega Genesis</p>
 								<p>⭐⭐⭐⭐</p>
 								<span class="precio">$399 MXN</span>
-								<button class="btn-carrito">Agregar al carrito</button>
+								<!-- Sonic 2 -->
+								<button
+									class="btn-carrito"
+									data-id="52"
+									data-nombre="Sonic 2"
+									data-plataforma="Sega Genesis"
+									data-precio="399"
+									data-imagen="sonic2.gif">
+									Agregar al carrito
+								</button>
 							</div>
 						</div>
 						<div class="swiper-slide producto-slide">
@@ -195,7 +221,16 @@
 								<p>Consola Nintendo 64</p>
 								<p>⭐⭐⭐⭐</p>
 								<span class="precio">$399 MXN</span>
-								<button class="btn-carrito">Agregar al carrito</button>
+								<!-- Super Mario Bros -->
+								<button
+									class="btn-carrito"
+									data-id="53"
+									data-nombre="Super Mario Bros"
+									data-plataforma="Nintendo 64"
+									data-precio="399"
+									data-imagen="marioclasic.gif">
+									Agregar al carrito
+								</button>
 							</div>
 						</div>
 						<div class="swiper-slide producto-slide">
@@ -205,7 +240,16 @@
 								<p>Consola clásica de 8 bits.</p>
 								<p>⭐⭐⭐⭐</p>
 								<span class="precio">$459 MXN</span>
-								<button class="btn-carrito">Agregar al carrito</button>
+								<!-- Control Nintendo 64 -->
+								<button
+									class="btn-carrito"
+									data-id="54"
+									data-nombre="Mando de Nintendo 64"
+									data-plataforma="Nintendo 64"
+									data-precio="459"
+									data-imagen="control.png">
+									Agregar al carrito
+								</button>
 							</div>
 						</div>
 						<div class="swiper-slide producto-slide">
@@ -215,7 +259,16 @@
 								<p>Con un control y memori card.</p>
 								<p>⭐⭐⭐⭐⭐</p>
 								<span class="precio">$1999 MXN</span>
-								<button class="btn-carrito">Agregar al carrito</button>
+								<!-- PlayStation One -->
+								<button
+									class="btn-carrito"
+									data-id="55"
+									data-nombre="PlayStation One"
+									data-plataforma="PlayStation"
+									data-precio="1999"
+									data-imagen="psone.png">
+									Agregar al carrito
+								</button>
 							</div>
 						</div>
 						<div class="swiper-slide producto-slide">
@@ -225,7 +278,16 @@
 								<p>Reacondicionado</p>
 								<p>⭐⭐⭐⭐</p>
 								<span class="precio">$2,000 MXN</span>
-								<button class="btn-carrito">Agregar al carrito</button>
+								<!-- GameBoy Color -->
+								<button
+									class="btn-carrito"
+									data-id="56"
+									data-nombre="GameBoy Color"
+									data-plataforma="Nintendo"
+									data-precio="2000"
+									data-imagen="gameboyColor.png">
+									Agregar al carrito
+								</button>
 							</div>
 						</div>
 						<div class="swiper-slide producto-slide">
@@ -235,7 +297,16 @@
 								<p>Reacondicionado.</p>
 								<p>⭐⭐⭐⭐⭐</p>
 								<span class="precio">$250 MXN</span>
-								<button class="btn-carrito">Agregar al carrito</button>
+								<!-- Joystick Atari -->
+								<button
+									class="btn-carrito"
+									data-id="57"
+									data-nombre="Joystick Clásico de Atari"
+									data-plataforma="Atari"
+									data-precio="250"
+									data-imagen="palanca.png">
+									Agregar al carrito
+								</button>
 							</div>
 						</div>
 						<div class="swiper-slide producto-slide">
@@ -245,7 +316,16 @@
 								<p>Consola clásica de 8 bits.</p>
 								<p>⭐⭐⭐⭐⭐</p>
 								<span class="precio">$2,999 MXN</span>
-								<button class="btn-carrito">Agregar al carrito</button>
+								<!-- Nintendo NES -->
+								<button
+									class="btn-carrito"
+									data-id="58"
+									data-nombre="Nintendo NES"
+									data-plataforma="NES"
+									data-precio="2999"
+									data-imagen="nintendoNes.png">
+									Agregar al carrito
+								</button>
 							</div>
 						</div>
 					</div>
@@ -593,10 +673,11 @@
 		</script>
 
 		<script>
-			const time = Math.floor(new Date(2026, 5, 29, 23, 59).getTime() / 1000);
+			const time = Math.floor(new Date(2026, 6, 29, 23, 59).getTime() / 1000);
 			new FlipDown(time).start().ifEnded(() => {
 				console.log("¡El contador terminó!");
 			});
 		</script>
+		<script type="module" src="/src/pages/home/home.js"></script>
 	</body>
 </html>

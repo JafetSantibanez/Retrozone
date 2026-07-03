@@ -31,10 +31,14 @@ html {
   justify-content: flex-start;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/qa
   padding: 80px 60px 10px;
   background-color: #121535;
   border-bottom: 4px solid #00ff1e;
   position: relative;
+<<<<<<< HEAD
 =======
   position: relative;
   padding: 0 -100px;
@@ -52,6 +56,8 @@ html {
   border-bottom: 4px solid #00ff1e;
   position: relative;
 >>>>>>> 0c33c4e (se añadio el responsive)
+=======
+>>>>>>> origin/qa
 }
 
 /* Efecto de Inner Shadow (Viñeta) */
@@ -65,8 +71,11 @@ html {
   /* Gradiente desde abajo-izquierda hacia arriba-derecha */
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0c33c4e (se añadio el responsive)
+=======
+>>>>>>> origin/qa
   background: radial-gradient(
     circle at 10% 80%,
     rgba(19, 19, 56, 0.9) 0%,
@@ -74,22 +83,29 @@ html {
     transparent 90%
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   background: radial-gradient(circle at 10% 80%, rgba(19, 19, 56, 0.9) 15%, rgba(19, 19, 56, 0.4) 30%, transparent 90%);
   
 >>>>>>> 2ac06a5 (Style: contact abour us mod de hero)
 =======
 >>>>>>> 0c33c4e (se añadio el responsive)
+=======
+>>>>>>> origin/qa
   pointer-events: none;
   z-index: 1;
 }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/qa
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 650px;
+<<<<<<< HEAD
 =======
 /* Asegura que tu contenido esté sobre la sombra */
 .hero-section .container {
@@ -115,6 +131,11 @@ html {
 
 .about-label {
 >>>>>>> 0c33c4e (se añadio el responsive)
+=======
+}
+
+.about-label {
+>>>>>>> origin/qa
   color: #ff2b9d;
   font-family: "Press Start 2P", cursive;
   font-size: 2.8rem;
@@ -124,6 +145,7 @@ html {
   line-height: 1;
   font-weight: normal;
   text-shadow:
+<<<<<<< HEAD
 <<<<<<< HEAD
       0 0 10px #ff2b9d,
       0 0 30px rgba(233, 63, 114, 0.4), 4px 4px 0px #333;
@@ -148,6 +170,11 @@ html {
     0 0 30px rgba(233, 63, 114, 0.4),
     4px 4px 0px #333;
 >>>>>>> 0c33c4e (se añadio el responsive)
+=======
+    0 0 10px #ff2b9d,
+    0 0 30px rgba(233, 63, 114, 0.4),
+    4px 4px 0px #333;
+>>>>>>> origin/qa
 }
 
 .hero-content h2 {
@@ -299,8 +326,11 @@ h3 {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 0c33c4e (se añadio el responsive)
+=======
+>>>>>>> origin/qa
 .arcade-img:hover {
   animation: saltoArcade 0.7s ease;
   transform: scale(1.04) rotate(-2deg);
@@ -309,6 +339,7 @@ h3 {
     0 0 45px #ff2b9d,
     0 0 70px #ff2b9d;
   filter: brightness(1.15);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 .arcade-img:hover{
@@ -323,6 +354,8 @@ h3 {
 >>>>>>> 2ac06a5 (Style: contact abour us mod de hero)
 =======
 >>>>>>> 0c33c4e (se añadio el responsive)
+=======
+>>>>>>> origin/qa
 }
 
 .historia {
@@ -656,6 +689,7 @@ h5 {
 >>>>>>> 37af34a (Se añadieron imagenes en about us)
 @keyframes saltoGithub {
 <<<<<<< HEAD
+<<<<<<< HEAD
     0%{
         transform: translateY(0) rotate(0deg);
     }
@@ -670,6 +704,8 @@ h5 {
     }
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/qa
   0% {
     transform: translateY(0) rotate(0deg);
   }
@@ -682,6 +718,7 @@ h5 {
   100% {
     transform: translateY(0) rotate(0deg);
   }
+<<<<<<< HEAD
 >>>>>>> 4585962 (Se modificaron las cards del team)
 }
 
@@ -717,13 +754,16 @@ h5 {
 	transition: 0.3s;
 =======
 >>>>>>> 37af34a (Se añadieron imagenes en about us)
+=======
+>>>>>>> origin/qa
 }
 
-.github-link{
-    text-decoration: none;
-	display: inline-block;
+.row-git {
+  padding-top: 50px;
+  padding-bottom: 15px;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> df6454b (Se agrego el github)
 =======
@@ -731,20 +771,33 @@ h5 {
     font-size: 5rem;
     color: #F5E6C8;   /* beige */
     transition: all .3s ease;
+=======
+.github-link {
+  text-decoration: none;
+  display: inline-block;
+>>>>>>> origin/qa
 }
 
-.github-link:hover i{
-    animation: saltoGithub .6s ease;
-    color: #F5E6C8;
-
-    filter:
-        drop-shadow(0 0 8px #f5f5f5)
-        drop-shadow(0 0 20px #f5f5f5);
-
-    transform: scale(1.15);
+.github-link i {
+  font-size: 5rem;
+  color: #f5e6c8; /* beige */
+  transition: all 0.3s ease;
 }
 
+.github-link:hover i {
+  animation: saltoGithub 0.6s ease;
+  color: #00ff1e;
+  filter: drop-shadow(0 0 20px #00ff1e);
+  transform: scale(1.15);
+}
 
+/* ===========================
+   RESPONSIVE 
+=========================== */
+
+/*---Responsive tablet---*/
+
+<<<<<<< HEAD
 >>>>>>> 37af34a (Se añadieron imagenes en about us)
 /* RESPONSIVE TABLET */
 =======
@@ -755,6 +808,8 @@ h5 {
 /*---Responsive tablet---*/
 
 >>>>>>> 721fa34 (se añadio el responsive)
+=======
+>>>>>>> origin/qa
 @media (max-width: 992px) {
   body {
     overflow-x: hidden;

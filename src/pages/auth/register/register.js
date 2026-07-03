@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       inputConfirm.focus();
     });
   }
+<<<<<<< HEAD
 
   //Base de datos simulada
   const usuariosRegistrados = [
@@ -56,6 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "angy_dev",
     "link8bits",
   ];
+=======
+>>>>>>> origin/qa
   const inputUsername = document.getElementById("username");
   const feedbackUsername = document.getElementById("usernameFeedback");
 

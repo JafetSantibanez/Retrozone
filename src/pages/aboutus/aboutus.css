@@ -29,35 +29,10 @@ html {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/qa
   padding: 80px 60px 10px;
   background-color: #121535;
   border-bottom: 4px solid #00ff1e;
   position: relative;
-<<<<<<< HEAD
-=======
-  position: relative;
-  padding: 0 -100px;
-  padding-top: 0px;
-  overflow: hidden;
-  
-  
-  /* Asegúrate de que el color de fondo de la sección 
-     coincida con el color final del gradiente (#121535) */
-  background-color: #121535;
->>>>>>> 2ac06a5 (Style: contact abour us mod de hero)
-=======
-  padding: 80px 60px 10px;
-  background-color: #121535;
-  border-bottom: 4px solid #00ff1e;
-  position: relative;
->>>>>>> 0c33c4e (se añadio el responsive)
-=======
->>>>>>> origin/qa
 }
 
 /* Efecto de Inner Shadow (Viñeta) */
@@ -69,60 +44,16 @@ html {
   width: 100%;
   height: 100%;
   /* Gradiente desde abajo-izquierda hacia arriba-derecha */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0c33c4e (se añadio el responsive)
-=======
->>>>>>> origin/qa
   background: radial-gradient(
     circle at 10% 80%,
     rgba(19, 19, 56, 0.9) 0%,
     rgba(19, 19, 56, 0.4) 0%,
     transparent 90%
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  background: radial-gradient(circle at 10% 80%, rgba(19, 19, 56, 0.9) 15%, rgba(19, 19, 56, 0.4) 30%, transparent 90%);
-  
->>>>>>> 2ac06a5 (Style: contact abour us mod de hero)
-=======
->>>>>>> 0c33c4e (se añadio el responsive)
-=======
->>>>>>> origin/qa
   pointer-events: none;
   z-index: 1;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/qa
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 650px;
-<<<<<<< HEAD
-=======
-/* Asegura que tu contenido esté sobre la sombra */
-.hero-section .container {
-  position: relative;
-  z-index: 2;
-}
-
-.hero-content{
-	position: relative;
-    z-index: 2;
-	max-width: 650px;
->>>>>>> 2ac06a5 (Style: contact abour us mod de hero)
-}
-
-.about-label {
-<<<<<<< HEAD
-=======
 .hero-content {
   position: relative;
   z-index: 2;
@@ -130,26 +61,6 @@ html {
 }
 
 .about-label {
->>>>>>> 0c33c4e (se añadio el responsive)
-=======
-}
-
-.about-label {
->>>>>>> origin/qa
-  color: #ff2b9d;
-  font-family: "Press Start 2P", cursive;
-  font-size: 2.8rem;
-  letter-spacing: 2px;
-  margin: 0 0 45px 0;
-  margin-bottom: 90px;
-  line-height: 1;
-  font-weight: normal;
-  text-shadow:
-<<<<<<< HEAD
-<<<<<<< HEAD
-      0 0 10px #ff2b9d,
-      0 0 30px rgba(233, 63, 114, 0.4), 4px 4px 0px #333;
-=======
     color: #ff2b9d;
     font-family: "Press Start 2P", cursive;
     font-size: 2.8rem;
@@ -164,27 +75,16 @@ html {
         0 0 10px #ff2b9d,
         0 0 30px rgba(255, 43, 157, 0.4),
         4px 4px 0px #333;
->>>>>>> 6ccb335 (Style: le puse como glow neon al titulo about us en about us)
-=======
-    0 0 10px #ff2b9d,
-    0 0 30px rgba(233, 63, 114, 0.4),
-    4px 4px 0px #333;
->>>>>>> 0c33c4e (se añadio el responsive)
-=======
-    0 0 10px #ff2b9d,
-    0 0 30px rgba(233, 63, 114, 0.4),
-    4px 4px 0px #333;
->>>>>>> origin/qa
 }
+
 
 .hero-content h2 {
   color: #f1f3a4;
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 1.1;
   text-shadow:
-    0 0 10px #dadc81,
-    0 0 30px rgba(255, 255, 150, 0.4),
-    4px 4px 0px #333;
+      0 0 10px #dadc81,
+      0 0 30px rgba(255, 255, 150, 0.4), 4px 4px 0px #333;
 }
 
 .hero-content p {
@@ -263,6 +163,8 @@ main {
   padding: 90px 70px;
   border-bottom: 4px solid #00ff1e;
   min-height: 85vh;
+  padding-top: 90px;
+  padding-bottom: 90px;
 }
 
 .historia h3,
@@ -290,7 +192,7 @@ main {
 h3 {
   color: #00ff1e;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   margin-bottom: 30px;
   letter-spacing: 3px;
 }
@@ -324,13 +226,6 @@ h3 {
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0c33c4e (se añadio el responsive)
-=======
->>>>>>> origin/qa
 .arcade-img:hover {
   animation: saltoArcade 0.7s ease;
   transform: scale(1.04) rotate(-2deg);
@@ -339,23 +234,6 @@ h3 {
     0 0 45px #ff2b9d,
     0 0 70px #ff2b9d;
   filter: brightness(1.15);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-.arcade-img:hover{
-    animation: saltoArcade .7s ease;
-    transform: 
-		scale(1.04)
-		rotate(-2deg);
-    box-shadow:
-        0 0 20px #ff2b9d,
-        0 0 45px #ff2b9d,
-        0 0 70px #ff2b9d;
->>>>>>> 2ac06a5 (Style: contact abour us mod de hero)
-=======
->>>>>>> 0c33c4e (se añadio el responsive)
-=======
->>>>>>> origin/qa
 }
 
 .historia {
@@ -365,7 +243,7 @@ h3 {
 }
 
 .historia p {
-  font-size: 0.9rem;
+  font-size: 0.90rem;
   line-height: 1.8;
   max-width: 720px;
   margin: 0 auto 25px;
@@ -394,7 +272,7 @@ h3 {
 }
 
 .flip-card {
-  height: 450px;
+  height: 420px;
   perspective: 1200px;
   width: 100%;
   transition: transform 0.35s ease;
@@ -454,12 +332,12 @@ h3 {
 .flip-card-back h4 {
   color: #00ff1e;
   font-family: "Press Start 2P", cursive;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
 }
 
 .flip-card-back p {
   color: white;
-  font-size: 1rem;
+  font-size: 0.90rem;
   line-height: 1.6;
   max-width: 520px;
   margin: 0 auto;
@@ -520,7 +398,8 @@ h3 {
 .valor:hover .valor-icon {
   transform: translateY(-12px) scale(1.12);
   animation: salto 0.6s ease;
-  filter: drop-shadow(0 0 15px #ff2b9d) drop-shadow(0 0 25px #ff2b9d);
+  filter: drop-shadow(0 0 15px #ff2b9d) 
+          drop-shadow(0 0 25px #ff2b9d);
 }
 
 .valor h5 {
@@ -539,7 +418,7 @@ h3 {
 }
 
 .valor p {
-  font-size: 0.9rem;
+  font-size: 0.90rem;
   line-height: 1.9;
   margin: 0;
 }
@@ -549,7 +428,8 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+.btn-retro {
   font-family: "Press Start 2P", cursive;
 }
 
@@ -585,9 +465,7 @@ h5 {
   overflow: hidden;
   background: #142b20;
   box-shadow: 0 0 12px rgba(0, 255, 30, 0.25);
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .team:hover {
@@ -609,14 +487,14 @@ h5 {
   display: block;
 }
 
-.team-content-inner {
-  background: rgba(10, 25, 20, 0.7);
-  border-radius: 10px;
-  padding: 8px 12px 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  height: auto;
+.team-content-inner{
+    background: rgba(10,25,20,.70);
+    border-radius: 10px;
+    padding: 8px 12px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
 }
 
 .team .team-content {
@@ -627,7 +505,7 @@ h5 {
   transform: translateX(-50%);
 }
 
-.team-info h5 {
+.team-info h5{
   margin-bottom: 2px;
 }
 
@@ -642,7 +520,7 @@ h5 {
 
 .team-position {
   color: #00ff1e;
-  font-size: 0.8rem;
+  font-size: 0.80rem;
 }
 
 .team-contact {
@@ -683,29 +561,7 @@ h5 {
   transform: scale(1.15);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 37af34a (Se añadieron imagenes en about us)
 @keyframes saltoGithub {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    0%{
-        transform: translateY(0) rotate(0deg);
-    }
-    30%{
-        transform: translateY(-15px) rotate(-10deg);
-    }
-    60%{
-        transform: translateY(4px) rotate(8deg);
-    }
-    100%{
-        transform: translateY(0) rotate(0deg);
-    }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/qa
   0% {
     transform: translateY(0) rotate(0deg);
   }
@@ -718,11 +574,9 @@ h5 {
   100% {
     transform: translateY(0) rotate(0deg);
   }
-<<<<<<< HEAD
->>>>>>> 4585962 (Se modificaron las cards del team)
 }
 
-.row-git {
+.row-git{
   padding-top: 50px;
   padding-bottom: 15px;
 }
@@ -745,336 +599,217 @@ h5 {
   transform: scale(1.15);
 }
 
-<<<<<<< HEAD
-=======
-.git {
-	width: 28px;
-	height: 28px;
-	margin-top: 10px;
-	transition: 0.3s;
-=======
->>>>>>> 37af34a (Se añadieron imagenes en about us)
-=======
->>>>>>> origin/qa
-}
-
-.row-git {
-  padding-top: 50px;
-  padding-bottom: 15px;
-}
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> df6454b (Se agrego el github)
-=======
-.github-link i{
-    font-size: 5rem;
-    color: #F5E6C8;   /* beige */
-    transition: all .3s ease;
-=======
-.github-link {
-  text-decoration: none;
-  display: inline-block;
->>>>>>> origin/qa
-}
-
-.github-link i {
-  font-size: 5rem;
-  color: #f5e6c8; /* beige */
-  transition: all 0.3s ease;
-}
-
-.github-link:hover i {
-  animation: saltoGithub 0.6s ease;
-  color: #00ff1e;
-  filter: drop-shadow(0 0 20px #00ff1e);
-  transform: scale(1.15);
-}
-
-/* ===========================
-   RESPONSIVE 
-=========================== */
-
-/*---Responsive tablet---*/
-
-<<<<<<< HEAD
->>>>>>> 37af34a (Se añadieron imagenes en about us)
 /* RESPONSIVE TABLET */
-=======
-/* ===========================
-   RESPONSIVE 
-=========================== */
-
-/*---Responsive tablet---*/
-
->>>>>>> 721fa34 (se añadio el responsive)
-=======
->>>>>>> origin/qa
 @media (max-width: 992px) {
   body {
+    padding-top: 0;
     overflow-x: hidden;
   }
 
-  /* HERO */
-
-  .hero-section {
-    padding: 70px 35px;
-    min-height: auto;
-    text-align: center;
-  }
-
-  .hero-content {
-    max-width: 100%;
-  }
-
   .about-label {
-    font-size: 1.7rem;
-    margin-bottom: 40px;
+    font-size: 1.2rem;
+    margin-bottom: 18px;
   }
-
-  .hero-content h2 {
-    font-size: 1.8rem;
-  }
-
-  .hero-content p {
-    font-size: 0.95rem;
-    margin: 35px auto;
-    max-width: 650px;
-  }
-
-  .contenedor-botones-contacto {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  /* SECCIONES */
 
   .historia,
   .mision-vision,
   .valores,
   .conocenos {
-    padding: 70px 35px;
+    padding: 45px 35px;
   }
 
-  h3 {
-    font-size: 1.4rem;
-    text-align: center;
-  }
-
-  /* HISTORIA */
-
-  .historia .row {
-    flex-direction: column;
-    text-align: center;
+  .historia h3,
+  .valores h3,
+  .conocenos h3 {
+    font-size: 1.1rem;
+    gap: 15px;
   }
 
   .arcade-img {
     max-width: 420px;
-    margin: 0 auto 40px;
+    margin: 0 auto 30px;
     display: block;
   }
 
   .historia p {
-    font-size: 0.9rem;
-    line-height: 1.9;
-  }
-
-  /* MISIÓN Y VISIÓN */
-
-  .flip-card {
-    height: 430px;
-  }
-
-  .icon-retro {
-    width: 170px;
-  }
-
-  .flip-card-front h4,
-  .flip-card-back h4 {
-    font-size: 1rem;
-  }
-
-  /* VALORES */
-
-  .valores-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .valor {
-    min-height: auto;
-    padding: 30px 20px;
-  }
-
-  .valor-icon {
-    width: 170px;
-    height: 170px;
-  }
-
-  /* CONÓCENOS */
-
-  .subtitulo-equipo {
-    font-size: 0.9rem;
-  }
-
-  .team {
-    max-width: 320px;
-    height: 300px;
+    max-width: 720px;
+    font-size: 0.85rem;
+    line-height: 1.8;
     margin: 0 auto 25px;
   }
 
-  .avatar-name {
-    font-size: 0.82rem;
-  }
-
-  .team-position {
-    font-size: 0.7rem;
-  }
-
-  .team .team-content {
-    width: 82%;
-  }
-
-  .social-icon {
-    font-size: 1.8rem;
-  }
-
-  /* GITHUB */
-
-  .github-link i {
-    font-size: 4rem;
-  }
-}
-
-/*---Responsive celular---*/
-
-@media (max-width: 576px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  /* HERO */
-
-  .hero-section {
-    padding: 50px 20px;
-    min-height: auto;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .hero-content {
-    max-width: 100%;
-  }
-
-  .about-label {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-
-  .hero-content h2 {
-    font-size: 1.2rem;
-    line-height: 1.4;
-  }
-
-  .hero-content p {
-    font-size: 0.85rem;
-    margin: 30px auto;
-  }
-
-  .contenedor-botones-contacto {
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-  }
-
-  /* SECCIONES */
-
-  .historia,
-  .mision-vision,
-  .valores,
-  .conocenos {
-    padding: 50px 20px;
-  }
-
-  h3 {
-    font-size: 1rem;
-    text-align: center;
-  }
-
-  /* HISTORIA */
-
   .historia .row {
+    align-items: center;
+    flex-direction: column;
     text-align: center;
   }
 
-  .arcade-img {
-    max-width: 100%;
-    margin-bottom: 30px;
+  .historia .col-md-5,
+  .historia .col-md-7 {
+    width: 100%;
   }
 
-  .historia p {
-    font-size: 0.85rem;
-    line-height: 1.8;
-  }
-
-  /* MISIÓN Y VISIÓN */
-
-  .flip-card {
-    height: 420px;
-    margin-bottom: 20px;
+  .historia img {
+    margin-bottom: 25px;
   }
 
   .icon-retro {
     width: 130px;
   }
 
-  .flip-card-front h4,
-  .flip-card-back h4 {
-    font-size: 0.9rem;
-  }
-
-  .flip-card-back p {
-    font-size: 0.75rem;
-  }
-
-  /* VALORES */
-
   .valores-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .valor {
-    min-height: auto;
-    padding: 30px 20px;
+    border-bottom: 2px solid #e91e63;
   }
 
-  .valor-icon {
-    width: 150px;
-    height: 150px;
+  .valor:nth-child(2),
+  .valor:nth-child(4) {
+    border-right: none;
   }
 
-  .valor h5 {
-    font-size: 0.9rem;
-  }
-
-  .valor p {
-    font-size: 0.8rem;
-    line-height: 1.7;
-  }
-
-  /* CONÓCENOS */
-
-  .subtitulo-equipo {
-    font-size: 0.8rem;
-    margin-bottom: 30px;
+  .valor:last-child {
+    grid-column: 1 / -1;
+    border-bottom: none;
   }
 
   .team {
-    max-width: 320px;
     height: 300px;
+  }
+
+  .team-content-inner {
+    padding: 15px;
+  }
+
+  .avatar-name {
+    font-size: 0.7rem;
+    line-height: 1.4;
+  }
+
+  .team-position {
+    font-size: 0.65rem;
+  }
+
+  .conocenos .col-lg-4 {
+    margin-bottom: 25px;
+  }
+
+  .subtitulo-equipo {
+    font-size: 0.85rem;
+  }
+} /* CIERRA EL MEDIA QUERY DE TABLET */
+
+/* RESPONSIVE CELULAR */
+
+@media (max-width: 576px) {
+  .team {
+    height: 330px;
+  }
+
+  .team .team-content {
+    margin: 0 15px;
+  }
+
+  body {
+    padding-top: 0;
+    overflow-x: hidden;
+  }
+
+  .about-label {
+    text-align: center;
+  }
+
+  .historia,
+  .mision-vision,
+  .valores,
+  .conocenos {
+    padding: 30px 15px;
+  }
+
+  .historia p {
+    font-size: 0.75rem;
+  }
+
+  .historia .row {
+    gap: 25px;
+  }
+
+  .arcade-img {
+    max-width: 100%;
+  }
+
+  .icon-retro {
+    width: 120px;
+  }
+
+  .valores-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .valor h5 {
+    color: #00ff1e;
+    font-size: 0.85rem;
+  }
+
+  .valor p {
+    font-size: 0.75rem;
+  }
+
+  .valor {
+    border-right: none;
+    border-bottom: 2px solid #e91e63;
+  }
+
+  .valor:last-child {
+    border-bottom: none;
+  }
+
+  .team {
+    height: 320px;
+    max-width: 320px;
     margin: 0 auto 25px;
+  }
+
+  .team-avatar {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+  }
+
+  .team-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+    transform: none;
+  }
+
+  .historia h3,
+  .valores h3,
+  .conocenos h3 {
+    white-space: normal;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    gap: 12px;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+  .historia h3::before,
+  .historia h3::after,
+  .valores h3::before,
+  .valores h3::after,
+  .conocenos h3::before,
+  .conocenos h3::after {
+    content: "";
+    flex: none;
+    width: 150px;
+    height: 3px;
+    background: #e91e63;
   }
 
   .avatar-name {
@@ -1082,20 +817,16 @@ h5 {
   }
 
   .team-position {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
   }
 
-  .team .team-content {
-    width: 80%;
+  .team-content {
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
   }
 
-  .social-icon {
-    font-size: 1.7rem;
-  }
-
-  /* GITHUB */
-
-  .github-link i {
-    font-size: 3.5rem;
+  .team-content-inner {
+    padding: 10px;
   }
 }

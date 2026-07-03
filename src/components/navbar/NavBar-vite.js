@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import { updateBadge } from "../../utils/cart-store.js";
-
-export async function renderNavBar() {
-  const navbarContainer = document.getElementById("navbar");
-  if (!navbarContainer) return;
-
-  const res = await fetch("/src/components/navbar/NavBar.html");
-  const navHtml = await res.text();
-  navbarContainer.innerHTML = navHtml;
-
-  // Aquí llamamos a la función que verifica el login
-  actualizarBotonAuth();
-  configurarMenuHamburguesa();
-
-  // Sincroniza el contador del carrito con lo guardado en localStorage
-  updateBadge();
-  // Si el carrito cambia (en esta u otra pestaña), refresca el badge
-  document.addEventListener("cart:updated", updateBadge);
-=======
 // Importa el HTML
 import navHtml from "./NavBar.html?raw";
 
@@ -43,7 +23,6 @@ export function renderNavBar() {
 	if (typeof updateBadge === "function") {
 		updateBadge();
 	}
->>>>>>> origin/qa
 }
 
 // Iniciar sesión

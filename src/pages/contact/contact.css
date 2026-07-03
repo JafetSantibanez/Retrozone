@@ -10,21 +10,12 @@ body {
 }
 
 h3 {
-<<<<<<< HEAD
-  color: #00ff1e;
-  font-family: "Press Start 2P", cursive;
-  text-align: left;
-  font-size: 1rem;
-  margin-top: 15px;
-  letter-spacing: 2px;
-=======
 	color: #00ff1e;
 	font-family: "Press Start 2P", cursive;
 	text-align: left;
 	font-size: 1rem;
 	margin-top: 15px;
 	letter-spacing: 2px;
->>>>>>> origin/qa
 }
 
 html {
@@ -32,45 +23,6 @@ html {
 }
 
 .contenedor-botones-contacto {
-<<<<<<< HEAD
-    display: flex;
-    flex-direction: row;
-    /* Ajusta el gap a 10px o 15px para que estén más unidos */
-    gap: 15px; 
-    /* Esto los alinea a la izquierda de su contenedor */
-    justify-content: flex-start; 
-    align-items: center;
-    /* Ajusta este margen para subirlos o bajarlos respecto al texto */
-    margin-top: 20px; 
-    /* Aseguramos que no tengan margen izquierdo extra */
-    margin-left: 0;
-    width: 100%;
-    padding-left: 50px;
-}
-
-/*-------------------VISITANOS-------------------*/
- .btn-boton-personalizado {
-  /* Imagen de fondo */
-  background-image: url('/src/assets/Contact/BotonRetroneon.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  width: 180px;  /* Aumentado de 260px a 320px para más espacio horizontal */
-  height: 50px;
-  /* Centrado del texto */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Estilos de texto */
-  color: #39FF14; 
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.8rem; /* Un poco más pequeño para que quepa bien */
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  /* Transición suave */
-  transition: all 0.3s ease;
-=======
 	display: flex;
 	flex-direction: row;
 	/* Ajusta el gap a 10px o 15px para que estén más unidos */
@@ -108,22 +60,14 @@ html {
 	cursor: pointer;
 	/* Transición suave */
 	transition: all 0.3s ease;
->>>>>>> origin/qa
 }
 
 /* Efecto Hover Neón */
 .btn-boton-personalizado:hover {
-<<<<<<< HEAD
-  /* El brillo neón que sigue la forma de tus píxeles */
-  filter: drop-shadow(0 0 0px #39FF14) drop-shadow(0 0 5px #39FF14);
-  /* Ligero efecto de escala */
-  transform: scale(1.05);
-=======
 	/* El brillo neón que sigue la forma de tus píxeles */
 	filter: drop-shadow(0 0 0px #39ff14) drop-shadow(0 0 5px #39ff14);
 	/* Ligero efecto de escala */
 	transform: scale(1.05);
->>>>>>> origin/qa
 }
 
 /* Efecto al hacer clic (opcional: el botón se hunde) */
@@ -149,52 +93,6 @@ html {
 		0 0 30px rgba(255, 43, 157, 0.4),
 		4px 4px 0px #333;
 }
-<<<<<<< HEAD
-
-/*TEXTO NEON ROSA*/
-.about-label {
-    color: #ff2b9d;
-    font-family: "Press Start 2P", cursive;
-    font-size: 2.8rem;
-    letter-spacing: 2px;
-    margin-top: 80px;
-    margin-bottom: 50px;
-    padding-left: 50px;
-    line-height: 1;
-    font-weight: normal;
-    /* Efecto Glow Neón adaptado a rosa */
-    text-shadow:
-        0 0 10px #ff2b9d,
-        0 0 30px rgba(255, 43, 157, 0.4),
-        4px 4px 0px #333;
-}
-
-/*TEXTO NEON AMARILLO*/
-.arcade-title {
-  /* Fuente directa */
-  font-family: 'Press Start 2P', cursive;
-  /* Tamaño y color */
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  color: #f1f3a4; /* Sustituido --amarillito */
-  text-align: left;
-  margin-bottom: 70px;
-  padding-left: 45px;
-  line-height: 1.5;
-  /* Efecto Glow Neón */
-  text-shadow:
-      0 0 10px #dadc81,
-      0 0 30px rgba(255, 255, 150, 0.4),
-      4px 4px 0px #333;
-}
-
-.hero-description{
-    max-width: 650px;
-    color: white;
-    font-size: 1rem;
-    padding-left: 50px;
-    line-height: 1.9;     /* separación entre renglones */
-    margin-bottom: 50px;  /* separación con los botones */
-=======
 
 /*TEXTO NEON AMARILLO*/
 .arcade-title {
@@ -221,7 +119,6 @@ html {
 	padding-left: 50px;
 	line-height: 1.9; /* separación entre renglones */
 	margin-bottom: 50px; /* separación con los botones */
->>>>>>> origin/qa
 }
 
 /* 1. CONTENEDOR DEL MAPA (Estilo retro) */
@@ -233,10 +130,6 @@ html {
 	object-fit: cover;
 	border: 3px solid #ff2b9d;
 	box-shadow: 0 0 20px #ff2b9d;
-<<<<<<< HEAD
-	transition: all .35s ease;
-    cursor: pointer;
-=======
 	transition: all 0.35s ease;
 	cursor: pointer;
 }
@@ -248,7 +141,6 @@ html {
 		0 0 20px #ff2b9d,
 		0 0 45px #ff2b9d,
 		0 0 70px #ff2b9d;
->>>>>>> origin/qa
 }
 
 .map-container:hover{
@@ -272,25 +164,6 @@ html {
 
 /* 2. TEXTO DE INFORMACIÓN */
 
-<<<<<<< HEAD
-.contact-info{
-    padding-left: 60px;
-}
-
-.contact-info h3 {
-  color: #00ff1e;
-  font-family: "Press Start 2P", cursive;
-  font-size: 1.2rem;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  letter-spacing: 1px;
-}
-
-.contact-info p {
-  margin-bottom: 50px;
-  font-size: 1rem;
-  color: #ffffff;
-=======
 .contact-info {
 	padding-left: 60px;
 }
@@ -308,30 +181,10 @@ html {
 	margin-bottom: 50px;
 	font-size: 1rem;
 	color: #ffffff;
->>>>>>> origin/qa
 }
 
 /*--------------------------IMAGEN HERO ------------------------*/
 .hero-section {
-<<<<<<< HEAD
-  /* Combinamos el gradiente con la imagen */
-  background-image: 
-    linear-gradient(to bottom, transparent 2%, #121535 100%), 
-    url('/src/assets/Contact/hero3.png');
-  background-size: cover;
-  background-position: center;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
-  padding: 80px 60px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  overflow: hidden;
-  background-color: #121535;
-  /* Asegúrate de que el color de fondo de la sección 
-=======
 	/* Combinamos el gradiente con la imagen */
 	background-image:
 		linear-gradient(to bottom, transparent 2%, #121535 100%),
@@ -349,24 +202,12 @@ html {
 	overflow: hidden;
 	background-color: #121535;
 	/* Asegúrate de que el color de fondo de la sección 
->>>>>>> origin/qa
      coincida con el color final del gradiente (#121535) */
 	background-color: #121535;
 }
 
 /* Efecto de Inner Shadow (Viñeta) */
 .hero-section::after {
-<<<<<<< HEAD
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* Gradiente desde abajo-izquierda hacia arriba-derecha */
-  pointer-events: none;
-  z-index: 1;
-=======
 	content: "";
 	position: absolute;
 	top: 0;
@@ -376,42 +217,10 @@ html {
 	/* Gradiente desde abajo-izquierda hacia arriba-derecha */
 	pointer-events: none;
 	z-index: 1;
->>>>>>> origin/qa
 }
 
 /* Asegura que tu contenido esté sobre la sombra */
 .hero-section .container {
-<<<<<<< HEAD
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-
-/*-------------------FORMULARIO-------------------*/
-
-/* Contenedor */
-.contactanos-container{
-  width:100%
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 0 10px;
-}
-
-.contactanos-container form{
-    width: 70%;
-    margin: 0 auto;
-}
-
-.form-floating{
-    margin-bottom: 22px;
-}
-
-.form-control{
-    max-width: 100%;
-=======
 	position: relative;
 	z-index: 2;
 	display: flex;
@@ -440,7 +249,6 @@ html {
 
 .form-control {
 	max-width: 100%;
->>>>>>> origin/qa
 }
 
 /* Título */
@@ -461,17 +269,10 @@ html {
 }
 
 /* Focus */
-<<<<<<< HEAD
-.form-control:focus{
-    background-color: #F3F3E6 !important;
-    border-color: #39FF14 !important;
-    box-shadow: 0 0 10px rgba(57,255,20,.5) !important;
-=======
 .form-control:focus {
 	background-color: #f3f3e6 !important;
 	border-color: #39ff14 !important;
 	box-shadow: 0 0 10px rgba(57, 255, 20, 0.5) !important;
->>>>>>> origin/qa
 }
 
 /* Labels */
@@ -491,24 +292,6 @@ html {
 }
 
 /* Botón */
-<<<<<<< HEAD
-.btn-primary{
-    background-color: #39FF14 !important;
-    border: none !important;
-    color: #16184B !important;
-    font-weight: bold;
-    border-radius: 25px !important;
-    padding: 12px;
-    transition: .3s;
-  
-}
-
-/* Hover */
-.btn-primary:hover{
-    background-color: #4BFF29 !important;
-    transform: translateY(-2px);
-    box-shadow: 0 0 15px rgba(57,255,20,.7);
-=======
 .btn-primary {
 	background-color: #39ff14 !important;
 	border: none !important;
@@ -571,7 +354,6 @@ html {
 	animation: saltoSocial 0.6s ease;
 	filter: drop-shadow(0 0 10px #00ff1e) drop-shadow(0 0 20px #00ff1e);
 	transform: scale(1.2);
->>>>>>> origin/qa
 }
 
 .retro-heading {
@@ -622,12 +404,6 @@ html {
 }
 
 /* Responsive */
-<<<<<<< HEAD
-@media (max-width: 768px){
-    .contactanos-container{
-        padding: 15px;
-    }
-=======
 @media (max-width: 768px) {
 	.contactanos-container {
 		padding: 15px;
@@ -636,7 +412,6 @@ html {
 	.contact-title {
 		font-size: 1.4rem;
 	}
->>>>>>> origin/qa
 
 	.hero-section {
 		min-height: auto;
@@ -645,76 +420,6 @@ html {
 		justify-content: center;
 	}
 
-<<<<<<< HEAD
-    .hero-section {
-    min-height: auto;
-    padding: 60px 25px;
-    text-align: center;
-    justify-content: center;
-  }
-
-  .hero-section .container {
-    text-align: center !important;
-  }
-
-  .about-label {
-    font-size: 1.1rem;
-    margin-bottom: 35px;
-  }
-
-  .arcade-title {
-    text-align: center;
-    font-size: 1.5rem;
-  }
-
-  .hero-section p {
-    margin: 30px auto;
-    font-size: 0.85rem;
-  }
-
-  .contenedor-botones-contacto {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .retro-heading {
-    font-size: 0.85rem;
-    gap: 10px;
-  }
-
-  .retro-heading::before,
-  .retro-heading::after {
-    min-width: 40px;
-  }
-
-  .visit-section {
-    text-align: center;
-  }
-
-  .contact-info h3 {
-    text-align: center;
-  }
-
-  .social-links-retro {
-    justify-content: center;
-  }
-
-  .map-container {
-    max-width: 100%;
-    height: 280px;
-    margin: 30px auto 0;
-  }
-
-  .contactanos-container {
-    margin: 30px auto;
-    padding: 15px;
-  }
-}
-
-
-
-
-=======
 	.hero-section .container {
 		text-align: center !important;
 	}
@@ -772,4 +477,3 @@ html {
 		padding: 15px;
 	}
 }
->>>>>>> origin/qa

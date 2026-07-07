@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 </button>         
                 <div id="collapseDatos" class="collapse d-md-block">
                   <ul class="list-unstyled footer-links ms-2 ms-md-0 mt-2 mt-md-0">
-                    <li><a href="terminos.html" class="text-decoration-none text-white-50">Términos y Condiciones</a></li>
-                    <li><a href="privacidad.html" class="text-decoration-none text-white-50">Aviso de Privacidad de Clientes</a></li>
+                    <li><a href="/src/pages/terms/terms.html" class="text-decoration-none text-white-50">Términos y Condiciones</a></li>
+                    <li><a href="/src/pages/privacy/privacy.html" class="text-decoration-none text-white-50">Aviso de Privacidad de Clientes</a></li>
                   </ul>
                 </div>
               </div>       
@@ -90,11 +90,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Re-inicializar el colapsable de Bootstrap dinámicamente si es necesario
     if (window.bootstrap && window.bootstrap.Collapse) {
-      const collapseElementList = footerContainer.querySelectorAll('.collapse');
-      collapseElementList.forEach(collapseEl => {
+      const collapseElementList = footerContainer.querySelectorAll(".collapse");
+      collapseElementList.forEach((collapseEl) => {
         // En pantallas grandes (md) evitamos que Bootstrap oculte el menú al hacer resize
         if (window.innerWidth >= 768) {
-          collapseEl.classList.add('show');
+          collapseEl.classList.add("show");
         }
       });
     }

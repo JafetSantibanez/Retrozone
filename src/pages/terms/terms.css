@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #121535;
+  color: white;
+  font-family: "Orbitron", sans-serif;
+  line-height: 1.8;
+}
+
+/* HERO */
+
+.hero {
+  padding: 100px 20px 0px;
+  text-align: center;
+  background:
+    linear-gradient(rgba(18, 21, 53, 0.82), rgba(18, 21, 53, 0.92)),
+    url("../assets/img/hero3.png") center/cover;
+}
+
+.hero h1 {
+  font-family: "Press Start 2P", cursive;
+  color: #fff36d;
+  font-size: 2.2rem;
+  margin-bottom: 35px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* CONTENEDOR */
+
+.terms-container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 70px auto;
+}
+
+/* TARJETAS */
+
+.card {
+  background: #1d214d;
+  border-radius: 18px;
+  padding: 35px;
+  margin-bottom: 35px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+}
+
+.card h2 {
+  font-family: "Orbitron", sans-serif;
+  color: #fff36d;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.card h2::after {
+  content: "";
+  width: 90px;
+  height: 4px;
+  background: #ff2d55;
+  display: block;
+  margin-top: 12px;
+  border-radius: 10px;
+}
+
+.card p {
+  color: #e6e6e6;
+  font-size: 1rem;
+}
+
+.card ul {
+  margin-top: 20px;
+  padding-left: 30px;
+  color: #e6e6e6;
+}
+
+.card li {
+  margin-bottom: 12px;
+  color: #e6e6e6;
+  font-size: 1rem;
+}
+
+.card li::marker {
+  color: #ff2d55;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 150px;
+  }
+
+  .hero h1 {
+    font-size: 1.3rem;
+    line-height: 1.6;
+  }
+
+  .card {
+    padding: 25px;
+  }
+
+  .card h2 {
+    font-size: 1rem;
+  }
+}

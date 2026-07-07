@@ -25,13 +25,18 @@ body {
 
 .hero h1 {
   font-family: "Press Start 2P", cursive;
-  color: #fff36d;
-  font-size: 2.2rem;
+  color: #f1f3a4;
+  font-size: 2.5rem;
   margin-bottom: 35px;
+  line-height: 1.1;
+  text-shadow:
+    0 0 10px #dadc81,
+    0 0 30px rgba(255, 255, 150, 0.4),
+    4px 4px 0px #333;
 }
 
 .hero p {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #ddd;
 }
 
@@ -61,7 +66,7 @@ body {
 
 .card h2 {
   font-family: "Orbitron", sans-serif;
-  color: #fff36d;
+  color: #f1f3a4;
   margin-bottom: 25px;
   position: relative;
 }

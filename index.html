@@ -4,9 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!-- Normaliza estilos entre navegadores -->
 		<link rel="stylesheet" href="./src/style.css" />
-
 		<link rel="stylesheet" href="./src/pages/home/home.css" />
 
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,16 +22,45 @@
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
 			rel="stylesheet" />
 
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/bootstrap-ico<ns@1.11.3/font/bootstrap-icons.min.css" />
 		<link rel="stylesheet" href="./src/styles/global.css" />
 		<link rel="stylesheet" href="./src/styles/normalize.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/flipdown/dist/flipdown.min.css" />
 		<title>Retrozone</title>
+
+		<style>
+			.swiper-nuevo {
+				width: 100%;
+				height: 300px; /* Ajusta la altura según lo necesites */
+				margin: 40px 0;
+			}
+
+			.swiper-nuevo .swiper-slide {
+				text-align: center;
+				font-size: 18px;
+				background: #444;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #fff;
+			}
+
+			@media (max-width: 760px) {
+				.swiper-nuevo-next {
+					right: 20px;
+					transform: rotate(90deg);
+				}
+
+				.swiper-nuevo-prev {
+					left: 20px;
+					transform: rotate(90deg);
+				}
+			}
+		</style>
 	</head>
 
 	<body>
@@ -68,9 +95,11 @@
 			</div>
 			<img src="./src/assets/pasto.png" class="pasto" alt="Pasto" />
 		</section>
+
 		<section class="categoria-container">
 			<h2 class="titulo-categoria">- CATEGORIAS -</h2>
 			<section class="categoria">
+				<div class="stars"></div>
 				<div class="card" style="width: 10rem">
 					<img
 						src="./src/assets/nintendoNes.png"
@@ -114,6 +143,7 @@
 				</div>
 			</section>
 		</section>
+
 		<section>
 			<section class="galeria-retro">
 				<h2 class="titulo-categoria">- DESTACADOS -</h2>
@@ -124,115 +154,97 @@
 						--swiper-pagination-color: #fff;
 					"
 					class="swiper mySwiper2">
+					<div class="stars"></div>
 					<div class="swiper-wrapper">
 						<div class="swiper-slide producto-slide">
 							<img
 								src="./src/assets/Pacman Namco GIF - Pacman Namco Ghosts - Descobrir e Compartilhar GIFs.gif"
 								alt="Nintendo NES" />
-
 							<div class="producto-info">
 								<h3>Juego Pac-Man</h3>
 								<p>Para la consola Atari 2600.</p>
 								<p>⭐⭐⭐⭐⭐</p>
 								<span class="precio">$899 MXN</span>
-
 								<button class="btn-carrito">Agregar al carrito</button>
 							</div>
 						</div>
 						<div class="swiper-slide producto-slide">
 							<img src="./src/assets/gameboy.png" alt="Nintendo NES" />
-
 							<div class="producto-info">
 								<h3>Gameboy</h3>
 								<p>Consola clásica de 8 bits.</p>
 								<p>⭐⭐⭐⭐⭐</p>
 								<span class="precio">$2,199 MXN</span>
-
 								<button class="btn-carrito">Agregar al carrito</button>
 							</div>
 						</div>
 						<div class="swiper-slide producto-slide">
 							<img src="./src/assets/sonic2.gif" alt="Nintendo NES" />
-
 							<div class="producto-info">
 								<h3>Sonic 2</h3>
 								<p>Consola Sega Genesis</p>
 								<p>⭐⭐⭐⭐</p>
 								<span class="precio">$399 MXN</span>
-
 								<button class="btn-carrito">Agregar al carrito</button>
 							</div>
 						</div>
-
 						<div class="swiper-slide producto-slide">
 							<img src="./src/assets/marioclasic.gif" alt="Nintendo NES" />
-
 							<div class="producto-info">
 								<h3>Super Mario Bros</h3>
 								<p>Consola Nintendo 64</p>
 								<p>⭐⭐⭐⭐</p>
 								<span class="precio">$399 MXN</span>
-
 								<button class="btn-carrito">Agregar al carrito</button>
 							</div>
 						</div>
 						<div class="swiper-slide producto-slide">
 							<img src="./src/assets/control.png" alt="Nintendo NES" />
-
 							<div class="producto-info">
 								<h3>Mando de Nintendo 64</h3>
 								<p>Consola clásica de 8 bits.</p>
 								<p>⭐⭐⭐⭐</p>
 								<span class="precio">$459 MXN</span>
-
 								<button class="btn-carrito">Agregar al carrito</button>
 							</div>
 						</div>
 						<div class="swiper-slide producto-slide">
 							<img src="./src/assets/psone.png" alt="Nintendo NES" />
-
 							<div class="producto-info">
 								<h3>PlayStation one</h3>
 								<p>Con un control y memori card.</p>
 								<p>⭐⭐⭐⭐⭐</p>
 								<span class="precio">$1999 MXN</span>
-
 								<button class="btn-carrito">Agregar al carrito</button>
 							</div>
 						</div>
 						<div class="swiper-slide producto-slide">
 							<img src="./src/assets/gameboyColor.png" alt="Nintendo NES" />
-
 							<div class="producto-info">
 								<h3>GameBoy Color</h3>
 								<p>Reacondicionado</p>
 								<p>⭐⭐⭐⭐</p>
 								<span class="precio">$2,000 MXN</span>
-
 								<button class="btn-carrito">Agregar al carrito</button>
 							</div>
 						</div>
 						<div class="swiper-slide producto-slide">
 							<img src="./src/assets/palanca.png" alt="Nintendo NES" />
-
 							<div class="producto-info">
 								<h3>Joystick Clásico de Atari</h3>
 								<p>Reacondicionado.</p>
 								<p>⭐⭐⭐⭐⭐</p>
 								<span class="precio">$250 MXN</span>
-
 								<button class="btn-carrito">Agregar al carrito</button>
 							</div>
 						</div>
 						<div class="swiper-slide producto-slide">
 							<img src="./src/assets/nintendoNes.png" alt="Nintendo NES" />
-
 							<div class="producto-info">
 								<h3>Nintendo NES</h3>
 								<p>Consola clásica de 8 bits.</p>
 								<p>⭐⭐⭐⭐⭐</p>
 								<span class="precio">$2,999 MXN</span>
-
 								<button class="btn-carrito">Agregar al carrito</button>
 							</div>
 						</div>
@@ -248,25 +260,19 @@
 							<img
 								src="./src/assets/Pacman Namco GIF - Pacman Namco Ghosts - Descobrir e Compartilhar GIFs.gif" />
 						</div>
-
 						<div class="swiper-slide">
 							<img src="./src/assets/gameboy.png" />
 						</div>
-
 						<div class="swiper-slide">
 							<img src="./src/assets/sonic2.gif" />
 						</div>
-
 						<div class="swiper-slide">
 							<img src="./src/assets/marioclasic.gif" />
 						</div>
-
 						<div class="swiper-slide">
 							<img src="./src/assets/control.png" />
 						</div>
-						<div class="swiper-slide">
-							<img src="./src/assets/psone.png" />
-						</div>
+						<div class="swiper-slide"><img src="./src/assets/psone.png" /></div>
 						<div class="swiper-slide">
 							<img src="./src/assets/gameboyColor.png" />
 						</div>
@@ -281,10 +287,272 @@
 			</section>
 		</section>
 
+		<section class="oferta">
+			<div class="container-fluid oferta-container">
+				<div class="row justify-content-center align-items-center g-4">
+					<div class="col-lg-6 d-flex justify-content-center">
+						<div class="oferta-box">
+							<h2 class="tiOferta">OFERTA FINDE</h2>
+							<h1 class="tiOferta2">30% OFF</h1>
+							<h4>EN CONSOLAS RETRO</h4>
+							<h4 class="tiOferta">SOLO POR TIEMPO LIMITADO</h4>
+							<div id="flipdown" class="flipdown"></div>
+							<button class="retro-btn">VER OFERTAS</button>
+						</div>
+					</div>
+					<div class="col-lg-6 d-flex justify-content-center">
+						<div class="oferta-box2">
+							<h1 class="tiOferta">PROXIMAMENTE</h1>
+							<h3 class="tiOferta2">🎁 NUEVAS CONSOLAS</h3>
+							<h3 class="tiOferta2">🕹️ JUEGOS EXCLSIVOS</h3>
+							<h3 class="tiOferta2">⭐ TORNEOS RETRO</h3>
+							<h3 class="tiOferta2">💸 GRANDES DESCUENTOS</h3>
+							<h3 class="tiOferta2">👀 Y MUCHOS MAS...</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="porque">
+			<h1 class="porque tiOferta2">¿POR QUE COMPRAR EN RETROZONE?</h1>
+			<div class="proque container text-center">
+				<div class="row row-cols-1 row-cols-lg-4 g-3">
+					<div class="col">
+						<div class="p-3 border rounded-3 h-100">
+							<img
+								src="./src/assets/CamionRetroo.png"
+								alt="envios"
+								width="100"
+								height="100"
+								class="mb-2" />
+							<h6 class="por3">ENVÍOS A TODO MÉXICO</h6>
+							<p class="por2">Rápidos y seguros</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="p-3 border rounded-3 h-100">
+							<img
+								src="./src/assets/seguro.png"
+								alt="pago seguro"
+								width="100"
+								height="100"
+								class="mb-2" />
+							<h6 class="por1">PAGO SEGURO</h6>
+							<p class="por2">Tus datos protegidos</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="p-3 border rounded-3 h-100">
+							<img
+								src="./src/assets/cajaRetro.png"
+								alt="empaque gamer"
+								width="100"
+								height="100"
+								class="mb-2" />
+							<h6 class="por3">EMPAQUE GAMER</h6>
+							<p class="por2">Protegemos tu nostalgia</p>
+						</div>
+					</div>
+					<div class="col">
+						<div class="p-3 border rounded-3 h-100">
+							<img
+								src="./src/assets/calidadRetro.png"
+								alt="calidad"
+								width="100"
+								height="100"
+								class="mb-2" />
+							<h6 class="por1">CALIDAD GARANTIZADA</h6>
+							<p class="por2">Productos originales</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container my-5 seccion-nuevo-carrusel">
+			<h2 class="titulo-categoria text-center mb-4">
+				---------- LO QUE DICEN NUESTRSO GAMERS ----------
+			</h2>
+			<div class="swiper swiper-nuevo">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="col">
+							<div class="p-3 border rounded-3 h-100">
+								<img
+									src="./src/assets/brayan.png"
+									alt="envios"
+									width="100"
+									height="100"
+									class="mb-2" />
+								<h6 class="por1">Little Boss</h6>
+								<p class="por3">
+									Yo odio no encontrar lo que quiero, pero con RetroZone, nunca
+									me pasa eso.😈
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="col">
+							<div class="p-3 border rounded-3 h-100">
+								<img
+									src="./src/assets/ivone.png"
+									alt="envios"
+									width="100"
+									height="100"
+									class="mb-2" />
+								<h6 class="por1">The RH</h6>
+								<p class="por3">
+									Las cosas mas nice y retro las encuentro aqui, obvio de
+									vieojuegos.🫦
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="col">
+							<div class="p-3 border rounded-3 h-100">
+								<img
+									src="./src/assets/jafet.png"
+									alt="envios"
+									width="100"
+									height="100"
+									class="mb-2" />
+								<h6 class="por1">The Big Boss</h6>
+								<p class="por3">
+									Siempre compron mi mercancia en RetroZone, la mejor calidad 🚬
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="col">
+							<div class="p-3 border rounded-3 h-100">
+								<img
+									src="./src/assets/andrea.png"
+									alt="envios"
+									width="100"
+									height="100"
+									class="mb-2" />
+								<h6 class="por1">The Doctor of Colors</h6>
+								<p class="por3">
+									La consolas mas retro las encontre aqui, con los colores que
+									deseaba.🌈
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="col">
+							<div class="p-3 border rounded-3 h-100">
+								<img
+									src="./src/assets/jair.png"
+									alt="envios"
+									width="100"
+									height="100"
+									class="mb-2" />
+								<h6 class="por1">The gazebo</h6>
+								<p class="por3">
+									En todos lados roban, menos en Retrozone, por eso es la
+									faborita de mi familia.💸
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="col">
+							<div class="p-3 border rounded-3 h-100">
+								<img
+									src="./src/assets/angie.png"
+									alt="envios"
+									width="100"
+									height="100"
+									class="mb-2" />
+								<h6 class="por1">The chef</h6>
+								<p class="por3">
+									Aqui se cocinan ofertas increibles, les recomiendo los
+									videojuegos, hay mucha variedad.👩‍🍳
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="col">
+							<div class="p-3 border rounded-3 h-100">
+								<img
+									src="./src/assets/andri.png"
+									alt="envios"
+									width="100"
+									height="100"
+									class="mb-2" />
+								<h6 class="por1">The Russian</h6>
+								<p class="por3">
+									Ni Vladimir tiene estas consolas, Rusia tampoco tenia tan
+									buena atención. 🍾
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="col">
+							<div class="p-3 border rounded-3 h-100">
+								<img
+									src="./src/assets/aura.png"
+									alt="envios"
+									width="100"
+									height="100"
+									class="mb-2" />
+								<h6 class="por1">The Crumb tray</h6>
+								<p class="por3">
+									A RetroZone no le tuve que rogar tanto, como a mi ex, para que
+									enviaran rapido mis controles.🤪
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="col">
+							<div class="p-3 border rounded-3 h-100">
+								<img
+									src="./src/assets/erick.png"
+									alt="envios"
+									width="100"
+									height="100"
+									class="mb-2" />
+								<h6 class="por1">The Mexican BD</h6>
+								<p class="por3">
+									Cuando me fui al otro lado, lo unico que extrañe fue a
+									RetroZone, sus precios son inigualables.🤠|
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-next swiper-nuevo-next"></div>
+				<div class="swiper-button-prev swiper-nuevo-prev"></div>
+			</div>
+		</section>
+
 		<div id="footer-container"></div>
+
+		<!-- Bootstrap -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Swiper -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+		<!-- FlipDown -->
+		<script src="https://cdn.jsdelivr.net/npm/flipdown/dist/flipdown.min.js"></script>
+
+		<!-- Componentes -->
+		<script type="module" src="./src/components/navbar/NavBar-vite.js"></script>
+		<script type="module" src="./src/components/footer/Footer.js"></script>
+
+		<!-- Tus scripts -->
 		<script>
-			var swiper = new Swiper(".mySwiper", {
+			// --- INICIALIZACIÓN DEL PRIMER CARRUSEL (DESTACADOS) ---
+			var swiperOriginalThumbs = new Swiper(".mySwiper", {
 				loop: true,
 				spaceBetween: 10,
 				slidesPerView: 4,
@@ -292,7 +560,7 @@
 				watchSlidesProgress: true,
 			});
 
-			var swiper2 = new Swiper(".mySwiper2", {
+			var swiperOriginal = new Swiper(".mySwiper2", {
 				loop: true,
 				spaceBetween: 10,
 				navigation: {
@@ -300,16 +568,35 @@
 					prevEl: ".swiper-button-prev",
 				},
 				thumbs: {
-					swiper: swiper,
+					swiper: swiperOriginalThumbs,
 				},
 			});
+
+			// --- INICIALIZACIÓN DEL SEGUNDO CARRUSEL (NUEVO) ---
+			var nuevoSwiper = new Swiper(".swiper-nuevo", {
+				slidesPerView: 3,
+				direction: getNuevoDirection(),
+				navigation: {
+					nextEl: ".swiper-nuevo-next",
+					prevEl: ".swiper-nuevo-prev",
+				},
+				on: {
+					resize: function () {
+						nuevoSwiper.changeDirection(getNuevoDirection());
+					},
+				},
+			});
+
+			function getNuevoDirection() {
+				return window.innerWidth <= 760 ? "vertical" : "horizontal";
+			}
 		</script>
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-			crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-		<script type="module" src="./src/components/navbar/NavBar-vite.js"></script>
-		<script type="module" src="./src/components/footer/Footer.js"></script>
+
+		<script>
+			const time = Math.floor(new Date(2026, 5, 29, 23, 59).getTime() / 1000);
+			new FlipDown(time).start().ifEnded(() => {
+				console.log("¡El contador terminó!");
+			});
+		</script>
 	</body>
 </html>

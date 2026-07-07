@@ -57,20 +57,26 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   //Autenticación
+  // Antes esto traía TODA la lista de usuarios (GET /users) y comparaba
+  // email+password en el navegador — además de inseguro (cualquiera podía
+  // ver la lista completa de usuarios y contraseñas), dependía de
+  // json-server, que nunca estuvo instalado. Ahora se manda solo el email
+  // y password al backend real, que hace la verificación con BCrypt del
+  // lado del servidor y responde 200 (con los datos del usuario) o 401.
   async function autenticarUsuario(credenciales) {
     try {
-      const respuesta = await fetch("http://localhost:3000/users");
-      if (!respuesta.ok) throw new Error("No se pudo leer la base de datos.");
+      const respuesta = await fetch("http://localhost:8080/api/users/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email: credenciales.email,
+          password: credenciales.password,
+        }),
+      });
 
-      const usuarios = await respuesta.json();
+      if (respuesta.ok) {
+        const usuarioEncontrado = await respuesta.json();
 
-      const usuarioEncontrado = usuarios.find(
-        (user) =>
-          user.email === credenciales.email &&
-          user.password === credenciales.password,
-      );
-
-      if (usuarioEncontrado) {
         if (credenciales.recordarme) {
           localStorage.setItem(
             "usuarioLogueado",
@@ -83,9 +89,9 @@ document.addEventListener("DOMContentLoaded", () => {
           );
         }
 
-        window.location.href = "../../../index.html";
+        window.location.href = "/index.html";
       } else {
-        // Si no se encuentra en el JSON
+        // 401: credenciales incorrectas
         const inputCorreo = document.getElementById("email");
         const inputContrasena = document.getElementById("password");
         const errorGlobal = document.getElementById("loginErrorGlobal");
@@ -96,6 +102,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } catch (error) {
       console.error("Error en el sistema:", error);
+      alert(
+        "No se pudo conectar con el servidor. ¿Está encendido el backend (Spring Boot, puerto 8080)?",
+      );
     }
   }
 });

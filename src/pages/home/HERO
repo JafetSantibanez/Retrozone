@@ -21,7 +21,7 @@ HTML:
 				<!-- Logo + título -->
 				<div class="arcade-logo-row">
 					<img
-						src="../../assets/logoRetro.jpeg"
+						src="../../assets/navbar/homeLogo.jpeg"
 						class="arcade-logo-img"
 						alt="Logo Retrozone" />
 					<h1 class="arcade-title">ETROZONE</h1>

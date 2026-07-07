@@ -4,9 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RetroZone — Tu Carrito</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="../../styles/global.css" />
     <link rel="stylesheet" href="cart.css" />
   </head>
@@ -16,7 +25,12 @@
     <main class="cart-main">
       <header class="cart-header text-center">
         <h1 class="cart-title">
-          <img src="/src/assets/navbar/cart.png" alt="carrito" width="" class="cart-title-icon" />
+          <img
+            src="/src/assets/navbar/cart.png"
+            alt="carrito"
+            width=""
+            class="cart-title-icon"
+          />
           TU CARRITO
         </h1>
         <p class="cart-subtitle">Revisa tu selección antes de pagar</p>
@@ -25,7 +39,6 @@
       <!-- Estado: carrito con productos -->
       <section id="cartContenido" class="px-3 px-md-4 pb-5 d-none">
         <div class="row g-4">
-
           <!-- Lista de productos -->
           <div class="col-12 col-lg-8">
             <div class="cart-items-header d-none d-md-flex">
@@ -70,15 +83,13 @@
                 <span id="resumenTotal">$0</span>
               </div>
 
-              <button id="btnPagar" class="btn-pagar">
-                PROCEDER AL PAGO
-              </button>
+              <button id="btnPagar" class="btn-pagar">PROCEDER AL PAGO</button>
               <p class="resumen-nota">
-                <i class="bi bi-shield-lock"></i> Pago seguro · Productos retro garantizados
+                <i class="bi bi-shield-lock"></i> Pago seguro · Productos retro
+                garantizados
               </p>
             </aside>
           </div>
-
         </div>
       </section>
 
@@ -88,9 +99,12 @@
           src="/src/assets/alien-cart.png"
           alt="Alien retro"
           class="cart-vacio-alien"
-          onerror="this.style.display='none'; this.nextElementSibling.style.display='block'"
+          onerror="
+            this.style.display = 'none';
+            this.nextElementSibling.style.display = 'block';
+          "
         />
-        <div class="cart-vacio-icon-fallback" style="display:none">👾</div>
+        <div class="cart-vacio-icon-fallback" style="display: none">👾</div>
         <p class="cart-vacio-texto">TU CARRITO ESTÁ VACÍO</p>
         <p class="cart-vacio-sub">¡Aún no hay aventuras en tu mochila!</p>
         <a href="/src/pages/catalog/catalog.html" class="btn-explorar">
@@ -101,7 +115,10 @@
 
     <div id="footer-container"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script>
     <script type="module" src="/src/components/navbar/NavBar-vite.js"></script>
     <script type="module" src="/src/components/footer/Footer.js"></script>
     <script type="module" src="cart.js"></script>

@@ -220,11 +220,11 @@ html {
 /*-------------------FORMULARIO-------------------*/
 
 /* Contenedor */
-.contactanos-container {
-	width: 100%;
-	max-width: 600px;
-	margin: 50px auto;
-	padding: 0 10px;
+.contactanos-container{
+  width:100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 0 10px;
 }
 
 .contactanos-container form {

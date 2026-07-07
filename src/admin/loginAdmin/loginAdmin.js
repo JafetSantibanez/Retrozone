@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
           JSON.stringify(adminEncontrado),
         );
 
-        window.location.href = "../../../index.html";
+        window.location.href = "/index.html";
       } else {
         // Si no se encuentra en el JSON
         const inputCorreo = document.getElementById("email");

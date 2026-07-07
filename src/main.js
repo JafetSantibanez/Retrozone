@@ -1,7 +1,19 @@
-import { renderNavBar } from "./components/navbar/NavBar.js";
+const verificarConexion = async () => {
+  try {
+    // Apuntamos a tu controlador real de productos
+    const respuesta = await fetch("http://localhost:8080/api/products");
 
-// Selecciona el contenedor <div id="app"></div> de tu index.html
-const app = document.querySelector("#app");
+    if (!respuesta.ok) {
+      throw new Error(`Error en el servidor: ${respuesta.status}`);
+    }
 
-// Ejecuta la función e inyecta el HTML del navbar adentro
-app.innerHTML = renderNavBar();
+    const datos = await respuesta.json();
+    console.log("🟢 ¡CONEXIÓN EXITOSA CON EL BACKEND REAL!");
+    console.log("Datos recibidos (Productos):", datos);
+    // Debería mostrarte un arreglo vacío [] o la lista si ya insertaste datos.
+  } catch (error) {
+    console.error("❌ Error de comunicación:", error.message);
+  }
+};
+
+verificarConexion();

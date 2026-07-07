@@ -153,13 +153,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     // Simulación de envío al backend
     function enviarDatosAlBackend(datosUsuario) {
-      const url = "http://localhost:3000/users";
+      const url = "http://localhost:8080/api/users";
       const usuarioFormatoJSON = {
         email: datosUsuario.email,
         password: datosUsuario.password,
         username: datosUsuario.username,
-        nombreCompleto: datosUsuario.nombreCompleto,
-        telefono: datosUsuario.telefono,
+        nombreCompleto: datosUsuario.fullName,
+        telefono: datosUsuario.phone,
       };
       fetch(url, {
         method: "POST", // Indicamos que vamos a guardar/crear datos
@@ -208,16 +208,16 @@ document.addEventListener("DOMContentLoaded", () => {
       return false;
     }
 
-    const usuarioExiste = usuariosRegistrados.some(
-      (u) => u.username.toLowerCase() === valor.toLowerCase(),
-    );
-    if (usuarioExiste) {
-      if (feedbackUsername)
-        feedbackUsername.textContent = "Este nombre de usuario ya está en uso.";
-      inputUsername.classList.remove("is-valid");
-      inputUsername.classList.add("is-invalid");
-      return false;
-    }
+    // const usuarioExiste = usuariosRegistrados.some(
+    //   (u) => u.username.toLowerCase() === valor.toLowerCase(),
+    // );
+    // if (usuarioExiste) {
+    //   if (feedbackUsername)
+    //     feedbackUsername.textContent = "Este nombre de usuario ya está en uso.";
+    //   inputUsername.classList.remove("is-valid");
+    //   inputUsername.classList.add("is-invalid");
+    //   return false;
+    // }
 
     inputUsername.classList.remove("is-invalid");
     inputUsername.classList.add("is-valid");
@@ -228,5 +228,5 @@ document.addEventListener("DOMContentLoaded", () => {
 fetch("../../components/Footer.html")
   .then((response) => response.text())
   .then((data) => {
-    document.getElementById("footer").innerHTML = data;
+    //    document.getElementById("footer").innerHTML = data;
   });

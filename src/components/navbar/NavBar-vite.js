@@ -1,16 +1,20 @@
-// Importa el HTML
-import navHtml from "./NavBar.html?raw";
-
 // Importa utilidades
 import { updateBadge } from "../../utils/cart-store.js";
 
-// Importa el CSS
-import "../../styles/global.css";
-
-export function renderNavBar() {
+// NOTA: "NavBar.html?raw" e "import ...css" son transformaciones de Vite —
+// solo funcionan cuando el proyecto corre a través del dev server de Vite.
+// Con Live Server (sirve archivos tal cual, sin transformar nada), el
+// navegador intenta interpretar esos archivos como JavaScript y falla,
+// lo que rompe este script completo y por eso no aparece el navbar.
+// Usamos fetch() en su lugar, que funciona igual en ambos casos.
+// (global.css ya se carga aparte con un <link> en cada página, así que no
+// hace falta importarlo aquí.)
+export async function renderNavBar() {
 	const navbarContainer = document.getElementById("navbar");
 	if (!navbarContainer) return;
 
+	const res = await fetch("/src/components/navbar/NavBar.html");
+	const navHtml = await res.text();
 	navbarContainer.innerHTML = navHtml;
 
 	// Actualiza el botón de sesión

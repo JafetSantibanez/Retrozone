@@ -112,7 +112,7 @@ main.container-fluid {
 /* media queries */
 @media (max-width: 576px) {
   body {
-    background-image: url("../../../assets/register/BgRetroZone.png");
+    background-image: url("../../assets/register/BgRetroZone.png");
     background-size: cover;
     background-position: center;
   }

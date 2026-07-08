@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
   });
 
-  //Contarseñas
+  // Control de visibilidad de contraseñas
   const iconTogglePassword = document.getElementById("togglePassword");
   const inputPassword = document.getElementById("password");
   if (iconTogglePassword && inputPassword) {
@@ -47,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
       inputConfirm.focus();
     });
   }
+
+  // Input de Nombre de Usuario
   const inputUsername = document.getElementById("username");
   const feedbackUsername = document.getElementById("usernameFeedback");
 
@@ -56,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  //Validación de formulario
+  // Validación de formulario
   const formulario = document.getElementById("registroForm");
 
   if (formulario) {
@@ -65,13 +67,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const inputNombre = document.getElementById("fullName");
       const inputCorreo = document.getElementById("email");
-      const inputContrasena = document.getElementById("password");
-      const inputConfirmacion = document.getElementById("confirmPassword");
 
       const nombre = inputNombre.value.trim();
       const correo = inputCorreo.value.trim();
-      const contrasena = inputContrasena.value;
-      const confirmacion = inputConfirmacion.value;
+      const contrasena = inputPassword.value;
+      const confirmacion = inputConfirm.value;
 
       let formularioCorrecto = true;
 
@@ -81,8 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
         inputUsername,
         inputCorreo,
         inputTelefono,
-        inputContrasena,
-        inputConfirmacion,
+        inputPassword,
+        inputConfirm,
       ].forEach((input) => {
         if (input) input.classList.remove("is-invalid", "is-valid");
       });
@@ -96,12 +96,12 @@ document.addEventListener("DOMContentLoaded", () => {
         if (inputNombre) inputNombre.classList.add("is-valid");
       }
 
-      // Validación: nombre de usuario
+      // Validación: Nombre de usuario
       if (!validarNombreUsuario()) {
         formularioCorrecto = false;
       }
 
-      // Validación: correo electrónico
+      // Validación: Correo electrónico
       const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!regexCorreo.test(correo)) {
         if (inputCorreo) inputCorreo.classList.add("is-invalid");
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (inputCorreo) inputCorreo.classList.add("is-valid");
       }
 
-      // Validación: teléfono
+      // Validación: Teléfono
       if (!iti.isValidNumber()) {
         if (inputTelefono) inputTelefono.classList.add("is-invalid");
         formularioCorrecto = false;
@@ -118,67 +118,57 @@ document.addEventListener("DOMContentLoaded", () => {
         if (inputTelefono) inputTelefono.classList.add("is-valid");
       }
 
-      // Validación: contraseña
+      // Validación: Contraseña
       const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
       if (!regexPassword.test(contrasena)) {
-        if (inputContrasena) inputContrasena.classList.add("is-invalid");
+        if (inputPassword) inputPassword.classList.add("is-invalid");
         formularioCorrecto = false;
       } else {
-        if (inputContrasena) inputContrasena.classList.add("is-valid");
+        if (inputPassword) inputPassword.classList.add("is-valid");
       }
 
-      // Validación: confirmación de contraseña
+      // Validación: Confirmación de contraseña
       if (confirmacion === "" || contrasena !== confirmacion) {
-        if (inputConfirmacion) inputConfirmacion.classList.add("is-invalid");
+        if (inputConfirm) inputConfirm.classList.add("is-invalid");
         formularioCorrecto = false;
       } else {
-        if (inputConfirmacion && regexPassword.test(contrasena)) {
-          inputConfirmacion.classList.add("is-valid");
+        if (inputConfirm && regexPassword.test(contrasena)) {
+          inputConfirm.classList.add("is-valid");
         }
       }
 
-      // Hacer el objeto
+      // Construcción del objeto corregido
       if (formularioCorrecto) {
         const nuevoUsuario = {
-          nombreCompleto: document.getElementById("fullName").value.trim(),
-          username: document.getElementById("username").value.trim(),
-          email: document.getElementById("email").value.trim(),
-          telefono: iti.getNumber(),
-          password: document.getElementById("password").value,
+          fullName: nombre,
+          userName: inputUsername.value.trim(), // Corregida la referencia para evitar 'undefined'
+          email: correo,
+          phone: iti.getNumber(),
+          password: contrasena,
+          registrationDate: new Date().toISOString().split("T")[0], // Genera formato AAAA-MM-DD
+          address: "Sin dirección especificada", // Evita nulos en la Base de Datos
         };
         enviarDatosAlBackend(nuevoUsuario);
       } else {
         alert("Error de validación en el formulario.");
       }
     });
-    // Envío al backend real (Spring Boot).
-    // Los nombres de estos campos deben coincidir EXACTO con los que espera
-    // el modelo Users.java del backend: fullName, userName, email, phone,
-    // password. (No mandamos registrationDate: el servidor la genera solo.)
-    function enviarDatosAlBackend(datosUsuario) {
-      const url = "http://localhost:8080/api/users";
-      const usuarioFormatoJSON = {
-        email: datosUsuario.email,
-        password: datosUsuario.password,
-        userName: datosUsuario.username,
-        fullName: datosUsuario.nombreCompleto,
-        phone: datosUsuario.telefono,
-      };
+
+    // Envío al backend (Spring Boot)
+    function enviarDatosAlBackend(usuarioFormatoJSON) {
+      const url = "/api/users";
+
       fetch(url, {
-        method: "POST", // Indicamos que vamos a guardar/crear datos
+        method: "POST",
         headers: {
-          "Content-Type": "application/json", // Le avisamos al servidor que le mandamos un JSON
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify(usuarioFormatoJSON), // Convertimos el objeto de JS a texto plano JSON
+        body: JSON.stringify(usuarioFormatoJSON), // Envía el objeto directo sin reconstrucciones innecesarias
       })
         .then(async (response) => {
           if (response.ok) {
-            // alert(`¡Cuenta creada con éxito! ${usuarioFormatoJSON.username}.`);
-            //Aquí puedes redireccionar al login si quieres:
             window.location.href = "/src/pages/auth/login/login.html";
           } else if (response.status === 400) {
-            // El backend responde 400 con { message: "..." } cuando el email
-            // ya está registrado o la contraseña no cumple el formato.
             const cuerpo = await response.json().catch(() => null);
             alert(cuerpo?.message || "Datos de registro inválidos.");
           } else {
@@ -193,7 +183,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
   }
-  //Apoyo validar username
+
+  // Apoyo validar username
   function validarNombreUsuario() {
     if (!inputUsername) return false;
 
@@ -216,20 +207,8 @@ document.addEventListener("DOMContentLoaded", () => {
       return false;
     }
 
-    // Nota: la verificación de "nombre de usuario ya en uso" se hace del
-    // lado del servidor (al enviar el formulario), no aquí. Antes este
-    // bloque usaba una variable "usuariosRegistrados" que nunca se
-    // declaraba en ningún lado del proyecto — cada vez que se llamaba a
-    // esta función (al escribir en el campo, y también al enviar el
-    // formulario) lanzaba un ReferenceError sin capturar, lo que rompía
-    // el envío del formulario de registro por completo.
     inputUsername.classList.remove("is-invalid");
     inputUsername.classList.add("is-valid");
     return true;
   }
 });
-// El footer de esta página lo carga /src/components/footer/Footer.js
-// (referenciado directo en register.html) — construye el HTML del footer
-// él mismo, sin fetch. Este bloque quedó duplicado y apuntaba a una ruta
-// que no existe ("../../components/Footer.html"), además de buscar un
-// elemento #footer que tampoco existe en la página.

@@ -163,20 +163,27 @@ document.addEventListener("DOMContentLoaded", () => {
         alert("Error de validación en el formulario.");
       }
     });
+<<<<<<< HEAD
     // Simulación de envío al backend
 function enviarDatosAlBackend(datosUsuario) {
     console.log("Listo para enviar al backend:", datosUsuario);
    
     
 }
+=======
+    // Envío al backend real (Spring Boot).
+    // Los nombres de estos campos deben coincidir EXACTO con los que espera
+    // el modelo Users.java del backend: fullName, userName, email, phone,
+    // password. (No mandamos registrationDate: el servidor la genera solo.)
+>>>>>>> origin/qa
     function enviarDatosAlBackend(datosUsuario) {
-      const url = "http://localhost:3000/users";
+      const url = "http://localhost:8080/api/users";
       const usuarioFormatoJSON = {
         email: datosUsuario.email,
         password: datosUsuario.password,
-        username: datosUsuario.username,
-        nombreCompleto: datosUsuario.nombreCompleto,
-        telefono: datosUsuario.telefono,
+        userName: datosUsuario.username,
+        fullName: datosUsuario.nombreCompleto,
+        phone: datosUsuario.telefono,
       };
       fetch(url, {
         method: "POST", // Indicamos que vamos a guardar/crear datos
@@ -185,11 +192,16 @@ function enviarDatosAlBackend(datosUsuario) {
         },
         body: JSON.stringify(usuarioFormatoJSON), // Convertimos el objeto de JS a texto plano JSON
       })
-        .then((response) => {
+        .then(async (response) => {
           if (response.ok) {
             // alert(`¡Cuenta creada con éxito! ${usuarioFormatoJSON.username}.`);
             //Aquí puedes redireccionar al login si quieres:
             window.location.href = "/src/pages/auth/login/login.html";
+          } else if (response.status === 400) {
+            // El backend responde 400 con { message: "..." } cuando el email
+            // ya está registrado o la contraseña no cumple el formato.
+            const cuerpo = await response.json().catch(() => null);
+            alert(cuerpo?.message || "Datos de registro inválidos.");
           } else {
             alert("Hubo un error al registrar el usuario en el servidor.");
           }
@@ -197,7 +209,7 @@ function enviarDatosAlBackend(datosUsuario) {
         .catch((error) => {
           console.error("Error en la conexión con el servidor:", error);
           alert(
-            "No se pudo conectar con el servidor. ¿Está encendido el json-server?",
+            "No se pudo conectar con el servidor. ¿Está encendido el backend (Spring Boot, puerto 8080)?",
           );
         });
     }
@@ -225,6 +237,7 @@ function enviarDatosAlBackend(datosUsuario) {
       return false;
     }
 
+<<<<<<< HEAD
     const usuarioExiste = usuariosRegistrados.some(
       (u) => u.toLowerCase() === valor.toLowerCase(),
     );
@@ -236,6 +249,15 @@ function enviarDatosAlBackend(datosUsuario) {
       return false;
     }
 
+=======
+    // Nota: la verificación de "nombre de usuario ya en uso" se hace del
+    // lado del servidor (al enviar el formulario), no aquí. Antes este
+    // bloque usaba una variable "usuariosRegistrados" que nunca se
+    // declaraba en ningún lado del proyecto — cada vez que se llamaba a
+    // esta función (al escribir en el campo, y también al enviar el
+    // formulario) lanzaba un ReferenceError sin capturar, lo que rompía
+    // el envío del formulario de registro por completo.
+>>>>>>> origin/qa
     inputUsername.classList.remove("is-invalid");
     inputUsername.classList.add("is-valid");
     return true;

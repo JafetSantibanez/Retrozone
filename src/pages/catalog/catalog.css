@@ -1,0 +1,322 @@
+/* ===== LAYOUT GENERAL ===== */
+body {
+  background-color: #121535;
+  font-family: "Press Start 2P", monospace;
+  color: #fdffae;
+  min-height: 100vh;
+}
+
+.catalog-main {
+  padding-top: 10px;
+  min-height: 100vh;
+  
+}
+
+/* ===== ENCABEZADO ===== */
+.catalog-header {
+  padding: 2rem 1rem 1rem;
+}
+
+.catalog-title {
+  font-size: clamp(1.2rem, 4vw, 2.2rem);
+  color: #1be628;
+  text-shadow: 3px 3px 0 #000;
+  letter-spacing: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.catalog-subtitle {
+  font-size: 0.55rem;
+  color: #fdffae;
+  letter-spacing: 2px;
+  opacity: 0.75;
+}
+
+/* ===== FILTROS ===== */
+.catalog-filters {
+  background-color: rgba(0, 0, 0, 0.45);
+  border: 2px solid #1be628;
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  margin: 0 1rem;
+}
+
+.filter-label {
+  display: block;
+  font-size: 0.5rem;
+  color: #1be628;
+  margin-bottom: 0.4rem;
+  letter-spacing: 1px;
+}
+
+.filter-input,
+.filter-select {
+  background-color: #0a0d25 !important;
+  border: 2px solid #1be628 !important;
+  color: #fdffae !important;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.5rem;
+  border-radius: 6px !important;
+}
+
+.filter-input::placeholder {
+  color: rgba(253, 255, 174, 0.4);
+  font-size: 0.45rem;
+}
+
+.filter-input:focus,
+.filter-select:focus {
+  background-color: #0a0d25 !important;
+  border-color: #fdffae !important;
+  color: #fdffae !important;
+  box-shadow: 0 0 0 2px rgba(27, 230, 40, 0.25) !important;
+}
+
+.filter-select option {
+  background-color: #121535;
+  color: #fdffae;
+}
+
+.btn-filter-search {
+  background-color: #1be628;
+  border: 2px solid #1be628;
+  color: #000;
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0 6px 6px 0 !important;
+  transition: background-color 0.15s ease;
+}
+
+.btn-filter-search:hover {
+  background-color: #39ff14;
+}
+
+.resultado-contador {
+  font-size: 0.45rem;
+  color: #1be628;
+  white-space: nowrap;
+}
+
+/* ===== TAG FILTRO ACTIVO ===== */
+.tag-filtro {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(27, 230, 40, 0.15);
+  border: 1px solid #1be628;
+  color: #1be628;
+  font-size: 0.4rem;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.tag-filtro:hover {
+  background-color: rgba(27, 230, 40, 0.3);
+}
+
+/* ===== TARJETA DE PRODUCTO ===== */
+.product-card {
+  background-color: #0a0d25;
+  border: 2px solid #1be628;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 0 #1be628, 4px 10px 20px rgba(27, 230, 40, 0.2);
+}
+
+/* Imagen */
+.product-img-wrap {
+  position: relative;
+  background-color: #1c2b24;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.product-img {
+  max-height: 160px;
+  max-width: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.product-img-placeholder {
+  font-size: 4rem;
+  opacity: 0.35;
+}
+
+/* Badge descuento */
+.badge-descuento {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #c21a4b;
+  color: #fff;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.45rem;
+  padding: 4px 8px;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+}
+
+/* Badge stock */
+.badge-stock {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.38rem;
+  padding: 4px 7px;
+  border: 2px solid #000;
+  box-shadow: 2px 2px 0 #000;
+}
+
+.badge-stock.pocas   { background-color: #ff8c00; color: #000; }
+.badge-stock.enstock { background-color: #1be628; color: #000; }
+
+/* Cuerpo de la tarjeta */
+.product-body {
+  padding: 0.85rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.45rem;
+}
+
+.product-platform {
+  font-size: 0.38rem;
+  color: #1be628;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.product-name {
+  font-size: 0.55rem;
+  color: #fdffae;
+  line-height: 1.6;
+  min-height: 2.4em;
+}
+
+/* Corazones */
+.product-hearts {
+  display: flex;
+  gap: 3px;
+  font-size: 0.7rem;
+}
+
+.heart-full  { color: #c21a4b; }
+.heart-empty { color: #333; }
+
+/* Estado badge */
+.product-estado {
+  display: inline-block;
+  font-size: 0.38rem;
+  padding: 3px 7px;
+  border-radius: 3px;
+  border: 1px solid;
+  align-self: flex-start;
+}
+
+.estado-nuevo      { border-color: #1be628; color: #1be628; }
+.estado-seminuevo  { border-color: #fdffae; color: #fdffae; }
+.estado-buenestado { border-color: #64b5f6; color: #64b5f6; }
+.estado-aceptable  { border-color: #ff8c00; color: #ff8c00; }
+.estado-desgastado { border-color: #888;    color: #888; }
+
+/* Descripción */
+.product-desc {
+  font-size: 0.38rem;
+  color: rgba(253, 255, 174, 0.6);
+  line-height: 1.8;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}
+
+/* Precio */
+.product-precio-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.product-precio {
+  font-size: 0.85rem;
+  color: #1be628;
+}
+
+.product-precio-original {
+  font-size: 0.5rem;
+  color: #888;
+  text-decoration: line-through;
+}
+
+/* Botón agregar al carrito */
+.btn-agregar {
+  background-color: #c21a4b;
+  border: 2px solid #000;
+  color: #fdffae;
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.42rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.15s, transform 0.1s;
+  box-shadow: 3px 3px 0 #000;
+  text-transform: uppercase;
+  margin-top: auto;
+}
+
+.btn-agregar:hover {
+  background-color: #a01540;
+  transform: translateY(-1px);
+}
+
+.btn-agregar:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 #000;
+}
+
+/* ===== SIN RESULTADOS ===== */
+.sin-resultados-icon {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.sin-resultados-texto {
+  font-size: 0.65rem;
+  color: #fdffae;
+  letter-spacing: 2px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 576px) {
+  .catalog-filters {
+    margin: 0 0.5rem;
+  }
+
+  .product-img-wrap {
+    height: 150px;
+  }
+
+  .product-name {
+    font-size: 0.48rem;
+  }
+}

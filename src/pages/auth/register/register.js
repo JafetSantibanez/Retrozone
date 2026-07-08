@@ -228,9 +228,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return true;
   }
 });
-//footer
-fetch("../../components/Footer.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("footer").innerHTML = data;
-  });
+// El footer de esta página lo carga /src/components/footer/Footer.js
+// (referenciado directo en register.html) — construye el HTML del footer
+// él mismo, sin fetch. Este bloque quedó duplicado y apuntaba a una ruta
+// que no existe ("../../components/Footer.html"), además de buscar un
+// elemento #footer que tampoco existe en la página.

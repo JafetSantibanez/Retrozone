@@ -58,14 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// footer
-fetch("../../components/Footer.html")
-  .then((response) => response.text())
-  .then((data) => {
-    const footerContainer = document.getElementById("footer");
-    if (footerContainer) {
-      footerContainer.innerHTML = data;
-    }
-  })
-
-  .catch((err) => console.error("Error al cargar el footer:", err));
+// NOTA: forgot-password.html todavía es una página placeholder (sin navbar,
+// sin #footer-container, sin estilos) — le falta maquetación real antes de
+// que tenga sentido cargarle un footer. Este bloque apuntaba a una ruta que
+// no existe ("../../components/Footer.html") y a un elemento #footer que
+// tampoco existe en la página.

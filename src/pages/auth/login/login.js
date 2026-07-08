@@ -108,17 +108,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
-//footer
-fetch("../../components/Footer.html")
-  .then((response) => response.text())
-  .then((data) => {
-    const contenedorFooter = document.getElementById("footer");
-    // Solo intenta meter el HTML si el contenedor realmente existe en la página
-    if (contenedorFooter) {
-      contenedorFooter.innerHTML = data;
-    }
-    //fetch("/src/components/footer/footer.html")
-    // .then((response) => response.text())
-    //.then((data) => {
-    // document.getElementById("footer").innerHTML = data;
-  });
+// El footer de esta página lo carga /src/components/footer/Footer.js
+// (referenciado directo en login.html) — construye el HTML del footer él
+// mismo, sin fetch. Este bloque quedó duplicado y apuntaba a una ruta que
+// no existe ("../../components/Footer.html"), además de buscar un
+// elemento #footer que tampoco existe (el real es #footer-container).
